@@ -1,0 +1,23 @@
+.globalBtn {
+    border-radius: 0px 35.556px 35.556px 0px;
+    background: var(--Foundation-Primary-Primary, #AAF448);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: max-content;
+    padding: 14.222px 21.333px;
+    font-family: $fourthFont;
+    font-size: 17.778px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    @include responsive (max,991px) {
+        font-size: 16px;
+        padding: 10.222px 15.333px;
+    }
+    @include responsive (max,330px) {
+        font-size: 16px;
+        padding: 5px;
+        font-weight: 600;
+    }
+}

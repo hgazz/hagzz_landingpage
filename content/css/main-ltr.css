@@ -1,0 +1,880 @@
+@import url("https://fonts.cdnfonts.com/css/effra-trial");
+@import url("https://fonts.cdnfonts.com/css/typographica");
+@import url("https://fonts.cdnfonts.com/css/gooddog-2");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+body {
+  direction: ltr;
+  font-family: "Effra VF Trial", sans-serif; }
+
+/* mixin for responsive it takes 
+    type : min or max 
+    size : 100px for the width of target screen
+*/
+a {
+  text-decoration: none; }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield; }
+
+textarea {
+  resize: none; }
+
+:root {
+  scroll-behavior: smooth; }
+
+* {
+  /* Track */
+  /* Handle */
+  /* Handle on hover */ }
+  *::-webkit-scrollbar {
+    width: 5px; }
+  *::-webkit-scrollbar-track {
+    background: #f1f1f1; }
+  *::-webkit-scrollbar-thumb {
+    background: #A8FF35;
+    border-radius: 1rem; }
+  *::-webkit-scrollbar-thumb:hover {
+    background: #555; }
+
+body {
+  position: relative;
+  transition: all .3s ease-in-out;
+  scroll-behavior: smooth; }
+
+input {
+  outline: none;
+  border: none; }
+
+input[type='date']::-webkit-calendar-picker-indicator {
+  background: transparent;
+  bottom: 0;
+  color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
+  flex: 1 0 0; }
+
+ul {
+  list-style-type: none;
+  padding-left: 0; }
+
+a {
+  text-decoration: none; }
+
+button {
+  border: none;
+  outline: none;
+  background-color: transparent; }
+
+/* customize pages with main section*/
+main {
+  margin-top: 100px; }
+
+#preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  overflow: hidden;
+  background: black;
+  transition: all 0.6s ease-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  font-family: "Effra VF Trial", sans-serif;
+  background: black; }
+  #preloader .loader {
+    width: 10%;
+    height: 3.5px;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    background-color: #726e6e; }
+    @media (max-width: 991px) {
+      #preloader .loader {
+        width: 30%; } }
+  #preloader .loader::after {
+    content: '';
+    width: 50px;
+    height: 4.8px;
+    background: #A8FF35;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    animation: hitZak 1s ease-in-out infinite alternate; }
+@keyframes hitZak {
+  0% {
+    left: 0;
+    transform: translateX(-1%); }
+  100% {
+    left: 100%;
+    transform: translateX(-99%); } }
+.globalBtn {
+  border-radius: 0px 35.556px 35.556px 0px;
+  background: var(--Foundation-Primary-Primary, #AAF448);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  padding: 14.222px 21.333px;
+  font-family: "Inter", sans-serif;
+  font-size: 17.778px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; }
+  @media (max-width: 991px) {
+    .globalBtn {
+      font-size: 16px;
+      padding: 10.222px 15.333px; } }
+  @media (max-width: 330px) {
+    .globalBtn {
+      font-size: 16px;
+      padding: 5px;
+      font-weight: 600; } }
+
+.splide__slide.is-team img {
+  height: 400px; }
+
+.vertical-slide {
+  padding-block: 40px !important; }
+
+.splide__slide.text-slide {
+  cursor: pointer;
+  width: 50% !important;
+  margin-inline: auto !important; }
+
+.splide__slide.is-client {
+  width: max-content;
+  height: 150px;
+  overflow: hidden;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: white; }
+
+.splide__slide.is-client img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; }
+
+html {
+  scroll-behavior: smooth; }
+
+.vertical-slide {
+  background-color: #0F4B7B;
+  color: white; }
+
+.vertical-slide .text-slide {
+  color: white; }
+
+.splide {
+  direction: ltr !important; }
+
+#header {
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
+  #header .navsbar {
+    padding: 25px 99px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    background-color: black; }
+    @media (max-width: 991px) {
+      #header .navsbar {
+        padding: 24px 18px; } }
+    #header .navsbar__logo {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      overflow: hidden;
+      width: 260px; }
+      #header .navsbar__logo img {
+        width: 114px;
+        height: 37px; }
+    #header .navsbar__list {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 35px;
+      margin-bottom: 0;
+      flex: 1 0 0; }
+      @media (max-width: 991px) {
+        #header .navsbar__list {
+          display: none; } }
+      #header .navsbar__list li a {
+        color: white;
+        text-align: center;
+        font-family: "Effra VF Trial", sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        transition: all .5s; }
+      #header .navsbar__list li:has(.active) a {
+        color: #A8FF35; }
+      #header .navsbar__list li:has(.services) {
+        position: relative;
+        cursor: pointer; }
+        #header .navsbar__list li:has(.services)::after {
+          content: "\f107";
+          font-weight: 900;
+          font-family: "Font Awesome 5 Free";
+          margin-left: 6px;
+          color: #A8FF35;
+          transition: all .5s; }
+      #header .navsbar__list li:hover a {
+        color: #A8FF35;
+        text-shadow: 0px 2px 16px rgba(3, 95, 168, 0.2); }
+      #header .navsbar__list li .language {
+        font-family: "Effra VF Trial", sans-serif;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        color: rgba(3, 95, 168, 0.6);
+        text-align: center; }
+    #header .navsbar__user {
+      display: flex;
+      align-items: center;
+      gap: 35px;
+      width: 260px; }
+      #header .navsbar__user__login {
+        color: white;
+        text-align: center;
+        font-family: "Effra VF Trial", sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400; }
+      #header .navsbar__user__partner {
+        padding: 10.667px 28.444px;
+        border-radius: 35.556px;
+        background: #FFF;
+        color: #000;
+        text-align: center;
+        font-family: "Effra VF Trial", sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        position: relative;
+        transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        #header .navsbar__user__partner:hover {
+          background-color: #A8FF35;
+          box-shadow: 0 0 5px rgba(255, 255, 255, 0.3); }
+        #header .navsbar__user__partner::after {
+          content: "";
+          display: block;
+          position: absolute;
+          border-radius: 4em;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+          transition: all 0.5s;
+          box-shadow: 0 0 1px 5px white; }
+        #header .navsbar__user__partner:active::after {
+          box-shadow: 0 0 0 0 white;
+          position: absolute;
+          border-radius: 4em;
+          left: 0;
+          top: 0;
+          opacity: 1;
+          transition: 0s; }
+        #header .navsbar__user__partner:active {
+          top: 1px; }
+      @media (max-width: 991px) {
+        #header .navsbar__user {
+          display: none; } }
+    #header .navsbar__hamborg-tab {
+      display: none;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      padding: 0;
+      background-color: transparent;
+      color: white; }
+      @media (max-width: 991px) {
+        #header .navsbar__hamborg-tab {
+          display: block; } }
+
+.navsbar__mobile {
+  padding: 12px;
+  background-color: black;
+  height: 448px !important; }
+  .navsbar__mobile__list {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px; }
+    .navsbar__mobile__list li {
+      width: 100%; }
+      .navsbar__mobile__list li a {
+        color: #FFF;
+        text-align: center;
+        font-family: "Effra VF Trial", sans-serif;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400; }
+      .navsbar__mobile__list li:has(.active) a {
+        color: #A8FF35; }
+    .navsbar__mobile__list__login {
+      color: #FFF;
+      text-align: center;
+      font-family: "Effra VF Trial", sans-serif;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400; }
+    .navsbar__mobile__list__partner {
+      padding: 12px 32px;
+      border-radius: 35.556px;
+      background: #FFF;
+      color: #000;
+      text-align: center;
+      font-family: "Effra VF Trial", sans-serif;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400; }
+
+footer {
+  padding: 64px 99px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 57px; }
+  @media (max-width: 991px) {
+    footer {
+      padding: 40px 66px; } }
+  footer .downPart {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    @media (max-width: 991px) {
+      footer .downPart {
+        flex-direction: column;
+        gap: 44px; } }
+    footer .downPart .links {
+      width: 55%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+      @media (max-width: 1600px) {
+        footer .downPart .links {
+          width: 56.5%; } }
+      @media (max-width: 1350px) {
+        footer .downPart .links {
+          width: 57%; } }
+      @media (max-width: 1200px) {
+        footer .downPart .links {
+          width: 59%; } }
+      @media (max-width: 991px) {
+        footer .downPart .links {
+          flex-direction: column-reverse;
+          width: 100%;
+          gap: 44px; } }
+      footer .downPart .links__page {
+        display: flex;
+        gap: 35px; }
+        @media (max-width: 991px) {
+          footer .downPart .links__page {
+            flex-direction: column; } }
+        footer .downPart .links__page a {
+          color: black;
+          text-align: center;
+          font-family: "Effra VF Trial", sans-serif;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400; }
+          footer .downPart .links__page a:last-of-type {
+            display: none; }
+            @media (max-width: 991px) {
+              footer .downPart .links__page a:last-of-type {
+                display: inline-block; } }
+      footer .downPart .links__social {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        footer .downPart .links__social a {
+          transition: all 1s step-end; }
+          footer .downPart .links__social a img:nth-child(2) {
+            display: none; }
+          footer .downPart .links__social a:hover img:nth-child(1) {
+            display: none; }
+          footer .downPart .links__social a:hover img:nth-child(2) {
+            display: block; }
+        @media (max-width: 991px) {
+          footer .downPart .links__social a {
+            transition: all 1s step-end; }
+            footer .downPart .links__social a img:nth-child(1) {
+              display: none; }
+            footer .downPart .links__social a img:nth-child(2) {
+              display: block; } }
+    footer .downPart .copyRights {
+      margin: 0;
+      color: #A3A3A3;
+      text-align: right;
+      font-family: "Effra VF Trial", sans-serif;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400; }
+      footer .downPart .copyRights p {
+        margin: 0;
+        color: #A3A3A3;
+        text-align: right;
+        font-family: "Effra VF Trial", sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400; }
+      @media (max-width: 991px) {
+        footer .downPart .copyRights {
+          width: 100%; } }
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 99px;
+  padding-bottom: 0;
+  background-color: black;
+  height: max-content;
+  overflow: hidden; }
+  @media (max-width: 991px) {
+    .home {
+      padding-inline: 18px; } }
+  .home__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 34px; }
+    @media (max-width: 991px) {
+      .home__content {
+        gap: 24px; } }
+    .home__content__header__title p {
+      color: #FFF;
+      text-align: center;
+      font-family: "Effra VF Trial", sans-serif;
+      font-size: 64px;
+      font-style: normal;
+      font-weight: 800;
+      margin: 0; }
+      .home__content__header__title p:nth-child(2) {
+        line-height: 107%; }
+        .home__content__header__title p:nth-child(2) img {
+          width: 72px;
+          height: 72px; }
+          @media (max-width: 991px) {
+            .home__content__header__title p:nth-child(2) img {
+              width: 32px;
+              height: 32px; } }
+          @media (max-width: 330px) {
+            .home__content__header__title p:nth-child(2) img {
+              width: 25px;
+              height: 25px; } }
+      @media (max-width: 991px) {
+        .home__content__header__title p {
+          font-size: 32px;
+          font-weight: 800; } }
+      @media (max-width: 330px) {
+        .home__content__header__title p {
+          font-size: 25px;
+          font-weight: 600; } }
+    .home__content__header__desc {
+      max-width: 642px;
+      text-align: center;
+      margin-top: 21px; }
+      .home__content__header__desc p {
+        margin: 0;
+        color: #8B8B8B;
+        text-align: center;
+        font-family: "Effra VF Trial", sans-serif;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400; }
+        @media (max-width: 991px) {
+          .home__content__header__desc p {
+            font-size: 14px; } }
+        @media (max-width: 330px) {
+          .home__content__header__desc p {
+            max-width: 80%;
+            text-align: center;
+            margin: auto; } }
+    .home__content__btns {
+      display: flex;
+      align-items: center;
+      align-self: center;
+      justify-content: center;
+      gap: 15px;
+      position: relative;
+      width: 100%; }
+      @media (max-width: 330px) {
+        .home__content__btns {
+          font-size: 16px;
+          gap: 20px;
+          flex-direction: column; } }
+      .home__content__btns .homeBTn {
+        padding: 14.222px 28.444px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 9px;
+        background-color: #F1F5F7;
+        border-radius: 35.556px;
+        font-family: "Effra VF Trial", sans-serif;
+        font-weight: 600;
+        font-size: 18px; }
+        @media (max-width: 330px) {
+          .home__content__btns .homeBTn {
+            font-size: 16px;
+            gap: 5px;
+            padding: 14.222px 14.444px; } }
+      .home__content__btns__getnow {
+        position: absolute;
+        right: 5%;
+        top: -20px; }
+        @media (max-width: 991px) {
+          .home__content__btns__getnow {
+            display: none; } }
+        .home__content__btns__getnow .getItNow {
+          margin: 0;
+          color: #FFF;
+          text-align: center;
+          font-family: "GoodDog", sans-serif;
+          font-size: 14.222px;
+          font-style: normal;
+          font-weight: 400;
+          letter-spacing: 1px;
+          transform: rotate(6deg); }
+  .home__shape {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px; }
+    .home__shape__image {
+      width: 35%;
+      position: relative; }
+      @media (max-width: 991px) {
+        .home__shape__image {
+          width: 70%; } }
+      .home__shape__image img {
+        width: 100%;
+        height: 100%; }
+    .home__shape__word {
+      position: absolute;
+      left: -50px;
+      top: 10%; }
+  .home .pageTitle {
+    padding-block: 70px 90px; }
+    @media (max-width: 991px) {
+      .home .pageTitle {
+        padding-block: 0px 30px; } }
+    .home .pageTitle p {
+      color: #FFF;
+      text-align: center;
+      font-family: "Effra VF Trial", sans-serif;
+      font-size: 64px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 112%;
+      margin: 0; }
+      @media (max-width: 991px) {
+        .home .pageTitle p {
+          font-size: 32px;
+          font-weight: 600; } }
+      @media (max-width: 330px) {
+        .home .pageTitle p {
+          font-size: 25px;
+          font-weight: 600; } }
+
+.clickAway {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 43px;
+  padding: 71.111px 20px;
+  background-color: #A8FF35; }
+  @media (max-width: 991px) {
+    .clickAway {
+      padding: 30px 20px;
+      gap: 30px; } }
+  @media (max-width: 991px) {
+    .clickAway__header__large {
+      display: none; } }
+  .clickAway__header__small {
+    display: none; }
+    @media (max-width: 991px) {
+      .clickAway__header__small {
+        display: block; } }
+  .clickAway__image {
+    width: 607px; }
+    .clickAway__image img {
+      width: 100%;
+      aspect-ratio: 1.78984861977/1; }
+    @media (max-width: 991px) {
+      .clickAway__image {
+        display: none; } }
+  .clickAway__imageResponsive {
+    display: none; }
+    @media (max-width: 991px) {
+      .clickAway__imageResponsive {
+        display: inline-block;
+        width: 100%; }
+        .clickAway__imageResponsive img {
+          width: 100%;
+          aspect-ratio: 1.32473/1; } }
+  @media (max-width: 991px) and (max-width: 480px) {
+    .clickAway__imageResponsive {
+      width: 100%; } }
+
+  .clickAway__desc {
+    width: 100%;
+    align-self: center; }
+    .clickAway__desc p {
+      color: #000;
+      text-align: center;
+      font-family: "Effra VF Trial", sans-serif;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      max-width: 850px;
+      margin: 0;
+      margin: auto; }
+
+.joinUsNow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 71px 99px;
+  background-color: black;
+  width: 100%; }
+  @media (max-width: 991px) {
+    .joinUsNow {
+      padding: 30px 40px; } }
+  .joinUsNow__item {
+    display: flex;
+    align-items: center;
+    gap: 0; }
+    .joinUsNow__item .becomePartner:hover {
+      background-color: #A8FF35;
+      box-shadow: 0 0 5px rgba(255, 255, 255, 0.3); }
+    .joinUsNow__item .becomePartner::after {
+      content: "";
+      display: block;
+      position: absolute;
+      border-radius: 4em;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: all 0.5s;
+      box-shadow: 0 0 1px 5px white; }
+    .joinUsNow__item .becomePartner:active::after {
+      box-shadow: 0 0 0 0 white;
+      position: absolute;
+      border-radius: 4em;
+      left: 0;
+      top: 0;
+      opacity: 1;
+      transition: 0s; }
+    .joinUsNow__item .becomePartner:active {
+      top: 1px; }
+  .joinUsNow__item__mobile {
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    overflow: hidden; }
+    @media (max-width: 991px) {
+      .joinUsNow__item__mobile {
+        display: none; } }
+    @media (max-width: 991px) {
+      .joinUsNow__item__mobile img:nth-child(2) {
+        align-self: flex-end; } }
+    .joinUsNow__item__mobile .business-text {
+      position: absolute;
+      top: -5px;
+      left: 5%; }
+  .joinUsNow .responsive-joinUsNow {
+    display: none; }
+    @media (max-width: 991px) {
+      .joinUsNow .responsive-joinUsNow {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 32px; } }
+    .joinUsNow .responsive-joinUsNow .profit-text {
+      margin-left: 70px; }
+
+footer {
+  background-color: white; }
+
+.termsAndServices {
+  padding: 86px 99px 0px 99px;
+  background-color: #E9E9E9;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 85px; }
+  @media (max-width: 991px) {
+    .termsAndServices {
+      padding: 30px;
+      gap: 30px; } }
+  @media (max-width: 330px) {
+    .termsAndServices {
+      padding: 30px 15px; } }
+  .termsAndServices__part {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 50px;
+    width: 100%; }
+    .termsAndServices__part__first {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 29px;
+      width: 100%; }
+      .termsAndServices__part__first__item {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        width: 100%; }
+        .termsAndServices__part__first__item p {
+          margin: 0;
+          width: 100%; }
+        .termsAndServices__part__first__item .unordered {
+          list-style: disc; }
+        .termsAndServices__part__first__item .contact {
+          text-decoration: underline;
+          color: black; }
+    .termsAndServices__part__hint {
+      color: #000;
+      font-family: "Inter", sans-serif;
+      font-size: 17.778px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 150%; }
+
+.downloadHaggz {
+  padding: 71px 99px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 43px;
+  align-self: center; }
+  @media (max-width: 991px) {
+    .downloadHaggz .large-screen {
+      display: none; } }
+  .downloadHaggz .mobile-screen {
+    display: none; }
+    @media (max-width: 991px) {
+      .downloadHaggz .mobile-screen {
+        display: block; } }
+  @media (max-width: 991px) {
+    .downloadHaggz {
+      padding: 40px 5px; } }
+  .downloadHaggz__images {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 50px;
+    overflow: hidden; }
+    .downloadHaggz__images .splide__slide {
+      width: 300px;
+      height: 300px; }
+      .downloadHaggz__images .splide__slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; }
+    @media (max-width: 991px) {
+      .downloadHaggz__images {
+        flex-direction: column; } }
+    .downloadHaggz__images__item {
+      width: 250px;
+      aspect-ratio: 1.32473/1; }
+      @media (max-width: 991px) {
+        .downloadHaggz__images__item {
+          width: 80%; } }
+      .downloadHaggz__images__item img {
+        width: 100%;
+        height: 100%; }
+  .downloadHaggz__title {
+    color: #000;
+    text-align: center;
+    font-family: "Effra VF Trial", sans-serif;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 112%;
+    /* 71.68px */ }
+    @media (max-width: 991px) {
+      .downloadHaggz__title {
+        color: #000;
+        text-align: center;
+        font-family: "Effra VF Trial", sans-serif;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 800; } }
+    @media (max-width: 330px) {
+      .downloadHaggz__title {
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 400; } }
+    .downloadHaggz__title span {
+      color: #000;
+      font-family: TypoGraphica;
+      font-size: 64px;
+      font-style: normal;
+      font-weight: 400; }
+      @media (max-width: 991px) {
+        .downloadHaggz__title span {
+          color: #000;
+          text-align: center;
+          font-family: "Effra VF Trial", sans-serif;
+          font-size: 28px;
+          font-style: normal;
+          font-weight: 800; } }
+  .downloadHaggz__btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px; }
+    @media (max-width: 991px) {
+      .downloadHaggz__btns {
+        flex-direction: column;
+        gap: 20px; } }
+    .downloadHaggz__btns a {
+      padding: 14.222px 28.444px;
+      border-radius: 35.556px;
+      background: #000;
+      position: relative;
+      overflow: hidden;
+      transition: all .5s ease-in-out; }
+      .downloadHaggz__btns a:hover {
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.3); }
+  .downloadHaggz footer {
+    background-color: #E9E9E9; }
+
+/*# sourceMappingURL=main-ltr.css.map */

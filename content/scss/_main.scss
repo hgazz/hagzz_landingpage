@@ -1,0 +1,23 @@
+// abstracts
+@import "./abstracts/variables";
+@import "./abstracts/mixins";
+
+// base
+@import "./base/base";
+@import "./base/reset";
+
+// components
+@import "./components/preloader";
+@import "./components/globalBtn";
+@import "./components/_splide";
+
+
+// layout
+@import "./layout/navigation";
+@import "./layout/footer";
+
+
+// pages
+@import "./pages/index";
+@import "./pages/terms";
+
