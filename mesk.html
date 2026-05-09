@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hagzz is proudly developed by Mesk LLC – a Qatari technology company dedicated to building innovative digital solutions for sports and lifestyle.">
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hagzz.el7lm.com/mesk.html">
+    <meta property="og:title" content="About the Developer – Mesk LLC | Hagzz">
+    <meta property="og:description" content="Hagzz is proudly developed by Mesk LLC, a Qatari technology company building innovative digital solutions.">
+    <meta property="og:image" content="https://hagzz.el7lm.com/content/assets/images/icon/logo.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://hagzz.el7lm.com/mesk.html">
+    <link rel="icon" href="./content/assets/images/icon/tab-logo.svg">
+    <link rel="apple-touch-icon" href="./content/assets/images/icon/tab-logo.svg">
+    <title>About the Developer – Mesk LLC | Hagzz</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+        integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg=="
+        crossorigin="anonymous" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" />
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="./content/css/main-ltr.css">
+
+    <style>
+        /* ── Hero ── */
+        .mesk-hero {
+            position: relative;
+            min-height: 92vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .mesk-hero__bg {
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 80% 60% at 70% 50%, rgba(168, 255, 53, 0.12) 0%, transparent 70%),
+                radial-gradient(ellipse 50% 80% at 10% 80%, rgba(168, 255, 53, 0.07) 0%, transparent 60%);
+        }
+
+        /* Qatar-flag-inspired decorative bar */
+        .mesk-hero__flag-bar {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 6px;
+            height: 100%;
+            background: linear-gradient(to bottom, #8D1B3D 0%, #8D1B3D 50%, #ffffff 50%, #ffffff 100%);
+            opacity: 0.35;
+        }
+
+        /* Glowing grid lines */
+        .mesk-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(168, 255, 53, 0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(168, 255, 53, 0.04) 1px, transparent 1px);
+            background-size: 60px 60px;
+            pointer-events: none;
+        }
+
+        .mesk-hero__content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .mesk-hero__badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(168, 255, 53, 0.1);
+            border: 1px solid rgba(168, 255, 53, 0.3);
+            border-radius: 50px;
+            padding: 6px 18px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #A8FF35;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            margin-bottom: 28px;
+        }
+
+        .mesk-hero__badge .dot {
+            width: 7px;
+            height: 7px;
+            background: #A8FF35;
+            border-radius: 50%;
+            animation: pulse-dot 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse-dot {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50%       { opacity: 0.4; transform: scale(0.7); }
+        }
+
+        .mesk-hero__title {
+            font-size: clamp(2.8rem, 6vw, 5.5rem);
+            font-weight: 900;
+            line-height: 1.05;
+            color: #fff;
+            margin-bottom: 18px;
+            letter-spacing: -0.02em;
+        }
+
+        .mesk-hero__title span {
+            color: #A8FF35;
+        }
+
+        .mesk-hero__subtitle {
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            color: rgba(255, 255, 255, 0.65);
+            max-width: 520px;
+            line-height: 1.7;
+            margin-bottom: 40px;
+        }
+
+        .mesk-hero__cta {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .btn-mesk-primary {
+            background: #AAF448;
+            color: #000;
+            font-weight: 700;
+            font-size: 1rem;
+            padding: 14px 32px;
+            border-radius: 0px 35.556px 35.556px 0px;
+            border: none;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: background 0.25s, transform 0.2s;
+        }
+
+        .btn-mesk-primary:hover {
+            background: #c8ff6a;
+            color: #000;
+            transform: translateY(-2px);
+        }
+
+        .btn-mesk-ghost {
+            color: #fff;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 13px 28px;
+            border-radius: 50px;
+            border: 1.5px solid rgba(255, 255, 255, 0.25);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: border-color 0.25s, background 0.25s;
+            background: rgba(255,255,255,0.04);
+        }
+
+        .btn-mesk-ghost:hover {
+            border-color: #A8FF35;
+            color: #A8FF35;
+            background: rgba(168, 255, 53, 0.08);
+        }
+
+        /* ── Hero visual (right side) ── */
+        .mesk-hero__visual {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mesk-hero__orb {
+            width: clamp(260px, 40vw, 480px);
+            height: clamp(260px, 40vw, 480px);
+            border-radius: 50%;
+            background: radial-gradient(circle at 35% 35%, #A8FF35 0%, rgba(168, 255, 53, 0.3) 45%, transparent 70%);
+            filter: blur(60px);
+            opacity: 0.35;
+            position: absolute;
+        }
+
+        .mesk-emblem {
+            position: relative;
+            z-index: 2;
+            width: clamp(200px, 32vw, 380px);
+            height: clamp(200px, 32vw, 380px);
+            border-radius: 50%;
+            border: 1.5px solid rgba(168, 255, 53, 0.25);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255,255,255,0.03);
+            backdrop-filter: blur(12px);
+        }
+
+        .mesk-emblem__inner {
+            width: 75%;
+            height: 75%;
+            border-radius: 50%;
+            border: 1px solid rgba(168, 255, 53, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0,0,0,0.5);
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .mesk-emblem__name {
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            font-weight: 900;
+            color: #A8FF35;
+            letter-spacing: 0.1em;
+            line-height: 1;
+        }
+
+        .mesk-emblem__sub {
+            font-size: clamp(0.65rem, 1.2vw, 0.85rem);
+            color: rgba(255,255,255,0.5);
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+        }
+
+        .mesk-emblem__flag {
+            font-size: 2rem;
+        }
+
+        /* Rotating ring */
+        .mesk-ring {
+            position: absolute;
+            width: 110%;
+            height: 110%;
+            border-radius: 50%;
+            border: 1px dashed rgba(168, 255, 53, 0.2);
+            animation: spin-slow 30s linear infinite;
+        }
+
+        @keyframes spin-slow {
+            from { transform: rotate(0deg); }
+            to   { transform: rotate(360deg); }
+        }
+
+        /* ── Stats strip ── */
+        .mesk-stats {
+            background: #0a0a0a;
+            border-top: 1px solid rgba(168, 255, 53, 0.12);
+            border-bottom: 1px solid rgba(168, 255, 53, 0.12);
+            padding: 36px 0;
+        }
+
+        .mesk-stats__item {
+            text-align: center;
+            padding: 12px 20px;
+        }
+
+        .mesk-stats__number {
+            font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+            font-weight: 900;
+            color: #A8FF35;
+            line-height: 1;
+        }
+
+        .mesk-stats__label {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.5);
+            margin-top: 4px;
+            letter-spacing: 0.04em;
+        }
+
+        /* ── About section ── */
+        .mesk-about {
+            background: #000;
+            padding: 100px 0;
+        }
+
+        .section-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #A8FF35;
+            margin-bottom: 16px;
+        }
+
+        .section-tag::before {
+            content: '';
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: #A8FF35;
+        }
+
+        .section-title {
+            font-size: clamp(1.9rem, 3.5vw, 3rem);
+            font-weight: 900;
+            color: #fff;
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+
+        .section-title span {
+            color: #A8FF35;
+        }
+
+        .section-body {
+            font-size: 1.05rem;
+            color: rgba(255,255,255,0.62);
+            line-height: 1.8;
+        }
+
+        /* Feature cards */
+        .mesk-feature-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.07);
+            border-radius: 20px;
+            padding: 36px 30px;
+            height: 100%;
+            transition: border-color 0.3s, transform 0.3s, background 0.3s;
+        }
+
+        .mesk-feature-card:hover {
+            border-color: rgba(168, 255, 53, 0.35);
+            transform: translateY(-6px);
+            background: rgba(168, 255, 53, 0.04);
+        }
+
+        .mesk-feature-card__icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 14px;
+            background: rgba(168, 255, 53, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: #A8FF35;
+            margin-bottom: 20px;
+        }
+
+        .mesk-feature-card__title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .mesk-feature-card__text {
+            font-size: 0.92rem;
+            color: rgba(255,255,255,0.5);
+            line-height: 1.65;
+        }
+
+        /* ── Hagzz connection section ── */
+        .mesk-connection {
+            background: linear-gradient(135deg, #0a0a0a 0%, #0d1500 100%);
+            padding: 100px 0;
+            border-top: 1px solid rgba(168, 255, 53, 0.1);
+        }
+
+        .connection-card {
+            border: 1px solid rgba(168, 255, 53, 0.2);
+            border-radius: 24px;
+            padding: 52px 48px;
+            background: rgba(168, 255, 53, 0.03);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .connection-card::before {
+            content: '';
+            position: absolute;
+            top: -60px;
+            right: -60px;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(168, 255, 53, 0.15), transparent 70%);
+            pointer-events: none;
+        }
+
+        .connection-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .connection-divider__line {
+            width: 2px;
+            height: 60px;
+            background: linear-gradient(to bottom, transparent, #A8FF35, transparent);
+        }
+
+        .connection-divider__icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: 1.5px solid rgba(168, 255, 53, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #A8FF35;
+            font-size: 1.1rem;
+        }
+
+        .app-brand-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 14px;
+            text-align: center;
+        }
+
+        .app-brand-box__logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+            border: 1.5px solid rgba(168, 255, 53, 0.25);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255,255,255,0.05);
+            overflow: hidden;
+        }
+
+        .app-brand-box__logo img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+        }
+
+        .app-brand-box__name {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: #fff;
+        }
+
+        .app-brand-box__tag {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.45);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        /* ── Qatar pride section ── */
+        .mesk-qatar {
+            background: #000;
+            padding: 90px 0;
+        }
+
+        .qatar-highlight {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 24px 30px;
+            border-radius: 16px;
+            border: 1px solid rgba(255,255,255,0.08);
+            background: rgba(255,255,255,0.02);
+            transition: border-color 0.3s;
+        }
+
+        .qatar-highlight:hover {
+            border-color: rgba(168, 255, 53, 0.25);
+        }
+
+        .qatar-highlight__icon {
+            font-size: 2rem;
+            width: 52px;
+            text-align: center;
+            flex-shrink: 0;
+        }
+
+        .qatar-highlight__title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 4px;
+        }
+
+        .qatar-highlight__text {
+            font-size: 0.88rem;
+            color: rgba(255,255,255,0.5);
+            margin: 0;
+        }
+
+        /* ── Visit Mesk CTA ── */
+        .mesk-cta {
+            background: linear-gradient(135deg, #0a0f00, #0a0a0a 60%);
+            padding: 100px 0;
+            border-top: 1px solid rgba(168, 255, 53, 0.1);
+            text-align: center;
+        }
+
+        .mesk-cta__title {
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            font-weight: 900;
+            color: #fff;
+            margin-bottom: 18px;
+        }
+
+        .mesk-cta__text {
+            font-size: 1.05rem;
+            color: rgba(255,255,255,0.55);
+            max-width: 500px;
+            margin: 0 auto 40px;
+            line-height: 1.7;
+        }
+
+        .btn-mesk-visit {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #AAF448;
+            color: #000;
+            font-weight: 800;
+            font-size: 1.05rem;
+            padding: 16px 40px;
+            border-radius: 0px 50px 50px 0px;
+            text-decoration: none;
+            transition: background 0.25s, transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 8px 32px rgba(168, 255, 53, 0.25);
+        }
+
+        .btn-mesk-visit:hover {
+            background: #c8ff6a;
+            color: #000;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(168, 255, 53, 0.35);
+        }
+
+        /* ── General dark page body ── */
+        body {
+            background: #000;
+            color: #fff;
+        }
+
+        /* Override footer for dark bg */
+        footer .downPart {
+            background: #000;
+        }
+
+        /* Divider */
+        .section-divider {
+            width: 48px;
+            height: 3px;
+            background: #A8FF35;
+            border-radius: 2px;
+            margin-bottom: 32px;
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 991px) {
+            .mesk-hero__visual { margin-top: 60px; }
+            .connection-card { padding: 36px 24px; }
+        }
+
+        @media (max-width: 576px) {
+            .mesk-emblem { width: 220px; height: 220px; }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ─── Navbar ─── -->
+    <header id="header">
+        <div class="navsbar">
+            <div class="navsbar__logo">
+                <a href="index.html" class="d-flex">
+                    <img src="./content/assets/images/icon/logo.svg" alt="Hagzz logo">
+                </a>
+            </div>
+            <ul class="navsbar__list">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./termsAndConditions.html">Terms and Conditions</a></li>
+                <li><a href="./privacy.html">Privacy Policy</a></li>
+                <li><a href="./contact.html">Contact Us</a></li>
+                <li><a href="./mesk.html" class="active">About Developer</a></li>
+            </ul>
+            <div class="navsbar__user">
+                <a href="https://partner.hagzz.com/en/partner/login" class="navsbar__user__login">Login</a>
+                <a href="https://form.jotform.com/MOSAUDI19/join-to-hagzz">
+                    <button class="navsbar__user__partner">Become a Partner</button>
+                </a>
+            </div>
+            <button class="navsbar__hamborg-tab navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <i class="fa-solid fa-bars fs-1"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navbar -->
+    <div class="offcanvas navsbar__mobile offcanvas-top" tabindex="-1" id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header ms-auto me-0 pb-0">
+            <button type="button" data-bs-dismiss="offcanvas" aria-label="Close">
+                <i class="fa-solid fa-xmark fs-1 text-white"></i>
+            </button>
+        </div>
+        <div class="offcanvas-body p-0">
+            <ul class="navsbar__mobile__list justify-content-end">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./termsAndConditions.html">Terms and Conditions</a></li>
+                <li><a href="./privacy.html">Privacy Policy</a></li>
+                <li><a href="./contact.html">Contact Us</a></li>
+                <li><a href="./mesk.html" class="active">About Developer</a></li>
+                <a href="https://partner.hagzz.com/en/partner/login" class="navsbar__user__login">Login</a>
+                <a href="https://form.jotform.com/MOSAUDI19/join-to-hagzz">
+                    <button class="navsbar__user__partner">Become a Partner</button>
+                </a>
+            </ul>
+        </div>
+    </div>
+
+    <main>
+
+        <!-- ─── HERO ─── -->
+        <section class="mesk-hero">
+            <div class="mesk-hero__bg"></div>
+            <div class="mesk-hero__flag-bar"></div>
+            <div class="container">
+                <div class="row align-items-center gy-5">
+
+                    <!-- Left: Text -->
+                    <div class="col-lg-6" data-aos="fade-right" data-aos-duration="800">
+                        <div class="mesk-hero__content">
+                            <div class="mesk-hero__badge">
+                                <span class="dot"></span>
+                                Qatari Tech Company
+                            </div>
+                            <h1 class="mesk-hero__title">
+                                Built with<br>
+                                passion by<br>
+                                <span>Mesk LLC</span>
+                            </h1>
+                            <p class="mesk-hero__subtitle">
+                                Hagzz is proudly developed by <strong style="color:#fff;">Mesk LLC</strong> —
+                                a forward-thinking Qatari technology company crafting digital experiences
+                                that connect people to the things they love.
+                            </p>
+                            <div class="mesk-hero__cta">
+                                <a href="https://www.mesk.qa" target="_blank" class="btn-mesk-primary">
+                                    Visit mesk.qa
+                                    <i class="fa-solid fa-arrow-up-right-from-square fa-sm"></i>
+                                </a>
+                                <a href="#about-mesk" class="btn-mesk-ghost">
+                                    Learn More
+                                    <i class="fa-solid fa-chevron-down fa-sm"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Emblem visual -->
+                    <div class="col-lg-6 d-flex justify-content-center" data-aos="fade-left" data-aos-duration="900" data-aos-delay="150">
+                        <div class="mesk-hero__visual">
+                            <div class="mesk-hero__orb"></div>
+                            <div class="mesk-emblem">
+                                <div class="mesk-ring"></div>
+                                <div class="mesk-emblem__inner">
+                                    <span class="mesk-emblem__flag">🇶🇦</span>
+                                    <span class="mesk-emblem__name">MESK</span>
+                                    <span class="mesk-emblem__sub">LLC · Qatar</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── STATS ─── -->
+        <section class="mesk-stats">
+            <div class="container">
+                <div class="row g-0 justify-content-center">
+                    <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="0">
+                        <div class="mesk-stats__item">
+                            <div class="mesk-stats__number">🇶🇦</div>
+                            <div class="mesk-stats__label">Qatar Founded</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="80">
+                        <div class="mesk-stats__item">
+                            <div class="mesk-stats__number">1</div>
+                            <div class="mesk-stats__label">Flagship App</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="160">
+                        <div class="mesk-stats__item">
+                            <div class="mesk-stats__number">∞</div>
+                            <div class="mesk-stats__label">Innovation Drive</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="240">
+                        <div class="mesk-stats__item">
+                            <div class="mesk-stats__number">100%</div>
+                            <div class="mesk-stats__label">Qatari Vision</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── ABOUT MESK ─── -->
+        <section class="mesk-about" id="about-mesk">
+            <div class="container">
+                <div class="row align-items-center gy-5">
+
+                    <!-- Left: copy -->
+                    <div class="col-lg-5" data-aos="fade-right" data-aos-duration="750">
+                        <div class="section-tag">Who We Are</div>
+                        <h2 class="section-title">
+                            A Qatari company<br>with a <span>global mindset</span>
+                        </h2>
+                        <div class="section-divider"></div>
+                        <p class="section-body">
+                            Mesk LLC is a technology company rooted in Qatar and driven by the ambition
+                            to build world-class digital products. We believe that sports, fitness, and an
+                            active lifestyle should be accessible to everyone — and technology is the
+                            bridge that makes it happen.
+                        </p>
+                        <p class="section-body mt-3">
+                            From ideation to launch, every product we build reflects our commitment to
+                            quality, simplicity, and user delight. Hagzz is our testament to that mission.
+                        </p>
+                        <a href="https://www.mesk.qa" target="_blank" class="btn-mesk-primary mt-4">
+                            Explore mesk.qa
+                            <i class="fa-solid fa-arrow-right fa-sm"></i>
+                        </a>
+                    </div>
+
+                    <!-- Right: feature cards -->
+                    <div class="col-lg-7">
+                        <div class="row g-4">
+                            <div class="col-sm-6" data-aos="fade-up" data-aos-delay="0">
+                                <div class="mesk-feature-card">
+                                    <div class="mesk-feature-card__icon">
+                                        <i class="fa-solid fa-flag"></i>
+                                    </div>
+                                    <div class="mesk-feature-card__title">Qatar-Headquartered</div>
+                                    <p class="mesk-feature-card__text">
+                                        Proudly based in the State of Qatar, aligned with the nation's
+                                        digital transformation vision and Qatar National Vision 2030.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6" data-aos="fade-up" data-aos-delay="80">
+                                <div class="mesk-feature-card">
+                                    <div class="mesk-feature-card__icon">
+                                        <i class="fa-solid fa-lightbulb"></i>
+                                    </div>
+                                    <div class="mesk-feature-card__title">Innovation First</div>
+                                    <p class="mesk-feature-card__text">
+                                        We approach every problem with a fresh perspective, leveraging
+                                        cutting-edge technology to create intuitive user experiences.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6" data-aos="fade-up" data-aos-delay="160">
+                                <div class="mesk-feature-card">
+                                    <div class="mesk-feature-card__icon">
+                                        <i class="fa-solid fa-mobile-screen-button"></i>
+                                    </div>
+                                    <div class="mesk-feature-card__title">Mobile-First Products</div>
+                                    <p class="mesk-feature-card__text">
+                                        Our products are designed for the modern mobile user — fast,
+                                        elegant, and built to work seamlessly across all devices.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6" data-aos="fade-up" data-aos-delay="240">
+                                <div class="mesk-feature-card">
+                                    <div class="mesk-feature-card__icon">
+                                        <i class="fa-solid fa-heart"></i>
+                                    </div>
+                                    <div class="mesk-feature-card__title">Community Driven</div>
+                                    <p class="mesk-feature-card__text">
+                                        We build for real people. Our solutions are shaped by community
+                                        feedback and a genuine desire to improve daily life.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── HAGZZ CONNECTION ─── -->
+        <section class="mesk-connection">
+            <div class="container">
+                <div class="text-center mb-64" data-aos="fade-up">
+                    <div class="section-tag" style="justify-content:center;">Our Flagship Product</div>
+                    <h2 class="section-title">
+                        Mesk <span>×</span> Hagzz
+                    </h2>
+                    <p class="section-body" style="max-width:520px; margin:0 auto;">
+                        Hagzz is the first — and flagship — application born from Mesk LLC's vision
+                        to modernise sports facility booking in the Arab world.
+                    </p>
+                </div>
+
+                <div class="connection-card mt-5" data-aos="fade-up" data-aos-delay="100">
+                    <div class="row align-items-center gy-4">
+
+                        <!-- Mesk -->
+                        <div class="col-md-4">
+                            <div class="app-brand-box">
+                                <div class="app-brand-box__logo" style="background: rgba(168,255,53,0.08); border-color: rgba(168,255,53,0.4);">
+                                    <span style="font-size:2.2rem; font-weight:900; color:#A8FF35; letter-spacing:0.05em;">M</span>
+                                </div>
+                                <div class="app-brand-box__name">Mesk LLC</div>
+                                <div class="app-brand-box__tag">🇶🇦 Qatar · Developer</div>
+                                <a href="https://www.mesk.qa" target="_blank"
+                                   style="font-size:0.82rem; color:#A8FF35; text-decoration:none; margin-top:4px;">
+                                    www.mesk.qa ↗
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Divider -->
+                        <div class="col-md-4 d-none d-md-flex justify-content-center">
+                            <div class="connection-divider">
+                                <div class="connection-divider__line"></div>
+                                <div class="connection-divider__icon">
+                                    <i class="fa-solid fa-code"></i>
+                                </div>
+                                <div class="connection-divider__line"></div>
+                                <span style="font-size:0.75rem; color:rgba(255,255,255,0.4); letter-spacing:0.1em; text-transform:uppercase;">Produced By</span>
+                                <div class="connection-divider__line"></div>
+                            </div>
+                        </div>
+                        <div class="col-12 d-md-none text-center py-2">
+                            <span style="color:#A8FF35; font-size:1.5rem;">↓</span>
+                            <div style="font-size:0.75rem; color:rgba(255,255,255,0.4); letter-spacing:0.12em; text-transform:uppercase; margin-top:4px;">Produced By</div>
+                        </div>
+
+                        <!-- Hagzz -->
+                        <div class="col-md-4">
+                            <div class="app-brand-box">
+                                <div class="app-brand-box__logo">
+                                    <img src="./content/assets/images/icon/logo.svg" alt="Hagzz Logo">
+                                </div>
+                                <div class="app-brand-box__name">Hagzz</div>
+                                <div class="app-brand-box__tag">Sports Booking App</div>
+                                <a href="./index.html"
+                                   style="font-size:0.82rem; color:#A8FF35; text-decoration:none; margin-top:4px;">
+                                    hagzz.el7lm.com ↗
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Download CTA -->
+                <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="200">
+                    <a href="https://play.google.com/store/apps/details?id=com.unlimitedhagzz.hagzz"
+                       target="_blank" class="btn-mesk-ghost" style="display:inline-flex; gap:10px; align-items:center; padding:14px 32px;">
+                        <i class="fa-brands fa-google-play"></i>
+                        Download Hagzz on Google Play
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── QATAR PRIDE ─── -->
+        <section class="mesk-qatar">
+            <div class="container">
+                <div class="row align-items-center gy-5">
+
+                    <div class="col-lg-5" data-aos="fade-right">
+                        <div class="section-tag">Rooted in Qatar</div>
+                        <h2 class="section-title">
+                            Where <span>heritage</span><br>meets technology
+                        </h2>
+                        <div class="section-divider"></div>
+                        <p class="section-body">
+                            Qatar has always been a land of ambition — a nation that turned a vision into
+                            one of the most remarkable stories of the 21st century. Mesk LLC embodies that
+                            same spirit: bold, driven, and unafraid to redefine what's possible.
+                        </p>
+                    </div>
+
+                    <div class="col-lg-7">
+                        <div class="row g-3">
+                            <div class="col-12" data-aos="fade-up" data-aos-delay="0">
+                                <div class="qatar-highlight">
+                                    <div class="qatar-highlight__icon">🏙️</div>
+                                    <div>
+                                        <div class="qatar-highlight__title">Qatar National Vision 2030</div>
+                                        <p class="qatar-highlight__text">
+                                            Aligned with QNV 2030, Mesk LLC contributes to building a
+                                            knowledge-based and diversified digital economy.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12" data-aos="fade-up" data-aos-delay="80">
+                                <div class="qatar-highlight">
+                                    <div class="qatar-highlight__icon">⚽</div>
+                                    <div>
+                                        <div class="qatar-highlight__title">Sports Culture at Heart</div>
+                                        <p class="qatar-highlight__text">
+                                            From hosting the FIFA World Cup to fostering grassroots sports,
+                                            Qatar breathes sports — and so does Hagzz.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12" data-aos="fade-up" data-aos-delay="160">
+                                <div class="qatar-highlight">
+                                    <div class="qatar-highlight__icon">🌍</div>
+                                    <div>
+                                        <div class="qatar-highlight__title">Arab-World Reach</div>
+                                        <p class="qatar-highlight__text">
+                                            Built for the Arab region with a global-quality standard,
+                                            Mesk products speak to millions across the Middle East.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── VISIT MESK CTA ─── -->
+        <section class="mesk-cta">
+            <div class="container" data-aos="fade-up">
+                <div class="section-tag" style="justify-content:center; margin-bottom:20px;">Discover More</div>
+                <h2 class="mesk-cta__title">
+                    Curious about<br>
+                    <span style="color:#A8FF35;">Mesk LLC?</span>
+                </h2>
+                <p class="mesk-cta__text">
+                    Explore our official website to learn about our company, our vision,
+                    and what we're building next.
+                </p>
+                <a href="https://www.mesk.qa" target="_blank" class="btn-mesk-visit">
+                    <i class="fa-solid fa-globe"></i>
+                    Visit www.mesk.qa
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ─── Footer ─── -->
+    <footer>
+        <div class="downPart">
+            <div class="links">
+                <div class="links__page">
+                    <a href="./privacy.html">Privacy Policy</a>
+                    <a href="./termsAndConditions.html">Terms and Conditions</a>
+                    <a href="./contact.html">Contact Us</a>
+                    <a href="./mesk.html">About Developer</a>
+                </div>
+                <div class="links__social">
+                    <a href="https://www.facebook.com/hagzzapp/" target="_blank">
+                        <img src="./content/assets/images/icon/facebook.svg" alt="Hagzz Facebook">
+                        <img src="./content/assets/images/icon/facebook2.svg" alt="Hagzz Facebook">
+                    </a>
+                    <a href="https://www.instagram.com/hagzzapp/" target="_blank">
+                        <img src="./content/assets/images/icon/instagram.svg" alt="Hagzz Instagram">
+                        <img src="./content/assets/images/icon/instagram2.svg" alt="Hagzz Instagram">
+                    </a>
+                    <a href="https://wa.me/201026558999" target="_blank">
+                        <img src="./content/assets/images/icon/whatsapp.svg" alt="Hagzz WhatsApp">
+                        <img src="./content/assets/images/icon/whatsapp2.svg" alt="Hagzz WhatsApp">
+                    </a>
+                    <a href="https://www.linkedin.com/company/hagzz/" target="_blank">
+                        <img src="./content/assets/images/footer/linkedIn.svg" alt="Hagzz LinkedIn">
+                        <img src="./content/assets/images/icon/linkedIn2.svg" alt="Hagzz LinkedIn">
+                    </a>
+                </div>
+            </div>
+            <div class="copyRights">
+                <p>&copy; All rights reserved to Hagzz 2025</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <span class="loader"></span>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"
+        integrity="sha512-X/YkDZyjTf4wyc2Vy16YGCPHwAY8rZJY+POgokZjQB2mhIRFJCckEGc6YyX9eNsPfn0PzThEuNs+uaomE5CO6A=="
+        crossorigin="anonymous"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- General JS -->
+    <script src="./content/js/general.js"></script>
+</html>
