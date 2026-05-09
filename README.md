@@ -16,5 +16,7 @@ Official landing page for the **Hagzz** sports booking mobile application.
 - `404.html` — Custom 404 page
 
 ## 📬 Contact
+- Email: hagzz@mesk.qa
+- Email: info@el7lm.com
 - Email: contacthagzz@gmail.com
 - WhatsApp: +20 102 655 8999
