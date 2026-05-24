@@ -1,4 +1,4 @@
-runtime: python39
+runtime: python312
 
 handlers:
   - url: /content
@@ -15,7 +15,7 @@ handlers:
     upload: .+\.pdf
     secure: always
 
-  - url: /(.+\.txt|.+\.xml)
+  - url: /(.+\.(txt|xml))
     static_files: \1
     upload: .+\.(txt|xml)
     secure: always
