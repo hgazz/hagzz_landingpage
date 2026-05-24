@@ -1,0 +1,26 @@
+runtime: python39
+
+handlers:
+  - url: /content
+    static_dir: content
+    secure: always
+
+  - url: /(.+\.html)
+    static_files: \1
+    upload: .+\.html
+    secure: always
+
+  - url: /(.+\.pdf)
+    static_files: \1
+    upload: .+\.pdf
+    secure: always
+
+  - url: /(.+\.txt|.+\.xml)
+    static_files: \1
+    upload: .+\.(txt|xml)
+    secure: always
+
+  - url: /
+    static_files: index.html
+    upload: index.html
+    secure: always
