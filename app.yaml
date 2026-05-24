@@ -1,23 +1,10 @@
 runtime: python312
 
 handlers:
-  - url: /content
-    static_dir: content
-    secure: always
-
-  - url: /(.+\.html)
+  - url: /(.*)
     static_files: \1
-    upload: .+\.html
-    secure: always
-
-  - url: /(.+\.pdf)
-    static_files: \1
-    upload: .+\.pdf
-    secure: always
-
-  - url: /(.+\.(txt|xml))
-    static_files: \1
-    upload: .+\.(txt|xml)
+    upload: .*
+    default_expiration: "1d"
     secure: always
 
   - url: /
