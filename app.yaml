@@ -4,7 +4,6 @@ handlers:
   - url: /(.*)
     static_files: \1
     upload: .*
-    default_expiration: "1d"
     secure: always
 
   - url: /
