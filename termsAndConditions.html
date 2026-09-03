@@ -27,6 +27,10 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Global main css file for ltr  -->
     <link rel="stylesheet" href="./content/css/main-ltr.css">
+    <!-- Google Fonts: Cairo & Tajawal (Unified Arabic Typography) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -38,17 +42,19 @@
                     <img src="./content/assets/images/icon/logo.svg" alt="Unlimited logo"> </a>
             </div>
             <ul class="navsbar__list">
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./termsAndConditions.html" class="active">Terms and Conditions</a></li>
-                <li><a href="./privacy.html">Privacy Policy</a></li>
-                <li><a href="./contact.html">Contact Us</a></li>
-                <li><a href="./mesk.html">About Developer</a></li>
+                <li><a href="./index.html" data-en="Home" data-ar="الرئيسية">Home</a></li>
+                <li><a href="./pricing.html" data-en="ERP Packages" data-ar="باقات ERP">ERP Packages</a></li>
+                <li><a href="./termsAndConditions.html" class="active" data-en="Terms and Conditions" data-ar="الشروط والأحكام">Terms and Conditions</a></li>
+                <li><a href="./privacy.html" data-en="Privacy Policy" data-ar="سياسة الخصوصية">Privacy Policy</a></li>
+                <li><a href="./contact.html" data-en="Contact Us" data-ar="اتصل بنا">Contact Us</a></li>
+                <li><a href="./mesk.html" data-en="About Developer" data-ar="عن المطور">About Developer</a></li>
             </ul>
             <div class="navsbar__user">
-                <a href="https://partner.hagzz.com/en/partner/login" class="navsbar__user__login">Login</a>
-                <a href="https://form.jotform.com/MOSAUDI19/join-to-hagzz">
-                    <button class="navsbar__user__partner">Become a Partner</button>
-                </a>
+                <a href="https://partner.hagzz.el7lm.com/partner/login" class="navsbar__user__login" data-en="Login" data-ar="تسجيل الدخول">Login</a>
+                <button id="lang-toggle" class="lang-toggle-btn" aria-label="Switch language">
+                    <i class="fa-solid fa-globe"></i> <span>English</span>
+                </button>
+                <a href="https://wa.me/97470542458?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%D9%83%20%D9%81%D9%8A%20%D9%86%D8%B8%D8%A7%D9%85%20Hagzz%20ERP" target="_blank" class="navsbar__user__partner" data-en="Start Free Trial" data-ar="ابدأ تجربتك المجانية">ابدأ تجربتك المجانية</a>
             </div>
             <button class="navsbar__hamborg-tab navbar-toggler" type="button" data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
@@ -65,19 +71,24 @@
             <button type="button" data-bs-dismiss="offcanvas" aria-label="Close">
                 <i class="fa-solid fa-xmark fs-1 text-white"></i>
             </button>
-
         </div>
         <div class="offcanvas-body p-0">
-            <ul class="navsbar__mobile__list justify-content-end ">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="./termsAndConditions.html" class="active">Terms and Conditions</a></li>
-                <li><a href="./privacy.html">Privacy Policy</a></li>
-                <li><a href="./contact.html">Contact Us</a></li>
-                <li><a href="./mesk.html">About Developer</a></li>
-                <a href="https://partner.hagzz.com/en/partner/login" class="navsbar__user__login">Login</a>
-                <a href="https://form.jotform.com/MOSAUDI19/join-to-hagzz">
-                    <button class="navsbar__user__partner">Become a Partner</button>
-                </a>
+            <ul class="navsbar__mobile__list justify-content-end text-center">
+                <li><a href="./index.html" data-en="Home" data-ar="الرئيسية">Home</a></li>
+                <li><a href="./pricing.html" data-en="ERP Packages" data-ar="باقات ERP">ERP Packages</a></li>
+                <li><a href="./termsAndConditions.html" class="active" data-en="Terms and Conditions" data-ar="الشروط والأحكام">Terms and Conditions</a></li>
+                <li><a href="./privacy.html" data-en="Privacy Policy" data-ar="سياسة الخصوصية">Privacy Policy</a></li>
+                <li><a href="./contact.html" data-en="Contact Us" data-ar="اتصل بنا">Contact Us</a></li>
+                <li><a href="./mesk.html" data-en="About Developer" data-ar="عن المطور">About Developer</a></li>
+                <li class="py-2">
+                    <button id="lang-toggle-mobile" class="lang-toggle-btn" style="margin:0 auto;" aria-label="Switch language">
+                        <i class="fa-solid fa-globe"></i> <span>English</span>
+                    </button>
+                </li>
+                <li><a href="https://partner.hagzz.el7lm.com/partner/login" class="navsbar__user__login" data-en="Login" data-ar="تسجيل الدخول">Login</a></li>
+                <li class="pt-2">
+                    <a href="https://wa.me/97470542458?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%D9%83%20%D9%81%D9%8A%20%D9%86%D8%B8%D8%A7%D9%85%20Hagzz%20ERP" target="_blank" class="navsbar__user__partner" data-en="Start Free Trial" data-ar="ابدأ تجربتك المجانية">ابدأ تجربتك المجانية</a>
+                </li>
             </ul>
         </div>
     </div>
@@ -89,7 +100,7 @@
             <div class="home__content">
                 <div class="home__content__header">
                     <div class="pageTitle">
-                        <p>Terms and Conditions</p>
+                        <p data-en="Terms and Conditions" data-ar="الشروط والأحكام">Terms and Conditions</p>
                     </div>
                 </div>
             </div>
@@ -98,67 +109,67 @@
             <div class="termsAndServices__part">
                 <div class="termsAndServices__part__first">
                     <div class="termsAndServices__part__first__item">
-                        <div class="globalBtn">1. Booking Regulation</div>
-                        <p>By booking a training session or activity through Hagzz, you agree to provide accurate
+                        <div class="globalBtn" data-en="1. Booking Regulation" data-ar="١. تنظيم الحجز">1. Booking Regulation</div>
+                        <p data-en="By booking a training session or activity through Hagzz, you agree to provide accurate personal information and payment details." data-ar="بحجزك لجلسة تدريبية أو نشاط عبر Hagzz، فإنك توافق على تقديم معلومات شخصية وتفاصيل دفع دقيقة.">By booking a training session or activity through Hagzz, you agree to provide accurate
                             personal information and payment details.</p>
                     </div>
                     <div class="termsAndServices__part__first__item">
-                        <div class="globalBtn">2. Payment</div>
-                        <p>When booking any service, you authorize Hagzz to process your payment through our designated
+                        <div class="globalBtn" data-en="2. Payment" data-ar="٢. الدفع">2. Payment</div>
+                        <p data-en="When booking any service, you authorize Hagzz to process your payment through our designated payment gateway. The full amount of the booking fee, inclusive of any applicable taxes and fees, will be processed via the payment gateway." data-ar="عند حجز أي خدمة، فإنك تفوّض Hagzz بمعالجة عملية الدفع عبر بوابة الدفع المعتمدة لدينا. سيتم تحصيل المبلغ الإجمالي لرسوم الحجز شاملاً أي ضرائب ورسوم مطبقة عبر بوابة الدفع.">When booking any service, you authorize Hagzz to process your payment through our designated
                             payment gateway. The full amount of the booking fee, inclusive of any applicable taxes and
                             fees, will be processed via the payment gateway.</p>
                     </div>
                     <div class="termsAndServices__part__first__item">
-                        <div class="globalBtn">3. Cancellation and Refund</div>
- <p>Cancellation by user: Booking can be cancelled and refunded in full if cancellation takes place 72 hours prior to schedule. Any cancellation thereafter
+                        <div class="globalBtn" data-en="3. Cancellation and Refund" data-ar="٣. الإلغاء والاسترداد">3. Cancellation and Refund</div>
+                        <p data-en="Cancellation by user: Booking can be cancelled and refunded in full if cancellation takes place 72 hours prior to schedule. Any cancellation thereafter may not be eligible for a refund. Cancellation by service provider: If the service provider cancels the booking, the user is entitled to a full refund." data-ar="الإلغاء من قبل المستخدم: يمكن إلغاء الحجز واسترداد المبلغ بالكامل إذا تم الإلغاء قبل 72 ساعة من الموعد المحدد. أي إلغاء بعد ذلك قد لا يكون مؤهلاً للاسترداد. الإلغاء من قبل مزود الخدمة: إذا قام مزود الخدمة بإلغاء الحجز، يحق للمستخدم استرداد كامل المبلغ.">Cancellation by user: Booking can be cancelled and refunded in full if cancellation takes place 72 hours prior to schedule. Any cancellation thereafter
 He may not be eligible for a refund. Cancellation by service provider: If the service provider cancels the booking or is important to be able to provide the service as agreed, the user is entitled to a full refund.
 Refund</p>                       
-<p>Kindly note that the cancellation and refund policy for each activity is determined by the
+                        <p data-en="Kindly note that the cancellation and refund policy for each activity is determined by the service provider. Therefore, we recommend all users to review the policy before confirming the booking." data-ar="يرجى ملاحظة أن سياسة الإلغاء والاسترداد لكل نشاط يحددها مزود الخدمة. لذلك، ننصح جميع المستخدمين بمراجعة السياسة قبل تأكيد الحجز.">Kindly note that the cancellation and refund policy for each activity is determined by the
                             service provider. Therefore, we recommend all users to review the policy before confirming
                             the booking.</p>
                     </div>
                     <div class="termsAndServices__part__first__item">
-                        <div class="globalBtn">4. Liability</div>
-                        <p>By participating in a sport or activity booked through Hagzz, you acknowledge and assume any
+                        <div class="globalBtn" data-en="4. Liability" data-ar="٤. حدود المسؤولية">4. Liability</div>
+                        <p data-en="By participating in a sport or activity booked through Hagzz, you acknowledge and assume any associated risks. You agree to release Hagzz, its affiliates, and employees from any liability for injury, loss, or damage that may occur during the activity." data-ar="بالمشاركة في رياضة أو نشاط تم حجزه عبر Hagzz، فإنك تقر وتتحمل أي مخاطر مرتبطة به. وتوافق على إبراء ذمة Hagzz والشركات التابعة لها وموظفيها من أي مسؤولية عن أي إصابة أو خسارة أو ضرر قد يحدث أثناء النشاط.">By participating in a sport or activity booked through Hagzz, you acknowledge and assume any
                             associated risks. You agree to release Hagzz, its affiliates, and employees from any
                             liability for injury, loss, or damage that may occur during the activity.</p>
                     </div>
                     <div class="termsAndServices__part__first__item">
-                        <div class="globalBtn">5. Health and Safety Requirements</div>
-                        <p>Certain sports and activities may have health, age restrictions, or prerequisites. It is your
+                        <div class="globalBtn" data-en="5. Health and Safety Requirements" data-ar="٥. متطلبات الصحة والسلامة">5. Health and Safety Requirements</div>
+                        <p data-en="Certain sports and activities may have health, age restrictions, or prerequisites. It is your responsibility to ensure compliance with these requirements before participating in any activity." data-ar="قد تنطبق على بعض الرياضات والأنشطة قيود صحية أو قيود عمرية أو متطلبات مسبقة. تقع على عاتقك مسؤولية التأكد من الامتثال لهذه المتطلبات قبل المشاركة في أي نشاط.">Certain sports and activities may have health, age restrictions, or prerequisites. It is your
                             responsibility to ensure compliance with these requirements before participating in any
                             activity.</p>
                     </div>
                     <div class="termsAndServices__part__first__item">
-                        <div class="globalBtn">6. Intellectual Property</div>
-                        <p>All content on Hagzz mobile application, including logos, trademarks, and copyrighted
+                        <div class="globalBtn" data-en="6. Intellectual Property" data-ar="٦. الملكية الفكرية">6. Intellectual Property</div>
+                        <p data-en="All content on Hagzz mobile application, including logos, trademarks, and copyrighted material, is the property of Hagzz or its affiliates. Unauthorized use of any content is strictly prohibited without prior permission." data-ar="جميع المحتويات على تطبيق وموقع Hagzz، بما في ذلك الشعارات والعلامات التجارية والمواد المحمية بحقوق الطبع والنشر، هي ملك لـ Hagzz أو الشركات التابعة لها. ويُحظر تماماً أي استخدام غير مصرح به دون إذن مسبق.">All content on Hagzz mobile application, including logos, trademarks, and copyrighted
                             material, is the property of Hagzz or its affiliates. Unauthorized use of any content is
                             strictly prohibited without prior permission.</p>
                     </div>
                     <div class="termsAndServices__part__first__item">
-                        <div class="globalBtn">7. Privacy Policy</div>
-                        <p>Your use of Hagzz mobile application is subject to our privacy policy, which details how we
+                        <div class="globalBtn" data-en="7. Privacy Policy" data-ar="٧. سياسة الخصوصية">7. Privacy Policy</div>
+                        <p data-en="Your use of Hagzz mobile application is subject to our privacy policy, which details how we collect, use, and safeguard your personal information." data-ar="يخضع استخدامك لتطبيق وموقع Hagzz لسياسة الخصوصية الخاصة بنا، والتي توضح بالتفصيل كيفية جمع معلوماتك الشخصية واستخدامها وحمايتها.">Your use of Hagzz mobile application is subject to our privacy policy, which details how we
                             collect, use, and safeguard your personal information.</p>
                     </div>
                     <div class="termsAndServices__part__first__item">
-                        <div class="globalBtn">8. Governing Law</div>
-                        <p>These termsAndServices and conditions are governed by the laws of the country where Hagzz is
+                        <div class="globalBtn" data-en="8. Governing Law" data-ar="٨. القانون الحاكم">8. Governing Law</div>
+                        <p data-en="These terms and conditions are governed by the laws of the country where Hagzz is headquartered." data-ar="تخضع هذه الشروط والأحكام وتُفسّر وفقاً لقوانين دولة قطر والدول التي تقدم Hagzz خدماتها فيها.">These termsAndServices and conditions are governed by the laws of the country where Hagzz is
                             headquartered.</p>
                     </div>
                     <div class="termsAndServices__part__first__item">
-                        <div class="globalBtn">9. Refund and Exchange</div>
-                        <p>
+                        <div class="globalBtn" data-en="9. Refund and Exchange" data-ar="٩. الاسترداد والاستبدال">9. Refund and Exchange</div>
+                        <p data-en="Refund requests are processed using the original payment method. Refunds may take time to appear in your account, depending on your bank's policies. Exceptional Cases: In cases of service failure or user dissatisfaction, refund requests may be considered at our discretion." data-ar="تتم معالجة طلبات الاسترداد باستخدام وسيلة الدفع الأصلية نفسها. قد يستغرق ظهور المبالغ المستردة بعض الوقت وفقاً لسياسات البنك الخاص بك. حالات استثنائية: في حالات تعذر تقديم الخدمة، قد يتم النظر في طلبات الاسترداد وفقاً لتقديرنا.">
                            Refund requests are processed using the original payment method. Refunds may take time to appear in your account, depending on your bank's policies.
                            Exceptional Cases: In cases of service failure or user dissatisfaction, refund requests may be considered at our discretion.
                         </p>
                     </div>
                 </div>
-                <div class="termsAndServices__part__hint">
+                <div class="termsAndServices__part__hint" data-en="These terms and conditions are subject to revisions at any time without prior notice. We advise you to review them carefully before making a booking." data-ar="تخضع هذه الشروط والأحكام للتحديث والمراجعة في أي وقت دون إشعار مسبق. ننصحك بمراجعتها بعناية قبل تأكيد أي حجز.">
                     These terms and conditions are subject to revisions at any time without prior notice. We advise you
                     to review them carefully before making a booking.
                 </div>
             </div>
-            <a href="terms.pdf" class="btn btn-dark downloadHaggz__btns mx-auto" download target="_blank">Download Terms File</a>
+            <a href="terms.pdf" class="btn btn-dark downloadHaggz__btns mx-auto" download target="_blank" data-en="Download Terms File" data-ar="تحميل ملف الشروط والأحكام (PDF)">Download Terms File</a>
             <div class="downloadHaggz">
                 <div class="large-screen">
                     <svg width="598" height="64" viewBox="0 0 598 64" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -327,9 +338,10 @@ Refund</p>
         <div class="downPart">
             <div class="links">
                 <div class="links__page">
-                    <a href="./privacy.html">Privacy Policy</a>
-                    <a href="./termsAndConditions.html">Terms and Conditions</a>
-                    <a href="./contact.html">Contact Us</a>
+                    <a href="./pricing.html" data-en="ERP Packages" data-ar="باقات ERP">ERP Packages</a>
+                    <a href="./privacy.html" data-en="Privacy Policy" data-ar="سياسة الخصوصية">Privacy Policy</a>
+                    <a href="./termsAndConditions.html" data-en="Terms and Conditions" data-ar="الشروط والأحكام">Terms and Conditions</a>
+                    <a href="./contact.html" data-en="Contact Us" data-ar="اتصل بنا">Contact Us</a>
                 </div>
                 <div class="links__social">
                     <a href="https://www.facebook.com/hagzzapp/">
@@ -337,15 +349,15 @@ Refund</p>
                         <img src="./content/assets/images/icon/facebook2.svg" alt="">
                     </a>
                     <a href="https://www.instagram.com/hagzzapp/" target="_blank"><img src="./content/assets/images/icon/instagram.svg" alt="Hagzz Instagram"><img
-                            src="./content/assets/images/icon/instagram2.svg" alt="Hagzz Instagram"></a>
-                    <a href="https://wa.me/01026558999" target="_blank"><img src="./content/assets/images/icon/whatsapp.svg" alt=""><img
+                             src="./content/assets/images/icon/instagram2.svg" alt="Hagzz Instagram"></a>
+                    <a href="https://wa.me/97470542458" target="_blank"><img src="./content/assets/images/icon/whatsapp.svg" alt=""><img
                             src="./content/assets/images/icon/whatsapp2.svg" alt=""></a>
                     <a href="https://www.linkedin.com/company/hagzz/"><img src="./content/assets/images/footer/linkedIn.svg" alt=""><img
                             src="./content/assets/images/icon/linkedIn2.svg" alt=""></a>
                 </div>
             </div>
             <div class="copyRights">
-                <p>&copy; All rights reserved to Hagzz 2025</p>
+                <p data-en="&copy; All rights reserved to Hagzz 2025" data-ar="&copy; جميع الحقوق محفوظة لـ Hagzz 2025">&copy; All rights reserved to Hagzz 2025</p>
             </div>
         </div>
     </footer>
@@ -375,6 +387,7 @@ Refund</p>
     integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="./content/js/general.js"></script>
+<script src="./content/js/lang.js"></script>
 <script src="https://chat.unlimited-software.com/packs/js/sdk.js" defer="" async=""></script>
 <script>
     (function(d,t) {

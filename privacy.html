@@ -1,341 +1,376 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Privacy Policy | Hagzz</title>
-  <meta name="description" content="Privacy Policy for Hagzz mobile application and website.">
-  <link rel="icon" href="./content/assets/images/icon/tab-logo.svg">
-  <style>
-    :root {
-      color-scheme: light;
-      --bg: #f7f8fb;
-      --card: #ffffff;
-      --text: #1f2937;
-      --muted: #5f6b7a;
-      --accent: #126c75;
-      --border: #dde3ea;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Privacy Policy and Integrated ERP Terms for Hagzz platform and mobile applications.">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Privacy Policy & ERP Terms – Hagzz">
+    <meta property="og:description" content="Privacy Policy & Integrated ERP System Terms for Hagzz platform.">
+    <link rel="icon" href="./content/assets/images/icon/tab-logo.svg">
+    <title>Privacy Policy | سياسة الخصوصية ونظام ERP – Hagzz</title>
 
-    * {
-      box-sizing: border-box;
-    }
+    <!-- Global bootstrap CDN V5.3.2 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+        integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg=="
+        crossorigin="anonymous" />
+    <!-- Font Awesome CDN V6.5.1 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Global main css file -->
+    <link rel="stylesheet" href="./content/css/main-ltr.css">
 
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--text);
-      font-family: Arial, "Tahoma", sans-serif;
-      line-height: 1.7;
-    }
+    <style>
+        .policy-container {
+            max-width: 1000px;
+            margin: -40px auto 70px;
+            padding: 0 20px;
+            position: relative;
+            z-index: 10;
+        }
 
-    header {
-      background: var(--card);
-      border-bottom: 1px solid var(--border);
-    }
+        .policy-card {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 45px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.06);
+            border: 1px solid #e2e8f0;
+            line-height: 1.85;
+        }
 
-    .wrap {
-      width: min(1080px, calc(100% - 32px));
-      margin: 0 auto;
-    }
+        .policy-meta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(168, 255, 53, 0.15);
+            color: #0f172a;
+            padding: 7px 18px;
+            border-radius: 50px;
+            font-size: 13.5px;
+            font-weight: 700;
+            margin-bottom: 25px;
+        }
 
-    .topbar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      padding: 18px 0;
-    }
+        .policy-section-title {
+            color: #0f172a;
+            font-size: 20px;
+            font-weight: 800;
+            margin-top: 36px;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      color: var(--text);
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 20px;
-    }
+        .policy-section-title .section-num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            background: #0f172a;
+            color: #A8FF35;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 900;
+            flex-shrink: 0;
+        }
 
-    .brand img {
-      width: 38px;
-      height: 38px;
-      object-fit: contain;
-    }
+        .policy-card p, .policy-card li {
+            color: #475569;
+            font-size: 15.5px;
+        }
 
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      font-size: 14px;
-    }
+        .policy-card ul {
+            padding-right: 25px;
+            padding-left: 25px;
+            margin-bottom: 20px;
+        }
 
-    nav a {
-      color: var(--muted);
-      text-decoration: none;
-    }
+        .policy-card li {
+            margin-bottom: 10px;
+        }
 
-    nav a:hover {
-      color: var(--accent);
-    }
+        .erp-highlight-box {
+            background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+            border: 1.5px solid #86efac;
+            border-radius: 16px;
+            padding: 24px;
+            margin: 25px 0;
+        }
 
-    main {
-      padding: 36px 0 56px;
-    }
+        .erp-highlight-box h4 {
+            color: #166534;
+            font-size: 17px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
 
-    .policy {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 32px;
-      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
-    }
+        .contact-box-policy {
+            background: #f8fafc;
+            border: 1.5px solid #e2e8f0;
+            border-radius: 18px;
+            padding: 26px;
+            margin-top: 35px;
+        }
 
-    h1 {
-      margin: 0 0 8px;
-      font-size: clamp(30px, 5vw, 46px);
-      line-height: 1.15;
-    }
+        .contact-box-policy a {
+            color: #0284c7;
+            font-weight: 700;
+            text-decoration: none;
+        }
 
-    h2 {
-      margin: 32px 0 10px;
-      font-size: 22px;
-      color: var(--accent);
-    }
+        .contact-box-policy a:hover {
+            text-decoration: underline;
+        }
 
-    h3 {
-      margin: 24px 0 8px;
-      font-size: 18px;
-    }
-
-    p, li {
-      color: var(--muted);
-    }
-
-    ul {
-      padding-left: 22px;
-    }
-
-    .meta {
-      margin: 0 0 24px;
-      color: var(--muted);
-    }
-
-    .arabic {
-      direction: rtl;
-      text-align: right;
-      font-family: "Tahoma", Arial, sans-serif;
-      border-top: 1px solid var(--border);
-      margin-top: 36px;
-      padding-top: 30px;
-    }
-
-    a {
-      color: var(--accent);
-    }
-
-    footer {
-      color: var(--muted);
-      font-size: 14px;
-      padding: 24px 0 40px;
-      text-align: center;
-    }
-
-    @media (max-width: 640px) {
-      .topbar {
-        align-items: flex-start;
-        flex-direction: column;
-      }
-
-      .policy {
-        padding: 22px;
-      }
-    }
-  </style>
+        /* Language visibility switch */
+        html[lang="en"] .lang-ar-content { display: none !important; }
+        html[lang="ar"] .lang-en-content { display: none !important; }
+    </style>
+    <!-- Google Fonts: Cairo & Tajawal (Unified Arabic Typography) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <header>
-    <div class="wrap topbar">
-      <a class="brand" href="./index.html">
-        <img src="./content/assets/images/icon/tab-logo.svg" alt="Hagzz logo">
-        <span>Hagzz</span>
-      </a>
-      <nav aria-label="Main navigation">
-        <a href="./index.html">Home</a>
-        <a href="./termsAndConditions.html">Terms and Conditions</a>
-        <a href="./privacy.html">Privacy Policy</a>
-        <a href="https://partner.hagzz.el7lm.com/en/partner/login">Partner Login</a>
-      </nav>
+
+    <!-- ── Official Unified Header ── -->
+    <header id="header">
+        <div class="navsbar">
+            <div class="navsbar__logo">
+                <a href="./index.html" class="d-flex align-items-center">
+                    <img src="./content/assets/images/icon/logo.svg" alt="Hagzz logo">
+                </a>
+            </div>
+            <ul class="navsbar__list">
+                <li><a href="./index.html" data-en="Home" data-ar="الرئيسية">الرئيسية</a></li>
+                <li><a href="./pricing.html" data-en="ERP Packages" data-ar="باقات ERP">باقات ERP</a></li>
+                <li><a href="./termsAndConditions.html" data-en="Terms and Conditions" data-ar="الشروط والأحكام">الشروط والأحكام</a></li>
+                <li><a href="./privacy.html" class="active" data-en="Privacy Policy" data-ar="سياسة الخصوصية">سياسة الخصوصية</a></li>
+                <li><a href="./contact.html" data-en="Contact Us" data-ar="اتصل بنا">اتصل بنا</a></li>
+                <li><a href="./mesk.html" data-en="About Developer" data-ar="عن المطور">عن المطور</a></li>
+            </ul>
+            <div class="navsbar__user">
+                <a href="https://partner.hagzz.el7lm.com/partner/login" class="navsbar__user__login" data-en="Login" data-ar="تسجيل الدخول">تسجيل الدخول</a>
+                <button id="lang-toggle" class="lang-toggle-btn" aria-label="Switch language">
+                    <i class="fa-solid fa-globe"></i> <span>English</span>
+                </button>
+                <a href="https://wa.me/97470542458?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%D9%83%20%D9%81%D9%8A%20%D9%86%D8%B8%D8%A7%D9%85%20Hagzz%20ERP" target="_blank" class="navsbar__user__partner" data-en="Start Free Trial" data-ar="ابدأ تجربتك المجانية">ابدأ تجربتك المجانية</a>
+            </div>
+            <button class="navsbar__hamborg-tab navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Offcanvas Menu -->
+    <div class="offcanvas navsbar__mobile offcanvas-top" tabindex="-1" id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header me-auto ms-0 pb-0">
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body p-0">
+            <ul class="navsbar__mobile__list justify-content-end text-center">
+                <li><a href="./index.html" data-en="Home" data-ar="الرئيسية">الرئيسية</a></li>
+                <li><a href="./pricing.html" data-en="ERP Packages" data-ar="باقات ERP">باقات ERP</a></li>
+                <li><a href="./termsAndConditions.html" data-en="Terms and Conditions" data-ar="الشروط والأحكام">الشروط والأحكام</a></li>
+                <li><a href="./privacy.html" class="active" data-en="Privacy Policy" data-ar="سياسة الخصوصية">سياسة الخصوصية</a></li>
+                <li><a href="./contact.html" data-en="Contact Us" data-ar="اتصل بنا">اتصل بنا</a></li>
+                <li><a href="./mesk.html" data-en="About Developer" data-ar="عن المطور">عن المطور</a></li>
+                <li class="py-2">
+                    <button id="lang-toggle-mobile" class="lang-toggle-btn" style="margin:0 auto;" aria-label="Switch language">
+                        <i class="fa-solid fa-globe"></i> <span>English</span>
+                    </button>
+                </li>
+                <li><a href="https://partner.hagzz.el7lm.com/partner/login" class="navsbar__user__login" data-en="Login" data-ar="تسجيل الدخول">تسجيل الدخول</a></li>
+                <li class="pt-2">
+                    <a href="https://wa.me/97470542458?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%D9%83%20%D9%81%D9%8A%20%D9%86%D8%B8%D8%A7%D9%85%20Hagzz%20ERP" target="_blank" class="navsbar__user__partner" data-en="Start Free Trial" data-ar="ابدأ تجربتك المجانية">ابدأ تجربتك المجانية</a>
+                </li>
+            </ul>
+        </div>
     </div>
-  </header>
 
-  <main>
-    <article class="wrap policy">
-      <h1>Privacy Policy</h1>
-      <p class="meta">Effective date: May 16, 2026</p>
+    <!-- ── Page Banner Header ── -->
+    <main>
+        <div class="home">
+            <div class="home__content">
+                <div class="home__content__header">
+                    <div class="pageTitle">
+                        <p data-en="Privacy & ERP System Policy" data-ar="سياسة الخصوصية ونظام الإدارة المتكاملة ERP">سياسة الخصوصية ونظام الإدارة المتكاملة ERP</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-      <p>
-        This Privacy Policy explains how Hagzz, including the Hagzz mobile application
-        with package name <strong>com.unlimitedhagzz.hagzz</strong>, the Hagzz website,
-        and related partner services, collects, uses, shares, and protects user data.
-      </p>
+        <div class="policy-container">
+            <article class="policy-card">
+                
+                <!-- ── Arabic Content ── -->
+                <div class="lang-ar-content">
+                    <div class="policy-meta">
+                        <i class="fa-regular fa-calendar-check text-success"></i>
+                        <span>تاريخ التحديث والسريان: سبتمبر 2026</span>
+                    </div>
 
-      <h2>1. Information We Collect</h2>
-      <p>Depending on how you use Hagzz, we may collect the following information:</p>
-      <ul>
-        <li>Account information such as name, phone number, email address, password, language, country, city, and area.</li>
-        <li>Profile and booking information such as selected sports, favorite academies, training sessions, reservations, invoices, and cancellation requests.</li>
-        <li>Partner or academy information such as commercial name, contact details, addresses, sports, training programs, coaches, and uploaded images.</li>
-        <li>Payment-related information needed to process, confirm, refund, or support bookings. Card payments may be processed by third-party payment providers; Hagzz does not intentionally store full card numbers.</li>
-        <li>Device and technical information such as device type, app version, operating system, IP address, logs, crash data, and notification tokens.</li>
-        <li>Location-related information when you choose or allow location-based features, such as showing nearby academies or training locations.</li>
-        <li>Images or files you upload, such as academy logos, banners, coach images, or documents needed for partner operations.</li>
-      </ul>
+                    <p class="lead fw-bold text-dark">
+                        توضّح هذه السياسة الشاملة التزامات الخصوصية وحماية البيانات وشروط تشغيل <strong>نظام الإدارة المتكاملة للأندية والأكاديميات الرياضية (Hagzz ERP)</strong> وتطبيق حجز الملاعب والأنشطة، التابع لشركة <strong>Mesk LLC</strong> (دولة قطر).
+                    </p>
 
-      <h2>2. How We Use Information</h2>
-      <p>We use information to:</p>
-      <ul>
-        <li>Create and manage user, academy, partner, and admin accounts.</li>
-        <li>Display academies, sports, training sessions, banners, and booking options.</li>
-        <li>Process reservations, invoices, cancellations, refunds, and settlement operations.</li>
-        <li>Send service messages, booking updates, security notices, and push notifications.</li>
-        <li>Improve app performance, fix bugs, prevent fraud, and protect the safety of users and partners.</li>
-        <li>Provide customer support and respond to user requests.</li>
-        <li>Comply with legal, accounting, tax, and regulatory obligations.</li>
-      </ul>
+                    <!-- ERP Subscriptions Policy Box -->
+                    <div class="erp-highlight-box">
+                        <h4><i class="fa-solid fa-shield-halved"></i> سياسة باقات واشتراكات نظام الإدارة المتكاملة (ERP)</h4>
+                        <p class="mb-2"><strong>1. تفعيل الباقات:</strong> يتم تفعيل باقة الاشتراك المختارة (الانطلاقة، التوسع، النمو، أو المؤسسات) فور تأكيد الطلب، مع تمتع المنشأة بفترة تجريبية مجانية كاملة (أول شهر مجاناً) دون أي التزام مسبق.</p>
+                        <p class="mb-2"><strong>2. الفوترة والرسوم:</strong> يتم احتساب الرسوم وفقاً لدورة الفوترة المختارة (شهرياً أو سنوياً مع خصم شهرين مجاناً). تشمل الرسوم كافة التحديثات السحابية وتطبيقات الموبايل والدعم الفني.</p>
+                        <p class="mb-0"><strong>3. الشفافية:</strong> لا توجد أي رسوم خفية أو مصاريف صيانة إضافية غير المعلنة في الباقات الرسمية.</p>
+                    </div>
 
-      <h2>3. Sharing Information</h2>
-      <p>We may share limited data only when needed for operating Hagzz, including with:</p>
-      <ul>
-        <li>Academies, coaches, and partners involved in your bookings.</li>
-        <li>Payment processors and financial service providers for payments, refunds, invoices, and settlements.</li>
-        <li>Hosting, cloud storage, analytics, crash reporting, notification, email, and security providers.</li>
-        <li>Government, law enforcement, or regulatory authorities when required by law or to protect rights and safety.</li>
-      </ul>
-      <p>We do not sell personal information.</p>
+                    <h2 class="policy-section-title"><span class="section-num">1</span> سياسة الإلغاء، الاسترداد وإنهاء الاشتراك</h2>
+                    <ul>
+                        <li><strong>إلغاء الاشتراك:</strong> يحق للأكاديمية أو النادي إلغاء الاشتراك في أي وقت عبر لوحة التحكم السحابية أو بإشعار فريق الدعم قبل موعد تجديد الفاتورة التالية بـ 48 ساعة على الأقل.</li>
+                        <li><strong>الاسترداد والتسوية:</strong> في الاشتراكات السنوية، يتم احتساب المبالغ المستردة عن الأشهر المتبقية غير المستخدمة بعد تسوية الفترات الفعلية وفق شروط الخدمة.</li>
+                        <li><strong>الاحتفاظ بالوصول:</strong> يظل حساب الأكاديمية ونظامها متاحاً حتى نهاية دورة الفوترة المدفوعة.</li>
+                    </ul>
 
-      <h2>4. Third-Party Services</h2>
-      <p>
-        Hagzz may use third-party services such as cloud hosting, storage, analytics,
-        crash reporting, notifications, maps, and payment providers. These providers
-        may process data according to their own privacy policies and only as necessary
-        to provide their services.
-      </p>
+                    <h2 class="policy-section-title"><span class="section-num">2</span> إدارة بيانات المشتركين واللاعبين والمدربين</h2>
+                    <p>يعمل نظام Hagzz ERP كمنصة لمعالجة وحفظ بيانات المنشأة الرياضية بموجب أعلى معايير الخصوصية:</p>
+                    <ul>
+                        <li><strong>بيانات اللاعبين والمنتسبين:</strong> الأسماء، الفئات العمرية، الحصص والجداول التدريبية، التقييمات الفنية، وسجلات الحضور والغياب.</li>
+                        <li><strong>البيانات المالية:</strong> سندات القبض، الفواتير الإلكترونية، والاشتراكات الشهرية دون تخزين أرقام البطاقات البنكية الحساسة.</li>
+                        <li><strong>بيانات الكادر الفني والإداري:</strong> بيانات المدربين، الرواتب، وجداول الحصص الموكلة إليهم وفق الصلاحيات المحددة.</li>
+                    </ul>
 
-      <h2>5. Data Retention</h2>
-      <p>
-        We keep personal information for as long as needed to provide Hagzz services,
-        maintain booking records, comply with legal obligations, resolve disputes,
-        and enforce agreements. When information is no longer needed, we delete it
-        or anonymize it where reasonably possible.
-      </p>
+                    <h2 class="policy-section-title"><span class="section-num">3</span> أمان البيانات والنسخ الاحتياطي السحابي (Data Security)</h2>
+                    <ul>
+                        <li><strong>التشفير التام:</strong> يتم تشفير جميع البيانات أثناء النقل (SSL/TLS 256-bit) وأثناء التخزين على الخوادم السحابية المؤمنة.</li>
+                        <li><strong>النسخ الاحتياطي اليومي:</strong> يتم أخذ نسخ احتياطية تلقائية يومية لضمان استمرارية العمل ومنع أي فقدان للبيانات.</li>
+                        <li><strong>السرية التامة:</strong> تلتزم شركة مسك ومنصة Hagzz بعدم بيع أو مشاركة أو استغلال بيانات الأكاديمية أو منتسبيها لأي أغراض تجارية أو إعلانية مع أي طرف ثالث.</li>
+                    </ul>
 
-      <h2>6. Security</h2>
-      <p>
-        We use reasonable technical and organizational measures to protect personal
-        information. However, no online service can guarantee absolute security.
-        Users should keep account credentials confidential and contact us if they
-        suspect unauthorized access.
-      </p>
+                    <h2 class="policy-section-title"><span class="section-num">4</span> حقوق تصدير البيانات والحذف النهائي</h2>
+                    <ul>
+                        <li><strong>تصدير البيانات:</strong> يحق لإدارة الأكاديمية في أي وقت تصدير كافة بيانات اللاعبين والتقارير المالية والتشغيلية بصيغ قياسية (Excel / CSV / PDF).</li>
+                        <li><strong>الحذف النهائي:</strong> عند طلب إنهاء الحساب نهائياً، يتم مسح كافة السجلات وقواعد البيانات الخاصة بالمنشأة نهائياً من الخوادم بعد انتهاء المهلة القانونية للاحتفاظ المحاسبي.</li>
+                    </ul>
 
-      <h2>7. User Choices and Rights</h2>
-      <p>
-        You may request access, correction, deletion, or restriction of your personal
-        information, subject to legal and operational requirements. You may also manage
-        notification permissions from your device settings. To submit a direct account and data deletion request, please visit our <a href="./data-deletion.html">Account & Data Deletion Page</a> or contact us using the details below.
-      </p>
+                    <div class="contact-box-policy">
+                        <h5 class="fw-bold text-dark mb-3"><i class="fa-solid fa-headset text-success me-2"></i> قنوات التواصل الرسمية لإدارة الخصوصية والاشتراكات</h5>
+                        <p class="mb-2"><strong>الهاتف والواتساب الموحد:</strong> <a href="https://wa.me/97470542458" target="_blank">+974 7054 2458</a> (دولة قطر)</p>
+                        <p class="mb-2"><strong>البريد الإلكتروني:</strong> <a href="mailto:info@el7lm.com">info@el7lm.com</a> | <a href="mailto:hagzz@mesk.qa">hagzz@mesk.qa</a></p>
+                        <p class="mb-2"><strong>المواقع الرسمية:</strong> <a href="https://hagzz.el7lm.com" target="_blank">hagzz.el7lm.com</a> | <a href="https://mesk.el7lm.com" target="_blank">mesk.el7lm.com</a> | <a href="https://www.el7lm.com" target="_blank">www.el7lm.com</a></p>
+                        <p class="mb-0"><strong>الجهة المطورة والمالكة:</strong> شركة مسك ذ.م.م — دولة قطر (Mesk LLC)</p>
+                    </div>
+                </div>
 
-      <h2>8. Children</h2>
-      <p>
-        Hagzz is not intended for children under the minimum age required by applicable
-        law. If we learn that we collected data from a child without proper consent, we
-        will take reasonable steps to delete it.
-      </p>
+                <!-- ── English Content ── -->
+                <div class="lang-en-content">
+                    <div class="policy-meta">
+                        <i class="fa-regular fa-calendar-check text-success"></i>
+                        <span>Last Updated & Effective Date: September 2026</span>
+                    </div>
 
-      <h2>9. International Processing</h2>
-      <p>
-        Your information may be processed or stored in countries other than your own.
-        When this happens, we use reasonable safeguards consistent with this Privacy Policy.
-      </p>
+                    <p class="lead fw-bold text-dark">
+                        This comprehensive policy governs data protection, privacy, and operating terms for the <strong>Hagzz Integrated Sports Academy & Club ERP Management System</strong> and booking platform, operated by <strong>Mesk LLC</strong> (State of Qatar).
+                    </p>
 
-      <h2>10. Changes to This Policy</h2>
-      <p>
-        We may update this Privacy Policy from time to time. The latest version will be
-        available at this page, and the effective date will show when it was last updated.
-      </p>
+                    <!-- ERP Subscriptions Policy Box -->
+                    <div class="erp-highlight-box">
+                        <h4><i class="fa-solid fa-shield-halved"></i> Integrated ERP Subscription & Billing Policy</h4>
+                        <p class="mb-2"><strong>1. Plan Activation:</strong> Subscribed plans (Launch, Expansion, Growth, or Enterprise) are activated immediately upon request, including a full 1-month free trial with no prior commitment.</p>
+                        <p class="mb-2"><strong>2. Billing Cycles:</strong> Plans are billed on monthly or annual cycles (with 2 months free discount for annual commitments), covering all cloud updates, 3 mobile apps, and 24/7 support.</p>
+                        <p class="mb-0"><strong>3. Full Transparency:</strong> No hidden setup fees or surprise maintenance costs beyond the published tier pricing.</p>
+                    </div>
 
-      <h2>11. Contact Us</h2>
-      <p>
-        For privacy questions or requests, contact us at:
-        <br>Email: <a href="mailto:info@el7lm.com">info@el7lm.com</a>
-        <br>Email: <a href="mailto:hagzz@mesk.qa">hagzz@mesk.qa</a>
-        <br>Website: <a href="https://hagzz.el7lm.com">https://hagzz.el7lm.com</a>
-      </p>
+                    <h2 class="policy-section-title"><span class="section-num">1</span> Cancellation, Refunds & Account Termination</h2>
+                    <ul>
+                        <li><strong>Cancellation:</strong> Academies may cancel subscriptions at any time through the dashboard or by notifying support at least 48 hours before the next billing cycle.</li>
+                        <li><strong>Refunds & Settlements:</strong> For annual plans, unused full remaining months are eligible for pro-rated refund settlements according to service terms.</li>
+                        <li><strong>Access Continuity:</strong> Full access remains active until the end of the paid billing period.</li>
+                    </ul>
 
-      <section class="arabic" lang="ar">
-        <h2>سياسة الخصوصية</h2>
-        <p class="meta">تاريخ السريان: 16 مايو 2026</p>
+                    <h2 class="policy-section-title"><span class="section-num">2</span> Academy, Player & Staff Data Governance</h2>
+                    <p>Hagzz ERP processes and safeguards sports facility records under rigorous data governance protocols:</p>
+                    <ul>
+                        <li><strong>Player & Member Records:</strong> Member profiles, attendance, training schedules, and performance evaluations.</li>
+                        <li><strong>Financial Records:</strong> Invoices, payment receipts, and membership plans (processed without storing sensitive credit card details).</li>
+                        <li><strong>Coaching & Staff Data:</strong> Coach profiles, assigned squads, and role-based permissions.</li>
+                    </ul>
 
-        <p>
-          توضّح سياسة الخصوصية هذه كيفية جمع واستخدام ومشاركة وحماية البيانات في تطبيق
-          وموقع Hagzz، بما في ذلك تطبيق الهاتف الذي يحمل اسم الحزمة
-          <strong>com.unlimitedhagzz.hagzz</strong> وخدمات الشركاء المرتبطة به.
-        </p>
+                    <h2 class="policy-section-title"><span class="section-num">3</span> Cloud Security & Daily Automated Backups</h2>
+                    <ul>
+                        <li><strong>End-to-End Encryption:</strong> All data is encrypted in transit (TLS 256-bit) and at rest on secure cloud servers.</li>
+                        <li><strong>Daily Automated Backups:</strong> System records are backed up daily to prevent data loss and ensure uninterrupted continuity.</li>
+                        <li><strong>Strict Confidentiality:</strong> Mesk LLC and Hagzz never sell, rent, or monetize academy data with third-party advertisers.</li>
+                    </ul>
 
-        <h3>1. البيانات التي نجمعها</h3>
-        <ul>
-          <li>بيانات الحساب مثل الاسم ورقم الهاتف والبريد الإلكتروني وكلمة المرور واللغة والدولة والمدينة والمنطقة.</li>
-          <li>بيانات الملف الشخصي والحجوزات مثل الرياضات المختارة والأكاديميات المفضلة والحصص والفواتير وطلبات الإلغاء.</li>
-          <li>بيانات الأكاديميات والشركاء مثل الاسم التجاري وبيانات التواصل والعناوين والرياضات والبرامج التدريبية والمدربين والصور المرفوعة.</li>
-          <li>بيانات الدفع اللازمة لمعالجة الحجوزات أو تأكيدها أو رد المبالغ أو دعم الفواتير. لا نقوم بتخزين أرقام البطاقات البنكية الكاملة بشكل مقصود.</li>
-          <li>بيانات الجهاز والتقنية مثل نوع الجهاز وإصدار التطبيق ونظام التشغيل وعنوان IP وسجلات الأعطال ورموز الإشعارات.</li>
-          <li>بيانات الموقع عند استخدام ميزات تعتمد على الموقع مثل عرض الأكاديميات أو أماكن التدريب القريبة.</li>
-        </ul>
+                    <h2 class="policy-section-title"><span class="section-num">4</span> Data Export & Permanent Deletion Rights</h2>
+                    <ul>
+                        <li><strong>Data Export:</strong> Academy administrators can export their member databases, attendance logs, and financial records in standard formats (Excel, CSV, PDF) at any time.</li>
+                        <li><strong>Permanent Deletion:</strong> Upon contract termination, all facility data is permanently purged from active databases after required regulatory retention windows.</li>
+                    </ul>
 
-        <h3>2. كيفية استخدام البيانات</h3>
-        <ul>
-          <li>إنشاء وإدارة حسابات المستخدمين والأكاديميات والشركاء والإدارة.</li>
-          <li>عرض الأكاديميات والرياضات والحصص التدريبية والبنرات وخيارات الحجز.</li>
-          <li>معالجة الحجوزات والفواتير والإلغاءات والمبالغ المستردة والتسويات.</li>
-          <li>إرسال رسائل الخدمة وتحديثات الحجز وتنبيهات الأمان والإشعارات.</li>
-          <li>تحسين أداء التطبيق وإصلاح الأخطاء ومنع الاحتيال وحماية المستخدمين والشركاء.</li>
-          <li>تقديم الدعم والرد على الطلبات والالتزام بالمتطلبات القانونية والمحاسبية والتنظيمية.</li>
-        </ul>
+                    <div class="contact-box-policy">
+                        <h5 class="fw-bold text-dark mb-3"><i class="fa-solid fa-headset text-success me-2"></i> Official Contacts for ERP & Privacy Inquiries</h5>
+                        <p class="mb-2"><strong>Official Phone & WhatsApp:</strong> <a href="https://wa.me/97470542458" target="_blank">+974 7054 2458</a> (State of Qatar)</p>
+                        <p class="mb-2"><strong>Central Email:</strong> <a href="mailto:info@el7lm.com">info@el7lm.com</a> | <a href="mailto:hagzz@mesk.qa">hagzz@mesk.qa</a></p>
+                        <p class="mb-2"><strong>Official Portals:</strong> <a href="https://hagzz.el7lm.com" target="_blank">hagzz.el7lm.com</a> | <a href="https://mesk.el7lm.com" target="_blank">mesk.el7lm.com</a> | <a href="https://www.el7lm.com" target="_blank">www.el7lm.com</a></p>
+                        <p class="mb-0"><strong>Developed & Owned by:</strong> Mesk LLC — State of Qatar</p>
+                    </div>
+                </div>
 
-        <h3>3. مشاركة البيانات</h3>
-        <p>
-          قد نشارك بيانات محدودة عند الحاجة لتشغيل الخدمة، مثل مشاركتها مع الأكاديميات
-          أو المدربين أو مزودي الدفع أو خدمات الاستضافة والتخزين والتحليلات والإشعارات
-          والأمان، أو مع الجهات الرسمية عندما يكون ذلك مطلوبا قانونيا.
-        </p>
-        <p>لا نبيع البيانات الشخصية.</p>
+            </article>
+        </div>
+    </main>
 
-        <h3>4. الاحتفاظ بالبيانات والأمان</h3>
-        <p>
-          نحتفظ بالبيانات طالما كان ذلك ضروريا لتقديم الخدمة والاحتفاظ بسجلات الحجوزات
-          والامتثال للالتزامات القانونية وحل النزاعات. ونستخدم إجراءات حماية معقولة،
-          مع العلم أنه لا توجد خدمة إلكترونية يمكنها ضمان الأمان المطلق.
-        </p>
+    <!-- ── Official Unified Footer ── -->
+    <footer>
+        <div class="downPart">
+            <div class="links">
+                <div class="links__page">
+                    <a href="./pricing.html" data-en="ERP Packages" data-ar="باقات ERP">باقات ERP</a>
+                    <a href="./privacy.html" data-en="Privacy Policy" data-ar="سياسة الخصوصية">سياسة الخصوصية</a>
+                    <a href="./termsAndConditions.html" data-en="Terms and Conditions" data-ar="الشروط والأحكام">الشروط والأحكام</a>
+                    <a href="./contact.html" data-en="Contact Us" data-ar="اتصل بنا">اتصل بنا</a>
+                    <a href="./mesk.html" data-en="About Developer" data-ar="عن المطور">عن المطور</a>
+                </div>
+                <div class="links__social">
+                    <a href="https://www.facebook.com/hagzzapp/" target="_blank">
+                        <img src="./content/assets/images/icon/facebook.svg" alt="Facebook">
+                        <img src="./content/assets/images/icon/facebook2.svg" alt="Facebook">
+                    </a>
+                    <a href="https://www.instagram.com/hagzzapp/" target="_blank">
+                        <img src="./content/assets/images/icon/instagram.svg" alt="Instagram">
+                        <img src="./content/assets/images/icon/instagram2.svg" alt="Instagram">
+                    </a>
+                    <a href="https://wa.me/97470542458" target="_blank">
+                        <img src="./content/assets/images/icon/whatsapp.svg" alt="WhatsApp">
+                        <img src="./content/assets/images/icon/whatsapp2.svg" alt="WhatsApp">
+                    </a>
+                    <a href="https://www.linkedin.com/company/hagzz/" target="_blank">
+                        <img src="./content/assets/images/footer/linkedIn.svg" alt="LinkedIn">
+                        <img src="./content/assets/images/icon/linkedIn2.svg" alt="LinkedIn">
+                    </a>
+                </div>
+            </div>
+            <div class="copyRights">
+                <p data-en="&copy; All rights reserved to Hagzz platform — A product of Mesk LLC 2025" data-ar="&copy; جميع الحقوق محفوظة لمنصة Hagzz — إحدى منتجات شركة Mesk LLC 2025">&copy; جميع الحقوق محفوظة لمنصة Hagzz — إحدى منتجات شركة Mesk LLC 2025</p>
+            </div>
+        </div>
+    </footer>
 
-        <h3>5. حقوق المستخدم</h3>
-        <p>
-          يمكنك طلب الوصول إلى بياناتك أو تصحيحها أو حذفها أو تقييد استخدامها، وفقا
-          للمتطلبات القانونية والتشغيلية. ويمكنك كذلك إدارة أذونات الإشعارات من إعدادات جهازك.
-        </p>
-
-        <h3>6. التواصل معنا</h3>
-        <p>
-          لأي استفسار أو طلب متعلق بالخصوصية:
-          <br>البريد الإلكتروني: <a href="mailto:info@el7lm.com">info@el7lm.com</a>
-          <br>البريد الإلكتروني: <a href="mailto:hagzz@mesk.qa">hagzz@mesk.qa</a>
-          <br>الموقع: <a href="https://hagzz.el7lm.com">https://hagzz.el7lm.com</a>
-        </p>
-      </section>
-    </article>
-  </main>
-
-  <footer>
-    <div class="wrap">Copyright &copy; 2026 Hagzz. All rights reserved.</div>
-  </footer>
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"
+        integrity="sha512-X/YkDZyjTf4wyc2Vy16YGCPHwAY8rZJY+POgokZjQB2mhIRFJCckEGc6YyX9eNsPfn0PzThEuNs+uaomE5CO6A=="
+        crossorigin="anonymous"></script>
+    <script src="./content/js/general.js"></script>
+    <script src="./content/js/lang.js"></script>
 </body>
+
 </html>

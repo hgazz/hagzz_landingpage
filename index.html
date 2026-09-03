@@ -40,6 +40,10 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Global main css file for ltr  -->
     <link rel="stylesheet" href="./content/css/main-ltr.css">
+    <!-- Google Fonts: Cairo & Tajawal (Unified Arabic Typography) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -48,20 +52,23 @@
         <div class="navsbar">
             <div class="navsbar__logo">
                 <a href="index.html" class="d-flex">
-                    <img src="./content/assets/images/icon/logo.svg" alt="Unlimited logo"> </a>
+                    <img src="./content/assets/images/icon/logo.svg" alt="Hagzz logo">
+                </a>
             </div>
             <ul class="navsbar__list">
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="./termsAndConditions.html">Terms and Conditions</a></li>
-                <li><a href="./privacy.html">Privacy Policy</a></li>
-                <li><a href="./contact.html">Contact Us</a></li>
-                <li><a href="./mesk.html">About Developer</a></li>
+                <li><a href="#" class="active" data-en="Home" data-ar="الرئيسية">Home</a></li>
+                <li><a href="./pricing.html" data-en="ERP Packages" data-ar="باقات ERP">ERP Packages</a></li>
+                <li><a href="./termsAndConditions.html" data-en="Terms and Conditions" data-ar="الشروط والأحكام">Terms and Conditions</a></li>
+                <li><a href="./privacy.html" data-en="Privacy Policy" data-ar="سياسة الخصوصية">Privacy Policy</a></li>
+                <li><a href="./contact.html" data-en="Contact Us" data-ar="اتصل بنا">Contact Us</a></li>
+                <li><a href="./mesk.html" data-en="About Developer" data-ar="عن المطور">About Developer</a></li>
             </ul>
             <div class="navsbar__user">
-                <a href="https://partner.hagzz.com/en/partner/login" class="navsbar__user__login">Login</a>
-                <a href="https://form.jotform.com/MOSAUDI19/join-to-hagzz">
-                    <button class="navsbar__user__partner">Become a Partner</button>
-                </a>
+                <a href="https://partner.hagzz.el7lm.com/partner/login" class="navsbar__user__login" data-en="Login" data-ar="تسجيل الدخول">Login</a>
+                <button id="lang-toggle" class="lang-toggle-btn" aria-label="Switch language">
+                    <i class="fa-solid fa-globe"></i> <span>English</span>
+                </button>
+                <a href="https://wa.me/97470542458?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%D9%83%20%D9%81%D9%8A%20%D9%86%D8%B8%D8%A7%D9%85%20Hagzz%20ERP" target="_blank" class="navsbar__user__partner" data-en="Start Free Trial" data-ar="ابدأ تجربتك المجانية">ابدأ تجربتك المجانية</a>
             </div>
             <button class="navsbar__hamborg-tab navbar-toggler" type="button" data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
@@ -78,19 +85,24 @@
             <button type="button" data-bs-dismiss="offcanvas" aria-label="Close">
                 <i class="fa-solid fa-xmark fs-1 text-white"></i>
             </button>
-
         </div>
         <div class="offcanvas-body p-0">
-            <ul class="navsbar__mobile__list justify-content-end ">
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="./termsAndConditions.html">Terms and Conditions</a></li>
-                <li><a href="./privacy.html">Privacy Policy</a></li>
-                <li><a href="./contact.html">Contact Us</a></li>
-                <li><a href="./mesk.html">About Developer</a></li>
-                <a href="https://partner.hagzz.com/en/partner/login" class="navsbar__user__login">Login</a>
-                <a href="https://form.jotform.com/MOSAUDI19/join-to-hagzz">
-                    <button class="navsbar__user__partner">Become a Partner</button>
-                </a>
+            <ul class="navsbar__mobile__list justify-content-end text-center">
+                <li><a href="#" class="active" data-en="Home" data-ar="الرئيسية">Home</a></li>
+                <li><a href="./pricing.html" data-en="ERP Packages" data-ar="باقات ERP">ERP Packages</a></li>
+                <li><a href="./termsAndConditions.html" data-en="Terms and Conditions" data-ar="الشروط والأحكام">Terms and Conditions</a></li>
+                <li><a href="./privacy.html" data-en="Privacy Policy" data-ar="سياسة الخصوصية">Privacy Policy</a></li>
+                <li><a href="./contact.html" data-en="Contact Us" data-ar="اتصل بنا">Contact Us</a></li>
+                <li><a href="./mesk.html" data-en="About Developer" data-ar="عن المطور">About Developer</a></li>
+                <li class="py-2">
+                    <button id="lang-toggle-mobile" class="lang-toggle-btn" style="margin:0 auto;" aria-label="Switch language">
+                        <i class="fa-solid fa-globe"></i> <span>English</span>
+                    </button>
+                </li>
+                <li><a href="https://partner.hagzz.el7lm.com/partner/login" class="navsbar__user__login" data-en="Login" data-ar="تسجيل الدخول">Login</a></li>
+                <li class="pt-2">
+                    <a href="https://wa.me/97470542458?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%D9%83%20%D9%81%D9%8A%20%D9%86%D8%B8%D8%A7%D9%85%20Hagzz%20ERP" target="_blank" class="navsbar__user__partner" data-en="Start Free Trial" data-ar="ابدأ تجربتك المجانية">ابدأ تجربتك المجانية</a>
+                </li>
             </ul>
         </div>
     </div>
@@ -102,11 +114,11 @@
             <div class="home__content">
                 <div class="home__content__header">
                     <div class="home__content__header__title">
-                        <p>Join training sessions,</p>
-                        <p>tailored for you <img src="./content/assets/images/icon/emoji.png" alt=""></p>
+                        <p data-en="Join training sessions," data-ar="انضم إلى جلسات تدريبية">Join training sessions,</p>
+                        <p data-en="tailored for you" data-ar="مصمّمة خصيصاً لك">tailored for you <img src="./content/assets/images/icon/emoji.png" alt=""></p>
                     </div>
                     <div class="home__content__header__desc">
-                        <p>Step into the realm of boundless sports excitement tailored just for you! We cater to
+                        <p data-en="Step into the realm of boundless sports excitement tailored just for you! We cater to everyone, whether you're taking your first steps or aiming for the pro leagues." data-ar="ادخل عالم الرياضة بلا حدود، مصمّم خصيصاً لك! نخدم الجميع، سواء كنت تخطو خطواتك الأولى أو تسعى للاحترافية.">Step into the realm of boundless sports excitement tailored just for you! We cater to
                             everyone, whether you're taking your first steps or aiming for the pro leagues.</p>
                     </div>
                 </div>
@@ -253,7 +265,7 @@
                         </svg>
                     </a>
                     <div class="home__content__btns__getnow">
-                        <p class="getItNow">Get it now🔥</p>
+                        <p class="getItNow" data-en="Get it now🔥" data-ar="احصل عليه الآن🔥">Get it now🔥</p>
                         <img src="./content/assets/images/icon/arrow.svg" alt="">
                     </div>
                 </div>
@@ -292,7 +304,7 @@
                 <img src="./content/assets/images/home/click away responsive.png" alt="">
             </div>
             <div class="clickAway__desc">
-                <p>Discover the perfect training program to take your game to the next level. Navigate through hundreds
+                <p data-en="Discover the perfect training program to take your game to the next level. Navigate through hundreds of sports activities curated just for you and book the one that matches your interests and skill level." data-ar="اكتشف برنامج التدريب المثالي للارتقاء بمهاراتك الرياضية إلى المستوى التالي. تصفح مئات الأنشطة الرياضية المصممة خصيصاً لك واحجز ما يناسب اهتماماتك ومستواك.">Discover the perfect training program to take your game to the next level. Navigate through hundreds
                     of sports activities curated just for you and book the one that matches your interests and skill
                     level.</p>
             </div>
@@ -683,9 +695,10 @@
         <div class="downPart">
             <div class="links">
                 <div class="links__page">
-                    <a href="./privacy.html">Privacy Policy</a>
-                    <a href="./termsAndConditions.html">Terms and Conditions</a>
-                    <a href="./contact.html">Contact Us</a>
+                    <a href="./pricing.html" data-en="ERP Packages" data-ar="باقات ERP">ERP Packages</a>
+                    <a href="./privacy.html" data-en="Privacy Policy" data-ar="سياسة الخصوصية">Privacy Policy</a>
+                    <a href="./termsAndConditions.html" data-en="Terms and Conditions" data-ar="الشروط والأحكام">Terms and Conditions</a>
+                    <a href="./contact.html" data-en="Contact Us" data-ar="اتصل بنا">Contact Us</a>
                 </div>
                 <div class="links__social">
                     <a href="https://www.facebook.com/hagzzapp/">
@@ -694,7 +707,7 @@
                     </a>
                     <a href="https://www.instagram.com/hagzzapp/" target="_blank"><img src="./content/assets/images/icon/instagram.svg" alt="Hagzz Instagram"><img
                             src="./content/assets/images/icon/instagram2.svg" alt="Hagzz Instagram"></a>
-                    <a href="https://wa.me/201026558999" target="_blank"><img
+                    <a href="https://wa.me/97470542458" target="_blank"><img
                             src="./content/assets/images/icon/whatsapp.svg" alt="Hagzz WhatsApp"><img
                             src="./content/assets/images/icon/whatsapp2.svg" alt="Hagzz WhatsApp"></a>
                     <a href="https://www.linkedin.com/company/hagzz/" target="_blank"><img
@@ -703,7 +716,7 @@
                 </div>
             </div>
             <div class="copyRights">
-                <p>&copy; All rights reserved to Hagzz 2025</p>
+                <p data-en="&copy; All rights reserved to Hagzz 2025" data-ar="&copy; جميع الحقوق محفوظة لـ Hagzz 2025">&copy; All rights reserved to Hagzz 2025</p>
             </div>
         </div>
     </footer>
@@ -741,6 +754,7 @@
     </script>
 <script src="./content/js/splide.js"></script>
 <script src="./content/js/general.js"></script>
+<script src="./content/js/lang.js"></script>
 <script src="https://chat.unlimited-software.com/packs/js/sdk.js" defer="" async=""></script>
 <script>
     (function (d, t) {

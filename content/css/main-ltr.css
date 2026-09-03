@@ -4,6 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 body {
   direction: ltr;
+  background-color: #000000;
   font-family: "Effra VF Trial", sans-serif; }
 
 /* mixin for responsive it takes 
@@ -78,7 +79,10 @@ button {
 
 /* customize pages with main section*/
 main {
-  margin-top: 100px; }
+  margin-top: 72px; }
+@media (max-width: 991px) {
+  main {
+    margin-top: 60px; } }
 
 #preloader {
   position: fixed;
@@ -188,31 +192,32 @@ html {
   top: 0;
   transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
   #header .navsbar {
-    padding: 25px 99px;
+    padding: 0 60px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 100px;
-    background-color: black; }
+    height: 72px;
+    background-color: black;
+    gap: 16px; }
     @media (max-width: 991px) {
       #header .navsbar {
-        padding: 24px 18px; } }
+        padding: 0 18px;
+        height: 60px; } }
     #header .navsbar__logo {
       display: flex;
       align-items: center;
-      gap: 20px;
-      overflow: hidden;
-      width: 260px; }
+      flex-shrink: 0; }
       #header .navsbar__logo img {
-        width: 114px;
-        height: 37px; }
+        width: 110px;
+        height: auto; }
     #header .navsbar__list {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 35px;
+      gap: 24px;
       margin-bottom: 0;
-      flex: 1 0 0; }
+      flex: 1 1 auto;
+      padding: 0; }
       @media (max-width: 991px) {
         #header .navsbar__list {
           display: none; } }
@@ -249,8 +254,8 @@ html {
     #header .navsbar__user {
       display: flex;
       align-items: center;
-      gap: 35px;
-      width: 260px; }
+      gap: 14px;
+      flex-shrink: 0; }
       #header .navsbar__user__login {
         color: white;
         text-align: center;
@@ -258,33 +263,41 @@ html {
         font-size: 16px;
         font-style: normal;
         font-weight: 400; }
-      #header .navsbar__user__partner {
-        padding: 10.667px 28.444px;
-        border-radius: 35.556px;
-        background: #FFF;
-        color: #000;
-        text-align: center;
-        font-family: "Effra VF Trial", sans-serif;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        position: relative;
-        transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
-        #header .navsbar__user__partner:hover {
-          background-color: #A8FF35;
-          box-shadow: 0 0 5px rgba(255, 255, 255, 0.3); }
-        #header .navsbar__user__partner::after {
-          content: "";
-          display: block;
-          position: absolute;
-          border-radius: 4em;
-          left: 0;
-          top: 0;
-          width: 100%;
-          height: 100%;
-          opacity: 0;
-          transition: all 0.5s;
-          box-shadow: 0 0 1px 5px white; }
+      #header .navsbar__user__partner,
+      .navsbar__user__partner {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        height: 42px !important;
+        padding: 0 24px !important;
+        border-radius: 50px !important;
+        background: #A8FF35 !important;
+        color: #000000 !important;
+        text-align: center !important;
+        font-family: inherit !important;
+        font-size: 14.5px !important;
+        font-weight: 800 !important;
+        white-space: nowrap !important;
+        text-decoration: none !important;
+        line-height: 1 !important;
+        flex-shrink: 0 !important;
+        border: none !important;
+        cursor: pointer !important;
+        box-shadow: 0 4px 15px rgba(168, 255, 53, 0.3) !important;
+        transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+      }
+      #header .navsbar__user__partner:hover,
+      .navsbar__user__partner:hover {
+        background: #c8ff6a !important;
+        color: #000000 !important;
+        transform: translateY(-2px) !important;
+        box-shadow: 0 6px 20px rgba(168, 255, 53, 0.5) !important;
+      }
+      .navsbar__user__partner-link {
+        display: inline-flex !important;
+        text-decoration: none !important;
+        flex-shrink: 0 !important;
+      }
         #header .navsbar__user__partner:active::after {
           box-shadow: 0 0 0 0 white;
           position: absolute;
@@ -351,80 +364,49 @@ html {
       font-weight: 400; }
 
 footer {
-  padding: 64px 99px;
+  padding: 48px 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 57px; }
+  gap: 40px; }
   @media (max-width: 991px) {
     footer {
-      padding: 40px 66px; } }
+      padding: 36px 24px; } }
   footer .downPart {
     width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: space-between; }
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 32px; }
     @media (max-width: 991px) {
       footer .downPart {
         flex-direction: column;
-        gap: 44px; } }
+        align-items: center;
+        gap: 32px; } }
     footer .downPart .links {
-      width: 55%;
       display: flex;
-      align-items: center;
-      justify-content: space-between; }
-      @media (max-width: 1600px) {
-        footer .downPart .links {
-          width: 56.5%; } }
-      @media (max-width: 1350px) {
-        footer .downPart .links {
-          width: 57%; } }
-      @media (max-width: 1200px) {
-        footer .downPart .links {
-          width: 59%; } }
+      align-items: flex-start;
+      gap: 48px;
+      flex-wrap: wrap; }
       @media (max-width: 991px) {
         footer .downPart .links {
-          flex-direction: column-reverse;
-          width: 100%;
-          gap: 44px; } }
+          flex-direction: column;
+          align-items: center;
+          gap: 24px;
+          width: 100%; } }
       footer .downPart .links__page {
         display: flex;
-        gap: 35px; }
-        @media (max-width: 991px) {
-          footer .downPart .links__page {
-            flex-direction: column; } }
+        flex-direction: column;
+        gap: 14px; }
         footer .downPart .links__page a {
-          color: black;
-          text-align: center;
+          color: #A3A3A3;
           font-family: "Effra VF Trial", sans-serif;
-          font-size: 16px;
-          font-style: normal;
-          font-weight: 400; }
-          footer .downPart .links__page a:last-of-type {
-            display: none; }
-            @media (max-width: 991px) {
-              footer .downPart .links__page a:last-of-type {
-                display: inline-block; } }
-      footer .downPart .links__social {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
-        footer .downPart .links__social a {
-          transition: all 1s step-end; }
-          footer .downPart .links__social a img:nth-child(2) {
-            display: none; }
-          footer .downPart .links__social a:hover img:nth-child(1) {
-            display: none; }
-          footer .downPart .links__social a:hover img:nth-child(2) {
-            display: block; }
-        @media (max-width: 991px) {
-          footer .downPart .links__social a {
-            transition: all 1s step-end; }
-            footer .downPart .links__social a img:nth-child(1) {
-              display: none; }
-            footer .downPart .links__social a img:nth-child(2) {
-              display: block; } }
+          font-size: 15px;
+          font-weight: 400;
+          text-decoration: none;
+          transition: color 0.2s ease; }
+        footer .downPart .links__page a:hover {
+          color: #A8FF35; }
     footer .downPart .copyRights {
       margin: 0;
       color: #A3A3A3;
@@ -877,4 +859,141 @@ footer {
   .downloadHaggz footer {
     background-color: #E9E9E9; }
 
-/*# sourceMappingURL=main-ltr.css.map */
+/* ── Language Toggle Button (Universal) ─────────────────── */
+.lang-toggle-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 7px !important;
+  padding: 8px 18px !important;
+  border-radius: 50px !important;
+  background: rgba(168, 255, 53, 0.1) !important;
+  border: 1.5px solid rgba(168, 255, 53, 0.4) !important;
+  color: #A8FF35 !important;
+  font-size: 13.5px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.02em !important;
+  cursor: pointer !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  text-decoration: none !important;
+  line-height: 1 !important;
+  flex-shrink: 0 !important;
+  font-family: inherit !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25) !important;
+}
+.lang-toggle-btn i {
+  font-size: 14px !important;
+  color: #A8FF35 !important;
+  transition: transform 0.4s ease, color 0.3s ease !important;
+}
+.lang-toggle-btn:hover {
+  background: #A8FF35 !important;
+  color: #000000 !important;
+  border-color: #A8FF35 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(168, 255, 53, 0.5) !important;
+}
+.lang-toggle-btn:hover i {
+  color: #000000 !important;
+  transform: rotate(30deg) !important;
+}
+.lang-toggle-btn:hover span {
+  color: #000000 !important;
+}
+
+
+/* ══════════════════════════════════════════════════════════════════
+   UNIFIED ARABIC TYPOGRAPHY (IDENTICAL TO PRICING.HTML)
+   ══════════════════════════════════════════════════════════════════ */
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Tajawal:wght@400;500;700;800;900&display=swap");
+
+:root {
+  --font-arabic: 'Cairo', 'Tajawal', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body.lang-ar,
+body.lang-ar *:not(i):not([class*="fa"]):not([class*="icon"]):not(.fa-solid):not(.fa-brands):not(.fa-regular),
+html[lang="ar"],
+html[lang="ar"] *:not(i):not([class*="fa"]):not([class*="icon"]):not(.fa-solid):not(.fa-brands):not(.fa-regular),
+html[dir="rtl"],
+html[dir="rtl"] *:not(i):not([class*="fa"]):not([class*="icon"]):not(.fa-solid):not(.fa-brands):not(.fa-regular) {
+  font-family: 'Cairo', 'Tajawal', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+/* Headings in Arabic — Bold Cairo */
+body.lang-ar h1,
+body.lang-ar h2,
+body.lang-ar h3,
+body.lang-ar h4,
+body.lang-ar h5,
+body.lang-ar h6,
+body.lang-ar .home__content__header__title p,
+body.lang-ar .pageTitle p,
+body.lang-ar .erp-hero__title,
+body.lang-ar .erp-hero__subtitle,
+body.lang-ar .banner-text,
+body.lang-ar .plan-tag-line,
+body.lang-ar strong,
+body.lang-ar b,
+html[lang="ar"] h1,
+html[lang="ar"] h2,
+html[lang="ar"] h3,
+html[lang="ar"] h4,
+html[lang="ar"] .home__content__header__title p,
+html[lang="ar"] .pageTitle p,
+html[dir="rtl"] .home__content__header__title p,
+html[dir="rtl"] .pageTitle p {
+  font-family: 'Cairo', sans-serif !important;
+  font-weight: 800 !important;
+  letter-spacing: normal !important;
+}
+
+/* Paragraphs & UI in Arabic */
+body.lang-ar p,
+body.lang-ar span,
+body.lang-ar a,
+body.lang-ar button,
+body.lang-ar input,
+body.lang-ar select,
+body.lang-ar textarea,
+html[lang="ar"] p,
+html[lang="ar"] span,
+html[lang="ar"] a,
+html[lang="ar"] button,
+html[dir="rtl"] p,
+html[dir="rtl"] span,
+html[dir="rtl"] a,
+html[dir="rtl"] button {
+  font-family: 'Cairo', 'Tajawal', sans-serif !important;
+}
+
+.bidi-eng {
+  display: inline-block;
+  direction: ltr !important;
+  unicode-bidi: isolate !important;
+}
+
+/* ── RTL Home Hero Alignment & BiDi Punctuation Fixes ────── */
+body.lang-ar .home__content,
+body.lang-ar .home__content__header,
+body.lang-ar .home__content__header__title,
+body.lang-ar .home__content__header__desc,
+html[dir="rtl"] .home__content,
+html[dir="rtl"] .home__content__header,
+html[dir="rtl"] .home__content__header__title,
+html[dir="rtl"] .home__content__header__desc {
+  direction: rtl !important;
+  text-align: center !important;
+  align-items: center !important;
+  align-self: center !important;
+}
+
+body.lang-ar .home__content__header__title p,
+html[dir="rtl"] .home__content__header__title p,
+body.lang-ar .home__content__header__desc p,
+html[dir="rtl"] .home__content__header__desc p {
+  direction: rtl !important;
+  unicode-bidi: isolate !important;
+  text-align: center !important;
+}
+
