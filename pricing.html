@@ -1292,7 +1292,7 @@
         }
 
         /* ── Official Footer – Premium ── */
-        footer {
+        footer.site-footer {
             background: linear-gradient(180deg, #050a07 0%, #000000 100%);
             color: #ffffff;
             padding: 60px 20px 30px;
@@ -1300,7 +1300,7 @@
             overflow: hidden;
         }
 
-        footer::before {
+        footer.site-footer::before {
             content: '';
             position: absolute;
             top: 0;
@@ -1536,7 +1536,8 @@
         }
 
     </style>
-    <link rel="stylesheet" href="./content/css/main-ltr.css">
+    <link rel="stylesheet" href="./content/css/main-ltr.css?v=2.0">
+    <link rel="stylesheet" href="./content/css/shared.css?v=1.0">
 </head>
 
 <body>
@@ -2230,35 +2231,38 @@
     </div>
 
     <!-- ── Official Footer – Premium ── -->
-    <footer>
-        <div class="downPart">
-            <div class="footer-brand-row">
-                <div class="footer-brand-logo">
-                    <a href="./index.html">
-                        <img src="./content/assets/images/icon/logo.svg" alt="Hagzz logo">
-                    </a>
-                    <div class="footer-brand-tagline" data-en="Integrated ERP Platform for Sports Clubs & Academies Management" data-ar="منصة ERP متكاملة لإدارة الأندية والأكاديميات الرياضية">منصة ERP متكاملة لإدارة الأندية والأكاديميات الرياضية</div>
-                </div>
-                <div class="footer-social">
-                    <a href="https://www.facebook.com/hagzzapp/" target="_blank" class="soc-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/hagzzapp/" target="_blank" class="soc-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://wa.me/97470542458" target="_blank" class="soc-btn" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-                    <a href="https://www.linkedin.com/company/hagzz/" target="_blank" class="soc-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                </div>
-            </div>
-            <div class="footer-links-row">
-                <div class="footer-nav">
-                    <a href="./index.html" data-en="Home" data-ar="الرئيسية">الرئيسية</a>
-                    <a href="./pricing.html" data-en="ERP Packages" data-ar="باقات الاشتراكات">باقات الاشتراكات</a>
-                    <a href="./privacy.html" data-en="Privacy Policy" data-ar="سياسة الخصوصية">سياسة الخصوصية</a>
-                    <a href="./termsAndConditions.html" data-en="Terms & Conditions" data-ar="الشروط والأحكام">الشروط والأحكام</a>
-                    <a href="./contact.html" data-en="Contact Us" data-ar="اتصل بنا">اتصل بنا</a>
-                    <a href="./mesk.html" data-en="About Developer Mesk" data-ar="عن المطور Mesk">عن المطور Mesk</a>
-                </div>
-            </div>
-            <div class="copyright-text" data-en="&copy; All rights reserved to Hagzz platform — A product of Mesk LLC 2025" data-ar="&copy; جميع الحقوق محفوظة لمنصة Hagzz — إحدى منتجات شركة Mesk LLC 2025">&copy; جميع الحقوق محفوظة لمنصة Hagzz — إحدى منتجات شركة Mesk LLC 2025</div>
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-brand-row">
+          <div class="footer-brand-logo">
+            <a href="./index.html"><img src="./content/assets/images/icon/logo.svg" alt="Hagzz logo"></a>
+            <div class="footer-brand-tagline"
+              data-en="Integrated ERP Platform for Sports Clubs &amp; Academies"
+              data-ar="منصة ERP متكاملة لإدارة الأندية والأكاديميات الرياضية">منصة ERP متكاملة لإدارة الأندية والأكاديميات</div>
+          </div>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/hagzzapp/" target="_blank" class="soc-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/hagzzapp/" target="_blank" class="soc-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://wa.me/97470542458" target="_blank" class="soc-btn" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://www.linkedin.com/company/hagzz/" target="_blank" class="soc-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
         </div>
+        <div class="footer-links-row">
+          <nav class="footer-nav" aria-label="Footer navigation">
+            <a href="./index.html" data-en="Home" data-ar="الرئيسية">الرئيسية</a>
+            <a href="./pricing.html" data-en="ERP Packages" data-ar="باقات الاشتراكات">باقات الاشتراكات</a>
+            <a href="./privacy.html" data-en="Privacy Policy" data-ar="سياسة الخصوصية">سياسة الخصوصية</a>
+            <a href="./termsAndConditions.html" data-en="Terms &amp; Conditions" data-ar="الشروط والأحكام">الشروط والأحكام</a>
+            <a href="./contact.html" data-en="Contact Us" data-ar="اتصل بنا">اتصل بنا</a>
+            <a href="./mesk.html" data-en="About Developer" data-ar="عن المطور">عن المطور</a>
+          </nav>
+        </div>
+        <div class="footer-copyright"
+          data-en="&copy; All rights reserved to Hagzz 2025 &mdash; A product of Mesk LLC"
+          data-ar="&copy; جميع الحقوق محفوظة لمنصة Hagzz 2025 &mdash; منتج شركة Mesk LLC">&copy; جميع الحقوق محفوظة لمنصة Hagzz 2025 &mdash; منتج شركة Mesk LLC</div>
+      </div>
     </footer>
+
 
     <!-- ── Floating WhatsApp ── -->
     <a href="https://wa.me/97470542458?text=مرحباً،%20أود%20الاستفسار%20عن%20باقات%20Hagzz%20ERP"

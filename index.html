@@ -39,7 +39,8 @@
         integrity="sha512-cSogJ0h5p3lhb//GYQRKsQAiwRku2tKOw/Rgvba47vg0+iOFrQ94iQbmAvRPF5+qkF8+gT7XBct233jFg1cBaQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Global main css file for ltr  -->
-    <link rel="stylesheet" href="./content/css/main-ltr.css">
+    <link rel="stylesheet" href="./content/css/main-ltr.css?v=2.0">
+    <link rel="stylesheet" href="./content/css/shared.css?v=1.0">
     <!-- Google Fonts: Cairo & Tajawal (Unified Arabic Typography) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -690,37 +691,39 @@
         </div>
     </main>
 
-    <!-- start footer -->
-    <footer>
-        <div class="downPart">
-            <div class="links">
-                <div class="links__page">
-                    <a href="./pricing.html" data-en="ERP Packages" data-ar="باقات <span class='bidi-eng'>ERP</span>">ERP Packages</a>
-                    <a href="./privacy.html" data-en="Privacy Policy" data-ar="سياسة الخصوصية">Privacy Policy</a>
-                    <a href="./termsAndConditions.html" data-en="Terms and Conditions" data-ar="الشروط والأحكام">Terms and Conditions</a>
-                    <a href="./contact.html" data-en="Contact Us" data-ar="اتصل بنا">Contact Us</a>
-                </div>
-                <div class="links__social">
-                    <a href="https://www.facebook.com/hagzzapp/">
-                        <img src="./content/assets/images/icon/facebook.svg" alt="">
-                        <img src="./content/assets/images/icon/facebook2.svg" alt="">
-                    </a>
-                    <a href="https://www.instagram.com/hagzzapp/" target="_blank"><img src="./content/assets/images/icon/instagram.svg" alt="Hagzz Instagram"><img
-                            src="./content/assets/images/icon/instagram2.svg" alt="Hagzz Instagram"></a>
-                    <a href="https://wa.me/97470542458" target="_blank"><img
-                            src="./content/assets/images/icon/whatsapp.svg" alt="Hagzz WhatsApp"><img
-                            src="./content/assets/images/icon/whatsapp2.svg" alt="Hagzz WhatsApp"></a>
-                    <a href="https://www.linkedin.com/company/hagzz/" target="_blank"><img
-                            src="./content/assets/images/footer/linkedIn.svg" alt="Hagzz LinkedIn"><img
-                            src="./content/assets/images/icon/linkedIn2.svg" alt="Hagzz LinkedIn"></a>
-                </div>
-            </div>
-            <div class="copyRights">
-                <p data-en="&copy; All rights reserved to Hagzz 2025" data-ar="&copy; جميع الحقوق محفوظة لـ Hagzz 2025">&copy; All rights reserved to Hagzz 2025</p>
-            </div>
+    <!-- UNIFIED FOOTER -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-brand-row">
+          <div class="footer-brand-logo">
+            <a href="./index.html"><img src="./content/assets/images/icon/logo.svg" alt="Hagzz logo"></a>
+            <div class="footer-brand-tagline"
+              data-en="Integrated ERP Platform for Sports Clubs &amp; Academies"
+              data-ar="منصة ERP متكاملة لإدارة الأندية والأكاديميات الرياضية">منصة ERP متكاملة لإدارة الأندية والأكاديميات</div>
+          </div>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/hagzzapp/" target="_blank" class="soc-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/hagzzapp/" target="_blank" class="soc-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://wa.me/97470542458" target="_blank" class="soc-btn" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://www.linkedin.com/company/hagzz/" target="_blank" class="soc-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
         </div>
+        <div class="footer-links-row">
+          <nav class="footer-nav" aria-label="Footer navigation">
+            <a href="./index.html" data-en="Home" data-ar="الرئيسية">الرئيسية</a>
+            <a href="./pricing.html" data-en="ERP Packages" data-ar="باقات الاشتراكات">باقات الاشتراكات</a>
+            <a href="./privacy.html" data-en="Privacy Policy" data-ar="سياسة الخصوصية">سياسة الخصوصية</a>
+            <a href="./termsAndConditions.html" data-en="Terms &amp; Conditions" data-ar="الشروط والأحكام">الشروط والأحكام</a>
+            <a href="./contact.html" data-en="Contact Us" data-ar="اتصل بنا">اتصل بنا</a>
+            <a href="./mesk.html" data-en="About Developer" data-ar="عن المطور">عن المطور</a>
+          </nav>
+        </div>
+        <div class="footer-copyright"
+          data-en="&copy; All rights reserved to Hagzz 2025 &mdash; A product of Mesk LLC"
+          data-ar="&copy; جميع الحقوق محفوظة لمنصة Hagzz 2025 &mdash; منتج شركة Mesk LLC">&copy; جميع الحقوق محفوظة لمنصة Hagzz 2025 &mdash; منتج شركة Mesk LLC</div>
+      </div>
     </footer>
-    <!-- end footer -->
+
 
     <!-- preloader -->
     <div id="preloader">
