@@ -645,13 +645,13 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 30px;
-  padding: 71px 99px;
+  gap: 24px;
+  padding: 36px 20px 50px;
   background-color: black;
   width: 100%; }
   @media (max-width: 991px) {
     .joinUsNow {
-      padding: 30px 40px; } }
+      padding: 24px 20px 40px; } }
   .joinUsNow__item {
     display: flex;
     align-items: center;
@@ -760,11 +760,11 @@ footer {
       line-height: 150%; }
 
 .downloadHaggz {
-  padding: 71px 99px;
+  padding: 24px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 43px;
+  gap: 20px;
   align-self: center; }
   @media (max-width: 991px) {
     .downloadHaggz .large-screen {
@@ -776,33 +776,97 @@ footer {
         display: block; } }
   @media (max-width: 991px) {
     .downloadHaggz {
-      padding: 40px 5px; } }
+      padding: 20px 10px;
+      gap: 16px; } }
   .downloadHaggz__images {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
-    gap: 50px;
     overflow: hidden; }
-    .downloadHaggz__images .splide__slide {
-      width: 300px;
-      height: 300px; }
-      .downloadHaggz__images .splide__slide img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover; }
+
+/* ── Academy Logos Section redesign ── */
+.logos-section {
+  background: #000;
+  padding: 24px 0 20px;
+  overflow: hidden; }
+
+.logos-section__heading {
+  text-align: center;
+  margin-bottom: 28px;
+  padding: 0 20px; }
+
+.logos-section__label {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #70C019;
+  margin-bottom: 8px; }
+
+.logos-section__title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.35; }
+
+.logos-section__title span {
+  color: #A8FF35; }
+
+/* ── Logo Slider cards ── */
+.logos-slide {
+  width: 100%; }
+
+.logos-slide .splide__slide {
+  width: 120px;
+  height: 120px;
+  background: #ffffff;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+  overflow: hidden;
+  transition: border-color 0.25s ease, transform 0.25s ease; }
+
+.logos-slide .splide__slide:hover {
+  border-color: rgba(112, 192, 25, 0.5);
+  transform: translateY(-3px); }
+
+.logos-slide .splide__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 6px; }
+
+@media (max-width: 768px) {
+  .logos-section {
+    padding: 32px 0 36px; }
+  .logos-section__title {
+    font-size: 18px; }
+  .logos-slide .splide__slide {
+    width: 90px;
+    height: 90px;
+    padding: 10px;
+    border-radius: 12px; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .logos-slide .splide__track {
+    animation: none !important; } }
+
+
+  .downloadHaggz__images__item {
+    width: 250px;
+    aspect-ratio: 1.32473/1; }
     @media (max-width: 991px) {
-      .downloadHaggz__images {
-        flex-direction: column; } }
-    .downloadHaggz__images__item {
-      width: 250px;
-      aspect-ratio: 1.32473/1; }
-      @media (max-width: 991px) {
-        .downloadHaggz__images__item {
-          width: 80%; } }
-      .downloadHaggz__images__item img {
-        width: 100%;
-        height: 100%; }
+      .downloadHaggz__images__item {
+        width: 80%; } }
+    .downloadHaggz__images__item img {
+      width: 100%;
+      height: 100%; }
   .downloadHaggz__title {
     color: #000;
     text-align: center;

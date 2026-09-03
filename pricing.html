@@ -36,8 +36,8 @@
 
     <!-- Bootstrap 5 CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.rtl.min.css"
-        integrity="sha512-V1O0N6e3m6+mN0c9g8kO+zK6Efl6Zk5T2oE4u68Cg5CjX4Kq6Z/t4Qx5aE8A0n5Z+8qO+r0V+yJ1K8+qN6w=="
-        crossorigin="anonymous" />
+        integrity="sha512-SRg0d/3qeXy0utrb7F4+4jkFHhzdyvqjAd2i9ub0zWrPS80PoRaAtzmbMeVRYtApxoEcE6tcFZaHRY5UbwrTaw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Font Awesome 6.5.1 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -216,6 +216,77 @@
             font-size: 24px;
         }
 
+        @media (max-width: 1400px) {
+            .navsbar {
+                padding: 0 30px;
+                gap: 12px;
+            }
+            .navsbar__list {
+                gap: 16px;
+            }
+            .navsbar__list li a {
+                font-size: 14px;
+                padding: 6px 1px;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .navsbar {
+                padding: 0 16px;
+                gap: 8px;
+                height: 66px;
+            }
+            .navsbar__logo img {
+                width: 95px;
+            }
+            .navsbar__list {
+                gap: 10px;
+            }
+            .navsbar__list li a {
+                font-size: 13px;
+                padding: 4px 1px;
+            }
+            .navsbar__user {
+                gap: 8px;
+            }
+            .navsbar__user__login {
+                font-size: 13px;
+            }
+            .navsbar__user__partner {
+                height: 38px !important;
+                padding: 0 16px !important;
+                font-size: 13px !important;
+            }
+        }
+
+        @media (max-width: 1050px) {
+            .navsbar {
+                padding: 0 12px;
+                gap: 6px;
+            }
+            .navsbar__logo img {
+                width: 85px;
+            }
+            .navsbar__list {
+                gap: 6px;
+            }
+            .navsbar__list li a {
+                font-size: 12px;
+                padding: 4px 0;
+            }
+            .navsbar__user {
+                gap: 6px;
+            }
+            .navsbar__user__login {
+                font-size: 12px;
+            }
+            .navsbar__user__partner {
+                height: 34px !important;
+                padding: 0 12px !important;
+                font-size: 12px !important;
+            }
+        }
+
         @media (max-width: 991px) {
             .navsbar__hamborg-tab {
                 display: block;
@@ -231,11 +302,46 @@
             }
         }
 
+        /* Bootstrap offcanvas reset — ensure it is hidden until toggled */
+        .offcanvas {
+            visibility: hidden;
+            transform: translateY(-100%);
+            transition: transform 0.35s ease, visibility 0.35s;
+        }
+        .offcanvas.show {
+            visibility: visible !important;
+            transform: translateY(0) !important;
+        }
+
+        .offcanvas.navsbar__mobile.offcanvas-top,
         .offcanvas.navsbar__mobile {
-            background-color: #0d1310;
-            color: #fff;
-            padding: 24px;
-            border-bottom: 2px solid var(--primary-neon);
+            position: fixed !important;
+            top: 60px !important;
+            bottom: auto !important;
+            left: 0 !important;
+            right: 0 !important;
+            width: 100% !important;
+            background-color: #0d1310 !important;
+            color: #fff !important;
+            padding: 16px 20px 22px !important;
+            border-bottom: 2px solid var(--primary-neon) !important;
+            height: auto !important;
+            min-height: 0 !important;
+            max-height: calc(88dvh - 60px) !important;
+            overflow-y: auto !important;
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.85) !important;
+        }
+
+        .offcanvas.navsbar__mobile .offcanvas-header {
+            display: none !important;
+        }
+
+        .offcanvas.navsbar__mobile .offcanvas-body {
+            padding: 0 !important;
+            overflow: visible !important;
+            flex-grow: 0 !important;
+            height: auto !important;
+            min-height: 0 !important;
         }
 
         .navsbar__mobile__list {
@@ -243,13 +349,13 @@
             padding: 0;
             display: flex;
             flex-direction: column;
-            gap: 16px;
+            gap: 14px;
             text-align: center;
         }
 
         .navsbar__mobile__list li a {
             color: #fff;
-            font-size: 17px;
+            font-size: 16px;
             text-decoration: none;
             font-weight: 600;
         }
@@ -396,6 +502,7 @@
         .erp-hero__tagline {
             display: inline-flex;
             align-items: center;
+            justify-content: center;
             gap: 18px;
             font-size: 19px;
             font-weight: 700;
@@ -406,6 +513,7 @@
             border-radius: 50px;
             border: 1px solid #e2e8f0;
             box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+            max-width: 100%;
         }
 
         .erp-hero__tagline .tag-dot {
@@ -413,6 +521,37 @@
             height: 7px;
             background-color: #70C019;
             border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        @media (max-width: 768px) {
+            .erp-hero__tagline {
+                font-size: 13.5px;
+                gap: 10px;
+                padding: 6px 16px;
+                margin-bottom: 24px;
+            }
+            .erp-hero__tagline .tag-dot {
+                width: 5px;
+                height: 5px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .erp-hero__tagline {
+                font-size: 11px;
+                gap: 5px;
+                padding: 5px 10px;
+                border-radius: 30px;
+                max-width: 98%;
+                margin-left: auto;
+                margin-right: auto;
+                letter-spacing: -0.02em;
+            }
+            .erp-hero__tagline .tag-dot {
+                width: 4px;
+                height: 4px;
+            }
         }
 
         /* Billing Switcher */
@@ -1443,7 +1582,7 @@
         }
 
         
-        /* ── Bulletproof Modal Styles ── */
+        /* ── Bulletproof Compact Modal Styles ── */
         .modal {
             position: fixed !important;
             top: 0 !important;
@@ -1462,77 +1601,287 @@
             display: flex !important;
             align-items: center !important;
             justify-content: center !important;
+            padding: 12px !important;
         }
         .modal-dialog {
             margin: auto !important;
-            max-width: 540px !important;
-            width: 92% !important;
+            max-width: 480px !important;
+            width: 94% !important;
+            max-height: calc(100dvh - 24px);
         }
         .modal-content {
-            border-radius: 24px !important;
-            background: #0d1510 !important;
-            border: 1.5px solid rgba(168, 255, 53, 0.35) !important;
-            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.85), 0 0 35px rgba(168, 255, 53, 0.15) !important;
+            border-radius: 20px !important;
+            background: #ffffff !important;
+            border: 1px solid #e2e8f0 !important;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35), 0 0 1px rgba(0, 0, 0, 0.1) !important;
             overflow: hidden !important;
-            color: #ffffff !important;
+            color: #0f172a !important;
+            display: flex !important;
+            flex-direction: column !important;
+            max-height: calc(100dvh - 24px);
         }
         .modal-header {
-            background: #080d0a !important;
-            color: #fff !important;
-            padding: 22px 28px !important;
-            border-bottom: 1px solid rgba(168, 255, 53, 0.2) !important;
+            background: #f8fafc !important;
+            color: #0f172a !important;
+            padding: 14px 18px !important;
+            border-bottom: 1px solid #e2e8f0 !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: space-between !important;
+            gap: 10px !important;
+            flex-shrink: 0 !important;
+        }
+        .modal-header .modal-title {
+            color: #0f172a !important;
+            font-size: 16px !important;
+            font-weight: 800 !important;
+            margin-bottom: 2px !important;
+        }
+        .modal-header .modal-subtitle-badge {
+            color: #15803d !important;
+            font-size: 12px !important;
+            font-weight: 700 !important;
+        }
+        .modal-header .btn-close {
+            opacity: 0.65 !important;
+            filter: none !important;
+            width: 28px !important;
+            height: 28px !important;
+            flex-shrink: 0 !important;
+            background-size: 11px !important;
+            border-radius: 50% !important;
+            background-color: #e2e8f0 !important;
+            border: none !important;
+            padding: 0 !important;
+            cursor: pointer !important;
+            transition: opacity 0.2s, background-color 0.2s !important;
+        }
+        .modal-header .btn-close:hover {
+            opacity: 1 !important;
+            background-color: #cbd5e1 !important;
         }
         .modal-body {
-            padding: 28px !important;
-            background: #0d1510 !important;
+            padding: 16px 18px !important;
+            background: #ffffff !important;
+            overflow-y: auto !important;
+            -webkit-overflow-scrolling: touch;
         }
         .modal-body .form-label {
-            color: #e2e8f0 !important;
-            font-size: 14px !important;
+            color: #334155 !important;
+            font-size: 12.5px !important;
             font-weight: 700 !important;
-            margin-bottom: 7px !important;
+            margin-bottom: 4px !important;
             display: block !important;
         }
         .modal-body .form-control, .modal-body .form-select {
-            background: #141f17 !important;
-            border: 1.5px solid rgba(255, 255, 255, 0.15) !important;
-            color: #ffffff !important;
-            border-radius: 12px !important;
-            padding: 12px 16px !important;
-            font-size: 14.5px !important;
+            background: #f8fafc !important;
+            border: 1.5px solid #cbd5e1 !important;
+            color: #0f172a !important;
+            border-radius: 10px !important;
+            padding: 7px 12px !important;
+            font-size: 13.5px !important;
+            height: 38px !important;
+            font-weight: 600 !important;
+            transition: border-color 0.2s, box-shadow 0.2s, background-color 0.2s !important;
+        }
+        .modal-body .form-control#modalPlanDisplay {
+            background: #f0fdf4 !important;
+            border-color: #86efac !important;
+            color: #15803d !important;
+            font-weight: 800 !important;
         }
         .modal-body .form-select option {
-            background: #0d1510;
-            color: #ffffff;
+            background: #ffffff;
+            color: #0f172a;
         }
         .modal-body .form-control:focus, .modal-body .form-select:focus {
-            background: #19271d !important;
-            border-color: #A8FF35 !important;
-            box-shadow: 0 0 16px rgba(168, 255, 53, 0.3) !important;
-            color: #ffffff !important;
+            background: #ffffff !important;
+            border-color: #70C019 !important;
+            box-shadow: 0 0 0 3px rgba(112, 192, 25, 0.2) !important;
+            color: #0f172a !important;
             outline: none !important;
         }
         .modal-body .btn-submit-modal {
-            background: #10b981 !important;
+            background: #16a34a !important;
             color: #ffffff !important;
             font-weight: 800 !important;
-            font-size: 16px !important;
-            padding: 14px 24px !important;
+            font-size: 14.5px !important;
+            padding: 10px 20px !important;
             border-radius: 50px !important;
             border: none !important;
             width: 100% !important;
             display: flex !important;
             align-items: center !important;
             justify-content: center !important;
-            gap: 10px !important;
-            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.35) !important;
+            gap: 8px !important;
+            box-shadow: 0 4px 14px rgba(22, 163, 74, 0.35) !important;
             transition: all 0.25s ease !important;
             cursor: pointer !important;
         }
         .modal-body .btn-submit-modal:hover {
-            background: #059669 !important;
-            transform: translateY(-2px) !important;
-            box-shadow: 0 10px 25px rgba(16, 185, 129, 0.5) !important;
+            background: #15803d !important;
+            transform: translateY(-1px) !important;
+            box-shadow: 0 8px 20px rgba(22, 163, 74, 0.45) !important;
+        }
+
+        
+        /* ── Modal Input Validation Styling ── */
+        .modal-body .invalid-feedback {
+            font-size: 11px !important;
+            font-weight: 700 !important;
+            color: #dc2626 !important;
+            margin-top: 3px !important;
+            display: none;
+            line-height: 1.25;
+        }
+        .modal-body .is-invalid {
+            border-color: #ef4444 !important;
+            background-color: #fef2f2 !important;
+        }
+        .modal-body .is-invalid:focus {
+            box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2) !important;
+            border-color: #ef4444 !important;
+        }
+        .modal-body .is-valid {
+            border-color: #16a34a !important;
+            background-color: #f0fdf4 !important;
+        }
+        .modal-body .form-control.is-invalid ~ .invalid-feedback,
+        .modal-body .form-select.is-invalid ~ .invalid-feedback {
+            display: block !important;
+        }
+
+        /* ── Compact Mobile Viewport Overrides ── */
+        @media (max-width: 576px) {
+            .modal.show {
+                padding: 8px !important;
+                align-items: center !important;
+            }
+            .modal-dialog {
+                width: 96% !important;
+                max-width: 380px !important;
+                margin: auto !important;
+            }
+            .modal-content {
+                border-radius: 18px !important;
+            }
+            .modal-header {
+                padding: 10px 14px !important;
+            }
+            .modal-header .modal-title {
+                font-size: 14.5px !important;
+            }
+            .modal-header .modal-subtitle-badge {
+                font-size: 11px !important;
+            }
+            .modal-body {
+                padding: 12px 14px !important;
+            }
+            .modal-body .form-label {
+                font-size: 11.5px !important;
+                margin-bottom: 2px !important;
+            }
+            .modal-body .form-control, .modal-body .form-select {
+                height: 35px !important;
+                padding: 5px 10px !important;
+                font-size: 12px !important;
+                border-radius: 8px !important;
+            }
+            .modal-body .btn-submit-modal {
+                font-size: 13px !important;
+                padding: 8px 14px !important;
+            }
+        }
+
+
+        /* ═══════════════════════════════════════════════════════════
+           HAGZZ GROWTH FLYWHEEL — pricing.html (loob.png Image Showcase)
+           ═══════════════════════════════════════════════════════════ */
+        .flywheel-section {
+            padding: 70px 20px 50px;
+            background: #f8fafc;
+            border-top: 1px solid #e2e8f0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .flywheel-section .section-headline {
+            margin-bottom: 32px;
+        }
+        .fw-image-container {
+            width: 100%;
+            max-width: 1080px;
+            margin: 0 auto 36px;
+            overflow-x: auto;
+            overflow-y: hidden;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(112, 192, 25, 0.4) transparent;
+        }
+        .fw-image-container::-webkit-scrollbar {
+            height: 5px;
+        }
+        .fw-image-container::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .fw-image-container::-webkit-scrollbar-thumb {
+            background: rgba(112, 192, 25, 0.35);
+            border-radius: 4px;
+        }
+        .fw-image-container img {
+            width: 100%;
+            height: auto;
+            max-width: 1080px;
+            min-width: 680px;
+            display: block;
+            margin-inline: auto;
+            object-fit: contain;
+        }
+        @media (min-width: 768px) {
+            .fw-image-container img {
+                min-width: unset;
+            }
+        }
+        .fw-statement {
+            max-width: 760px;
+            margin: 0 auto 20px;
+            text-align: center;
+            font-size: 15.5px;
+            color: #334155;
+            line-height: 1.85;
+            font-weight: 500;
+        }
+        .fw-proof-wrap {
+            text-align: center;
+        }
+        .fw-proof {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 13.5px;
+            font-weight: 700;
+            color: #4d890e;
+            background: rgba(112, 192, 25, 0.08);
+            border: 1px solid rgba(112, 192, 25, 0.22);
+            border-radius: 50px;
+            padding: 10px 24px;
+        }
+        .fw-proof i {
+            font-size: 14px;
+        }
+        .card-plan-subtitle {
+            display: block;
+            font-size: 11.5px;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.72);
+            margin-top: 2px;
+            line-height: 1.4;
+        }
+        @media (max-width: 640px) {
+            .flywheel-section {
+                padding: 48px 16px 36px;
+            }
+            .fw-statement {
+                font-size: 14px;
+            }
         }
 
     </style>
@@ -1653,6 +2002,7 @@
                             <i class="fa-solid fa-rocket"></i>
                         </div>
                         <span class="banner-text" data-en="Launch Package" data-ar="باقة الانطلاقة">باقة الانطلاقة</span>
+                    <span class="card-plan-subtitle" data-en="For single-branch academies" data-ar="لأكاديمية بفرع واحد">لأكاديمية بفرع واحد</span>
                     </div>
                 </div>
 
@@ -1719,6 +2069,7 @@
                             <i class="fa-solid fa-chart-line"></i>
                         </div>
                         <span class="banner-text" data-en="Expansion Package" data-ar="باقة التوسع">باقة التوسع</span>
+                    <span class="card-plan-subtitle" data-en="For multi-branch academies" data-ar="للأكاديميات متعددة الفروع">للأكاديميات متعددة الفروع</span>
                     </div>
                 </div>
 
@@ -1783,6 +2134,7 @@
                             <i class="fa-solid fa-trophy"></i>
                         </div>
                         <span class="banner-text" data-en="Growth Package" data-ar="باقة النمو">باقة النمو</span>
+                    <span class="card-plan-subtitle" data-en="For multi-sport, multi-branch academies" data-ar="للأكاديميات متعددة الرياضات والفروع">للأكاديميات متعددة الرياضات والفروع</span>
                     </div>
                 </div>
 
@@ -1851,6 +2203,7 @@
                             <i class="fa-solid fa-shield-halved"></i>
                         </div>
                         <span class="banner-text" data-en="Enterprise Package" data-ar="باقة المؤسسات">باقة المؤسسات</span>
+                    <span class="card-plan-subtitle" data-en="For large clubs and sports groups" data-ar="للأندية والمجموعات الرياضية الكبيرة">للأندية والمجموعات الرياضية الكبيرة</span>
                     </div>
                 </div>
 
@@ -1955,6 +2308,50 @@
             </div>
         </div>
     </section>
+
+
+    <!-- ══════════════════════════════════════════════════════════
+         HAGZZ GROWTH FLYWHEEL SECTION (loob.png Image)
+         Position: after Trust Bar, before Comparison Table
+         ══════════════════════════════════════════════════════════ -->
+    <section class="flywheel-section" aria-labelledby="fw-heading">
+
+        <!-- Section headline -->
+        <div class="section-headline">
+            <span class="section-badge"
+                data-en="Growth Ecosystem"
+                data-ar="منظومة النمو">منظومة النمو</span>
+            <h2 id="fw-heading"
+                data-en="Manage your academy — and build a continuous growth cycle"
+                data-ar="أدر أكاديميتك… وابنِ دورة نمو مستمرة">أدر أكاديميتك… وابنِ دورة نمو مستمرة</h2>
+            <p data-en="Hagzz connects discovery, booking and registration with player management, subscriptions, payments and renewals through one connected ecosystem."
+               data-ar="Hagzz يربط اكتشاف التدريب والحجز والتسجيل بإدارة اللاعب والاشتراك والتحصيل والتجديد، لتصبح رحلة العميل منظومة مترابطة تدعم نمو الأكاديمية.">Hagzz يربط اكتشاف التدريب والحجز والتسجيل بإدارة اللاعب والاشتراك والتحصيل والتجديد، لتصبح رحلة العميل منظومة مترابطة تدعم نمو الأكاديمية.</p>
+        </div>
+
+        <!-- Growth Flywheel Image Showcase -->
+        <div class="fw-image-container">
+            <img src="./content/assets/images/Price/loob.png"
+                 alt="دورة Hagzz لإدارة ونمو الأكاديمية من اكتشاف التدريب والحجز وحتى الإدارة والتجديد والنمو"
+                 width="1494" height="1053"
+                 loading="lazy" decoding="async">
+        </div>
+
+        <!-- Value Statement -->
+        <p class="fw-statement"
+            data-en="Hagzz doesn’t start only after a player joins.<br>It connects the customer journey from discovery and booking to management, renewal and growth."
+            data-ar="Hagzz لا يدير المشترك بعد وصوله فقط…<br>بل يربط رحلة العميل من اكتشاف التدريب والحجز وحتى الإدارة والتجديد والنمو.">Hagzz لا يدير المشترك بعد وصوله فقط…<br>بل يربط رحلة العميل من اكتشاف التدريب والحجز وحتى الإدارة والتجديد والنمو.</p>
+
+        <!-- Social Proof -->
+        <div class="fw-proof-wrap">
+            <div class="fw-proof">
+                <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                <span data-en="100+ training programs are currently available through Hagzz"
+                      data-ar="أكثر من 100 تدريب متاح حاليًا عبر Hagzz">أكثر من 100 تدريب متاح حاليًا عبر Hagzz</span>
+            </div>
+        </div>
+
+    </section>
+    <!-- /.flywheel-section -->
 
     <!-- ── Comprehensive Comparison Table ── -->
     <section class="comparison-area">
@@ -2070,6 +2467,21 @@
                         </tr>
                         <tr>
                             <td data-en="1st Month Free Trial" data-ar="أول شهر مجاناً">أول شهر مجاناً</td>
+                            <td><i class="fa-solid fa-circle-check check-ok"></i></td>
+                            <td><i class="fa-solid fa-circle-check check-ok"></i></td>
+                            <td><i class="fa-solid fa-circle-check check-ok"></i></td>
+                            <td><i class="fa-solid fa-circle-check check-ok"></i></td>
+                        </tr>
+
+                        <tr>
+                            <td data-en="Discovery through Hagzz Booking Platform" data-ar="الظهور عبر منصة Hagzz للحجز">الظهور عبر منصة Hagzz للحجز</td>
+                            <td><i class="fa-solid fa-circle-check check-ok"></i></td>
+                            <td><i class="fa-solid fa-circle-check check-ok"></i></td>
+                            <td><i class="fa-solid fa-circle-check check-ok"></i></td>
+                            <td><i class="fa-solid fa-circle-check check-ok"></i></td>
+                        </tr>
+                        <tr>
+                            <td data-en="Online Registrations &amp; Bookings" data-ar="استقبال التسجيل والحجوزات أونلاين">استقبال التسجيل والحجوزات أونلاين</td>
                             <td><i class="fa-solid fa-circle-check check-ok"></i></td>
                             <td><i class="fa-solid fa-circle-check check-ok"></i></td>
                             <td><i class="fa-solid fa-circle-check check-ok"></i></td>
@@ -2210,8 +2622,8 @@
             <div class="cta-glow-right"></div>
             <div class="cta-content">
                 <div class="cta-eyebrow" data-en="<i class='fa-solid fa-circle-check'></i> 1st Month 100% Free Trial — No Commitments" data-ar="<i class='fa-solid fa-circle-check'></i> أول شهر مجاناً بالكامل — بدون أي التزام"><i class="fa-solid fa-circle-check"></i> أول شهر مجاناً بالكامل — بدون أي التزام</div>
-                <h2 data-en="Start Managing Your Sports Club Professionally Today" data-ar="ابدأ إدارة ناديك وأكاديميتك باحترافية اليوم">ابدأ إدارة ناديك وأكاديميتك باحترافية اليوم</h2>
-                <p data-en="Join elite sports academies managing operations with high efficiency on Hagzz ERP platform." data-ar="انضم إلى نخبة الأكاديميات والأندية الرياضية التي تدير عملياتها بكفاءة واحترافية عالية مع منصة Hagzz ERP المتكاملة.">انضم إلى نخبة الأكاديميات والأندية الرياضية التي تدير عملياتها بكفاءة واحترافية عالية مع منصة Hagzz ERP المتكاملة.</p>
+                <h2 data-en="Ready to build a more connected growth cycle for your academy?" data-ar="جاهز تبدأ دورة نمو أكثر تنظيمًا لأكاديميتك؟">جاهز تبدأ دورة نمو أكثر تنظيمًا لأكاديميتك؟</h2>
+                <p data-en="Use Hagzz to manage operations, registrations and bookings through one connected ecosystem." data-ar="استخدم Hagzz لإدارة التشغيل والتسجيل والحجوزات من منظومة واحدة مترابطة.">استخدم Hagzz لإدارة التشغيل والتسجيل والحجوزات من منظومة واحدة مترابطة.</p>
                 <div class="cta-actions">
                     <button class="btn-cta-main" onclick="openSubscribeModal('باقة التوسع', '$219 شهرياً')">
                         <span data-en="<i class='fa-solid fa-bolt'></i> Start Free Trial Now" data-ar="<i class='fa-solid fa-bolt'></i> ابدأ تجربتك المجانية الآن"><i class="fa-solid fa-bolt"></i> ابدأ تجربتك المجانية الآن</span>
@@ -2278,57 +2690,63 @@
                 <div class="modal-header">
                     <div>
                         <h5 class="modal-title fw-bold" id="subscribeModalLabel" data-en="Request Subscription & Free Trial" data-ar="طلب اشتراك وتجربة مجانية">طلب اشتراك وتجربة مجانية</h5>
-                        <p class="text-white-50 mb-0 small" id="modalSubtitle" data-en="1st Month 100% Free Trial" data-ar="أول شهر مجاناً بالكامل">أول شهر مجاناً بالكامل</p>
+                        <p class="modal-subtitle-badge mb-0" id="modalSubtitle" data-en="1st Month 100% Free Trial" data-ar="أول شهر مجاناً بالكامل">أول شهر مجاناً بالكامل</p>
                     </div>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                    <form id="subForm" onsubmit="handleSub(event)">
+                                <div class="modal-body">
+                    <form id="subForm" onsubmit="handleSub(event)" novalidate>
                         <input type="hidden" id="modalPlan" value="باقة الانطلاقة">
 
-                        <div class="mb-3">
-                            <label class="form-label fw-bold" data-en="Selected Plan" data-ar="الباقة المختارة">الباقة المختارة</label>
-                            <input type="text" id="modalPlanDisplay" class="form-control bg-light fw-bold text-success" readonly value="باقة الانطلاقة">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label fw-bold" data-en="Country" data-ar="الدولة">الدولة <span class="text-danger">*</span></label>
-                            <select id="modalCountry" class="form-select" required>
-                                <option value="دولة قطر 🇶🇦 (+974)" selected data-en="Qatar 🇶🇦 (+974)" data-ar="دولة قطر 🇶🇦 (+974)">دولة قطر 🇶🇦 (+974)</option>
-                                <option value="المملكة العربية السعودية 🇸🇦 (+966)" data-en="Saudi Arabia 🇸🇦 (+966)" data-ar="المملكة العربية السعودية 🇸🇦 (+966)">المملكة العربية السعودية 🇸🇦 (+966)</option>
-                                <option value="دولة الإمارات 🇦🇪 (+971)" data-en="UAE 🇦🇪 (+971)" data-ar="دولة الإمارات 🇦🇪 (+971)">دولة الإمارات 🇦🇪 (+971)</option>
-                                <option value="دولة الكويت 🇰🇼 (+965)" data-en="Kuwait 🇰🇼 (+965)" data-ar="دولة الكويت 🇰🇼 (+965)">دولة الكويت 🇰🇼 (+965)</option>
-                                <option value="مملكة البحرين 🇧🇭 (+973)" data-en="Bahrain 🇧🇭 (+973)" data-ar="مملكة البحرين 🇧🇭 (+973)">مملكة البحرين 🇧🇭 (+973)</option>
-                                <option value="سلطنة عُمان 🇴🇲 (+968)" data-en="Oman 🇴🇲 (+968)" data-ar="سلطنة عُمان 🇴🇲 (+968)">سلطنة عُمان 🇴🇲 (+968)</option>
-                                <option value="جمهورية مصر العربية 🇪🇬 (+20)" data-en="Egypt 🇪🇬 (+20)" data-ar="جمهورية مصر العربية 🇪🇬 (+20)">جمهورية مصر العربية 🇪🇬 (+20)</option>
-                                <option value="دولة أخرى 🌍" data-en="Other Country 🌍" data-ar="دولة أخرى 🌍">دولة أخرى 🌍</option>
-                            </select>
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label fw-bold" data-en="Academy / Club Name" data-ar="اسم الأكاديمية أو النادي">اسم الأكاديمية أو النادي <span class="text-danger">*</span></label>
-                            <input type="text" id="modalAcademy" class="form-control" placeholder="مثال: أكاديمية النجوم الرياضية" data-en-placeholder="e.g. Stars Sports Academy" data-ar-placeholder="مثال: أكاديمية النجوم الرياضية" required>
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label fw-bold" data-en="Responsible Person Name" data-ar="اسم المسؤول">اسم المسؤول <span class="text-danger">*</span></label>
-                            <input type="text" id="modalName" class="form-control" placeholder="الاسم الكريم" data-en-placeholder="Your Full Name" data-ar-placeholder="الاسم الكريم" required>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <label class="form-label fw-bold" data-en="Phone / WhatsApp" data-ar="رقم الجوال / واتساب">رقم الجوال / واتساب <span class="text-danger">*</span></label>
-                                <input type="tel" id="modalPhone" class="form-control" placeholder="+974 / +966..." data-en-placeholder="+974 / +966..." data-ar-placeholder="+974 / +966..." required>
+                        <div class="row g-2 mb-2">
+                            <div class="col-6">
+                                <label class="form-label" data-en="Selected Plan" data-ar="الباقة المختارة">الباقة المختارة</label>
+                                <input type="text" id="modalPlanDisplay" class="form-control fw-bold text-success" readonly value="باقة الانطلاقة">
                             </div>
-                            <div class="col-md-6 mb-3">
-                                <label class="form-label fw-bold" data-en="Email Address" data-ar="البريد الإلكتروني">البريد الإلكتروني</label>
-                                <input type="email" id="modalEmail" class="form-control" placeholder="name@example.com" data-en-placeholder="name@example.com" data-ar-placeholder="name@example.com">
+                            <div class="col-6">
+                                <label class="form-label" data-en="Country" data-ar="الدولة">الدولة <span class="text-danger">*</span></label>
+                                <select id="modalCountry" class="form-select" required onchange="handleCountryChange()">
+                                    <option value="دولة قطر 🇶🇦 (+974)" data-country="qa" selected data-en="Qatar 🇶🇦 (+974)" data-ar="دولة قطر 🇶🇦 (+974)">قطر 🇶🇦 (+974)</option>
+                                    <option value="المملكة العربية السعودية 🇸🇦 (+966)" data-country="sa" data-en="Saudi Arabia 🇸🇦 (+966)" data-ar="المملكة العربية السعودية 🇸🇦 (+966)">السعودية 🇸🇦 (+966)</option>
+                                    <option value="دولة الإمارات 🇦🇪 (+971)" data-country="ae" data-en="UAE 🇦🇪 (+971)" data-ar="دولة الإمارات 🇦🇪 (+971)">الإمارات 🇦🇪 (+971)</option>
+                                    <option value="دولة الكويت 🇰🇼 (+965)" data-country="kw" data-en="Kuwait 🇰🇼 (+965)" data-ar="دولة الكويت 🇰🇼 (+965)">الكويت 🇰🇼 (+965)</option>
+                                    <option value="مملكة البحرين 🇧🇭 (+973)" data-country="bh" data-en="Bahrain 🇧🇭 (+973)" data-ar="مملكة البحرين 🇧🇭 (+973)">البحرين 🇧🇭 (+973)</option>
+                                    <option value="سلطنة عُمان 🇴🇲 (+968)" data-country="om" data-en="Oman 🇴🇲 (+968)" data-ar="سلطنة عُمان 🇴🇲 (+968)">عُمان 🇴🇲 (+968)</option>
+                                    <option value="جمهورية مصر العربية 🇪🇬 (+20)" data-country="eg" data-en="Egypt 🇪🇬 (+20)" data-ar="جمهورية مصر العربية 🇪🇬 (+20)">مصر 🇪🇬 (+20)</option>
+                                    <option value="دولة أخرى 🌍" data-country="other" data-en="Other Country 🌍" data-ar="دولة أخرى 🌍">أخرى 🌍</option>
+                                </select>
                             </div>
                         </div>
 
-                        <div class="d-grid gap-2 mt-3">
-                            <button type="submit" class="btn-submit-modal" data-en="<i class='fa-brands fa-whatsapp'></i> Confirm & Send via WhatsApp" data-ar="<i class='fa-brands fa-whatsapp'></i> تأكيد الطلب والمتابعة عبر واتساب">
-                                <i class="fa-brands fa-whatsapp"></i> تأكيد الطلب والمتابعة عبر واتساب
+                        <div class="row g-2 mb-2">
+                            <div class="col-6">
+                                <label class="form-label" data-en="Academy / Club" data-ar="الأكاديمية / النادي">الأكاديمية / النادي <span class="text-danger">*</span></label>
+                                <input type="text" id="modalAcademy" class="form-control" placeholder="اسم الأكاديمية" data-en-placeholder="Academy Name" data-ar-placeholder="اسم الأكاديمية" required>
+                                <div class="invalid-feedback" id="academyError"></div>
+                            </div>
+                            <div class="col-6">
+                                <label class="form-label" data-en="Contact Name" data-ar="اسم المسؤول">اسم المسؤول <span class="text-danger">*</span></label>
+                                <input type="text" id="modalName" class="form-control" placeholder="الاسم الكريم" data-en-placeholder="Your Name" data-ar-placeholder="الاسم الكريم" required>
+                                <div class="invalid-feedback" id="nameError"></div>
+                            </div>
+                        </div>
+
+                        <div class="row g-2 mb-3">
+                            <div class="col-6">
+                                <label class="form-label" data-en="Phone / WhatsApp" data-ar="الجوال / واتساب">الجوال / واتساب <span class="text-danger">*</span></label>
+                                <input type="tel" id="modalPhone" class="form-control" placeholder="5512 3456" data-en-placeholder="5512 3456" data-ar-placeholder="5512 3456" required>
+                                <div class="invalid-feedback" id="phoneError"></div>
+                            </div>
+                            <div class="col-6">
+                                <label class="form-label" data-en="Email" data-ar="البريد الإلكتروني">البريد الإلكتروني <span class="text-danger">*</span></label>
+                                <input type="email" id="modalEmail" class="form-control" placeholder="name@example.com" data-en-placeholder="name@example.com" data-ar-placeholder="name@example.com" required>
+                                <div class="invalid-feedback" id="emailError"></div>
+                            </div>
+                        </div>
+
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn-submit-modal" data-en="<i class='fa-brands fa-whatsapp'></i> Confirm via WhatsApp" data-ar="<i class='fa-brands fa-whatsapp'></i> تأكيد الطلب عبر واتساب">
+                                <i class="fa-brands fa-whatsapp"></i> تأكيد الطلب عبر واتساب
                             </button>
                         </div>
                     </form>
@@ -2393,6 +2811,7 @@
 
         document.addEventListener('langChanged', function(e) {
             setBilling(currentBilling);
+            if (typeof handleCountryChange === 'function') handleCountryChange();
         });
 
         let subModal = null;
@@ -2409,14 +2828,276 @@
             subModal.show();
         }
 
+        // Country-specific phone validation rules
+        const countryPhoneRules = {
+            'qa': {
+                code: '+974',
+                placeholder: '5512 3456',
+                validate: function(clean) {
+                    // Qatar: 8 digits starting with 3, 5, 6, 7
+                    return /^[3567]\d{7}$/.test(clean);
+                },
+                cleanInput: function(raw) {
+                    return raw.replace(/[^\d]/g, '').replace(/^00974|^974|^0/, '');
+                },
+                formatFull: function(clean) {
+                    return '+974 ' + clean;
+                },
+                err_ar: 'رقم جوال قطري غير صحيح (8 أرقام تبدأ بـ 3، 5، 6، 7)',
+                err_en: 'Invalid Qatar number (8 digits starting with 3, 5, 6, 7)'
+            },
+            'sa': {
+                code: '+966',
+                placeholder: '050 123 4567',
+                validate: function(clean) {
+                    // Saudi: 9 digits starting with 5 (or 10 with leading 0)
+                    return /^5\d{8}$/.test(clean);
+                },
+                cleanInput: function(raw) {
+                    return raw.replace(/[^\d]/g, '').replace(/^00966|^966/, '').replace(/^0/, '');
+                },
+                formatFull: function(clean) {
+                    return '+966 5' + clean.slice(1);
+                },
+                err_ar: 'رقم جوال سعودي غير صحيح (يبدأ بـ 05 ومكون من 9 أرقام)',
+                err_en: 'Invalid Saudi number (starts with 05, 9 digits)'
+            },
+            'ae': {
+                code: '+971',
+                placeholder: '050 123 4567',
+                validate: function(clean) {
+                    // UAE: 9 digits starting with 5
+                    return /^5\d{8}$/.test(clean);
+                },
+                cleanInput: function(raw) {
+                    return raw.replace(/[^\d]/g, '').replace(/^00971|^971/, '').replace(/^0/, '');
+                },
+                formatFull: function(clean) {
+                    return '+971 5' + clean.slice(1);
+                },
+                err_ar: 'رقم جوال إماراتي غير صحيح (يبدأ بـ 05 ومكون من 9 أرقام)',
+                err_en: 'Invalid UAE number (starts with 05, 9 digits)'
+            },
+            'kw': {
+                code: '+965',
+                placeholder: '6612 3456',
+                validate: function(clean) {
+                    // Kuwait: 8 digits starting with 5, 6, 9
+                    return /^[569]\d{7}$/.test(clean);
+                },
+                cleanInput: function(raw) {
+                    return raw.replace(/[^\d]/g, '').replace(/^00965|^965/, '').replace(/^0/, '');
+                },
+                formatFull: function(clean) {
+                    return '+965 ' + clean;
+                },
+                err_ar: 'رقم جوال كويتي غير صحيح (8 أرقام تبدأ بـ 5، 6، 9)',
+                err_en: 'Invalid Kuwait number (8 digits starting with 5, 6, 9)'
+            },
+            'bh': {
+                code: '+973',
+                placeholder: '3912 3456',
+                validate: function(clean) {
+                    // Bahrain: 8 digits starting with 3, 6
+                    return /^[36]\d{7}$/.test(clean);
+                },
+                cleanInput: function(raw) {
+                    return raw.replace(/[^\d]/g, '').replace(/^00973|^973/, '').replace(/^0/, '');
+                },
+                formatFull: function(clean) {
+                    return '+973 ' + clean;
+                },
+                err_ar: 'رقم جوال بحريني غير صحيح (8 أرقام تبدأ بـ 3، 6)',
+                err_en: 'Invalid Bahrain number (8 digits starting with 3, 6)'
+            },
+            'om': {
+                code: '+968',
+                placeholder: '9123 4567',
+                validate: function(clean) {
+                    // Oman: 8 digits starting with 7, 9
+                    return /^[79]\d{7}$/.test(clean);
+                },
+                cleanInput: function(raw) {
+                    return raw.replace(/[^\d]/g, '').replace(/^00968|^968/, '').replace(/^0/, '');
+                },
+                formatFull: function(clean) {
+                    return '+968 ' + clean;
+                },
+                err_ar: 'رقم جوال عُماني غير صحيح (8 أرقام تبدأ بـ 7، 9)',
+                err_en: 'Invalid Oman number (8 digits starting with 7, 9)'
+            },
+            'eg': {
+                code: '+20',
+                placeholder: '010 1234 5678',
+                validate: function(clean) {
+                    // Egypt: 10 digits (without leading 0) starting with 10, 11, 12, 15
+                    return /^1[0125]\d{8}$/.test(clean);
+                },
+                cleanInput: function(raw) {
+                    return raw.replace(/[^\d]/g, '').replace(/^0020|^20/, '').replace(/^0/, '');
+                },
+                formatFull: function(clean) {
+                    return '+20 0' + clean;
+                },
+                err_ar: 'رقم جوال مصري غير صحيح (11 رقم يبدأ بـ 010/011/012/015)',
+                err_en: 'Invalid Egypt number (11 digits starting with 010/011/012/015)'
+            },
+            'other': {
+                code: '',
+                placeholder: '+1 234 567 8900',
+                validate: function(clean) {
+                    // General: at least 7 to 15 digits
+                    return /^\d{7,15}$/.test(clean);
+                },
+                cleanInput: function(raw) {
+                    return raw.replace(/[^\d]/g, '');
+                },
+                formatFull: function(clean) {
+                    return '+' + clean;
+                },
+                err_ar: 'يرجى إدخال رقم هاتف دولي صحيح (7-15 رقماً)',
+                err_en: 'Please enter a valid international phone number (7-15 digits)'
+            }
+        };
+
+        function getSelectedCountryCode() {
+            const select = document.getElementById('modalCountry');
+            const selectedOpt = select.options[select.selectedIndex];
+            return (selectedOpt && selectedOpt.getAttribute('data-country')) || 'qa';
+        }
+
+        function handleCountryChange() {
+            const countryKey = getSelectedCountryCode();
+            const rule = countryPhoneRules[countryKey] || countryPhoneRules['other'];
+            const phoneInput = document.getElementById('modalPhone');
+            phoneInput.placeholder = rule.placeholder;
+            phoneInput.setAttribute('data-ar-placeholder', rule.placeholder);
+            phoneInput.setAttribute('data-en-placeholder', rule.placeholder);
+            // Clear validation state on country change
+            phoneInput.classList.remove('is-invalid', 'is-valid');
+            const errEl = document.getElementById('phoneError');
+            if (errEl) errEl.innerText = '';
+        }
+
+        function validateField(id, errorId, isValid, errorMessage) {
+            const el = document.getElementById(id);
+            const errEl = document.getElementById(errorId);
+            if (!isValid) {
+                el.classList.add('is-invalid');
+                el.classList.remove('is-valid');
+                if (errEl) errEl.innerText = errorMessage;
+                return false;
+            } else {
+                el.classList.remove('is-invalid');
+                el.classList.add('is-valid');
+                if (errEl) errEl.innerText = '';
+                return true;
+            }
+        }
+
+        function validatePhone(showError = true) {
+            const isAr = (document.documentElement.lang !== 'en');
+            const phoneInput = document.getElementById('modalPhone');
+            const raw = phoneInput.value.trim();
+            const countryKey = getSelectedCountryCode();
+            const rule = countryPhoneRules[countryKey] || countryPhoneRules['other'];
+            
+            if (!raw) {
+                if (showError) {
+                    validateField('modalPhone', 'phoneError', false, isAr ? 'رقم الجوال مطلوب' : 'Phone number is required');
+                }
+                return false;
+            }
+
+            const clean = rule.cleanInput(raw);
+            const isValid = rule.validate(clean);
+            const errMsg = isAr ? rule.err_ar : rule.err_en;
+
+            return validateField('modalPhone', 'phoneError', isValid, errMsg);
+        }
+
+        function validateEmail(showError = true) {
+            const isAr = (document.documentElement.lang !== 'en');
+            const emailInput = document.getElementById('modalEmail');
+            const val = emailInput.value.trim();
+            
+            if (!val) {
+                if (showError) {
+                    validateField('modalEmail', 'emailError', false, isAr ? 'البريد الإلكتروني مطلوب' : 'Email is required');
+                }
+                return false;
+            }
+
+            // Strict standard email regex
+            const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            const isValid = emailRegex.test(val);
+            const errMsg = isAr ? 'يرجى إدخال بريد إلكتروني صحيح (مثال: name@example.com)' : 'Please enter a valid email (e.g. name@example.com)';
+
+            return validateField('modalEmail', 'emailError', isValid, errMsg);
+        }
+
+        function validateName(showError = true) {
+            const isAr = (document.documentElement.lang !== 'en');
+            const nameInput = document.getElementById('modalName');
+            const val = nameInput.value.trim();
+            const isValid = val.length >= 3;
+            const errMsg = isAr ? 'يرجى إدخال اسم صحيح (3 أحرف على الأقل)' : 'Please enter a valid name (min 3 characters)';
+            return validateField('modalName', 'nameError', isValid, errMsg);
+        }
+
+        function validateAcademy(showError = true) {
+            const isAr = (document.documentElement.lang !== 'en');
+            const acaInput = document.getElementById('modalAcademy');
+            const val = acaInput.value.trim();
+            const isValid = val.length >= 2;
+            const errMsg = isAr ? 'يرجى إدخال اسم الأكاديمية أو النادي' : 'Please enter academy or club name';
+            return validateField('modalAcademy', 'academyError', isValid, errMsg);
+        }
+
+        // Attach live input listeners for instant feedback
+        document.addEventListener('DOMContentLoaded', function() {
+            const pInput = document.getElementById('modalPhone');
+            const eInput = document.getElementById('modalEmail');
+            const nInput = document.getElementById('modalName');
+            const aInput = document.getElementById('modalAcademy');
+
+            if (pInput) pInput.addEventListener('input', () => validatePhone(false));
+            if (eInput) eInput.addEventListener('input', () => validateEmail(false));
+            if (nInput) nInput.addEventListener('input', () => validateName(false));
+            if (aInput) aInput.addEventListener('input', () => validateAcademy(false));
+        });
+
         function handleSub(e) {
             e.preventDefault();
+
+            // Run full validation on all fields
+            const isAcaValid = validateAcademy(true);
+            const isNameValid = validateName(true);
+            const isPhoneValid = validatePhone(true);
+            const isEmailValid = validateEmail(true);
+
+            if (!isAcaValid || !isNameValid || !isPhoneValid || !isEmailValid) {
+                // Focus the first invalid field
+                if (!isAcaValid) document.getElementById('modalAcademy').focus();
+                else if (!isNameValid) document.getElementById('modalName').focus();
+                else if (!isPhoneValid) document.getElementById('modalPhone').focus();
+                else if (!isEmailValid) document.getElementById('modalEmail').focus();
+                return;
+            }
+
             const plan = document.getElementById('modalPlan').value;
             const country = document.getElementById('modalCountry').value;
-            const academy = document.getElementById('modalAcademy').value;
-            const name = document.getElementById('modalName').value;
-            const phone = document.getElementById('modalPhone').value;
-            const email = document.getElementById('modalEmail').value || 'غير محدد';
+            const academy = document.getElementById('modalAcademy').value.trim();
+            const name = document.getElementById('modalName').value.trim();
+            const rawPhone = document.getElementById('modalPhone').value.trim();
+            const email = document.getElementById('modalEmail').value.trim();
+            
+            // Format phone with international country code
+            const countryKey = getSelectedCountryCode();
+            const rule = countryPhoneRules[countryKey] || countryPhoneRules['other'];
+            const cleanPhone = rule.cleanInput(rawPhone);
+            const formattedPhone = rule.formatFull(cleanPhone);
+
             const billing = currentBilling === 'annually' ? 'الدفع السنوي (شهرين مجاناً)' : 'الدفع الشهري';
 
             const msg = `مرحباً فريق Hagzz ERP 👋%0Aأرغب في طلب اشتراك وتجربة مجانية:%0A%0A` +
@@ -2426,7 +3107,7 @@
                 `🌍 *الدولة:* ${encodeURIComponent(country)}%0A` +
                 `🏢 *الأكاديمية:* ${encodeURIComponent(academy)}%0A` +
                 `👤 *المسؤول:* ${encodeURIComponent(name)}%0A` +
-                `📞 *الجوال:* ${encodeURIComponent(phone)}%0A` +
+                `📞 *الجوال:* ${encodeURIComponent(formattedPhone)}%0A` +
                 `✉️ *البريد:* ${encodeURIComponent(email)}`;
 
             window.open(`https://wa.me/97470542458?text=${msg}`, '_blank');
