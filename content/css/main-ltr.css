@@ -997,3 +997,39 @@ html[dir="rtl"] .home__content__header__desc p {
   text-align: center !important;
 }
 
+/* ── Navbar User Buttons Fix ── */
+.navsbar__user__login {
+  white-space: nowrap !important;
+}
+
+.navsbar__user__partner,
+.navsbar__mobile__list__partner {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 42px !important;
+  padding: 0 24px !important;
+  border-radius: 50px !important;
+  background: #A8FF35 !important;
+  color: #000000 !important;
+  text-align: center !important;
+  font-family: 'Cairo', 'Tajawal', sans-serif !important;
+  font-size: 14.5px !important;
+  font-weight: 800 !important;
+  white-space: nowrap !important;
+  text-decoration: none !important;
+  line-height: 1 !important;
+  flex-shrink: 0 !important;
+  border: none !important;
+  cursor: pointer !important;
+  box-shadow: 0 4px 15px rgba(168, 255, 53, 0.3) !important;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.navsbar__user__partner:hover,
+.navsbar__mobile__list__partner:hover {
+  background: #c8ff6a !important;
+  color: #000000 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(168, 255, 53, 0.5) !important;
+}
