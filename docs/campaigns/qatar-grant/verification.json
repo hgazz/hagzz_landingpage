@@ -1,0 +1,208 @@
+{
+  "date": "2026-10-24",
+  "responsive_checks": [
+    {
+      "width": 320,
+      "lang": "ar",
+      "dir": "rtl",
+      "overflow": false,
+      "broken": [],
+      "font": true,
+      "buttons": [
+        {
+          "width": 45,
+          "height": 46,
+          "left": 125.609375,
+          "right": 170.609375
+        },
+        {
+          "width": 101.609375,
+          "height": 43,
+          "left": 14,
+          "right": 115.609375
+        }
+      ],
+      "errors": [],
+      "status": 200
+    },
+    {
+      "width": 390,
+      "lang": "ar",
+      "dir": "rtl",
+      "overflow": false,
+      "broken": [],
+      "font": true,
+      "buttons": [
+        {
+          "width": 45,
+          "height": 46,
+          "left": 143.03125,
+          "right": 188.03125
+        },
+        {
+          "width": 115.03125,
+          "height": 43,
+          "left": 18,
+          "right": 133.03125
+        }
+      ],
+      "errors": [],
+      "status": 200
+    },
+    {
+      "width": 768,
+      "lang": "ar",
+      "dir": "rtl",
+      "overflow": false,
+      "broken": [],
+      "font": true,
+      "buttons": [
+        {
+          "width": 57.96875,
+          "height": 46,
+          "left": 183.875,
+          "right": 241.84375
+        },
+        {
+          "width": 147.875,
+          "height": 47,
+          "left": 24,
+          "right": 171.875
+        }
+      ],
+      "errors": [],
+      "status": 200
+    },
+    {
+      "width": 1440,
+      "lang": "ar",
+      "dir": "rtl",
+      "overflow": false,
+      "broken": [],
+      "font": true,
+      "buttons": [
+        {
+          "width": 57.96875,
+          "height": 46,
+          "left": 267.875,
+          "right": 325.84375
+        },
+        {
+          "width": 147.875,
+          "height": 47,
+          "left": 100,
+          "right": 247.875
+        }
+      ],
+      "errors": [],
+      "status": 200
+    },
+    {
+      "width": 320,
+      "lang": "en",
+      "dir": "ltr",
+      "overflow": false,
+      "broken": [],
+      "font": true,
+      "buttons": [
+        {
+          "width": 45,
+          "height": 46,
+          "left": 145.15625,
+          "right": 190.15625
+        },
+        {
+          "width": 105.84375,
+          "height": 43,
+          "left": 200.15625,
+          "right": 306
+        }
+      ],
+      "errors": [],
+      "status": 200
+    },
+    {
+      "width": 390,
+      "lang": "en",
+      "dir": "ltr",
+      "overflow": false,
+      "broken": [],
+      "font": true,
+      "buttons": [
+        {
+          "width": 45,
+          "height": 46,
+          "left": 197.359375,
+          "right": 242.359375
+        },
+        {
+          "width": 119.640625,
+          "height": 43,
+          "left": 252.359375,
+          "right": 372
+        }
+      ],
+      "errors": [],
+      "status": 200
+    },
+    {
+      "width": 768,
+      "lang": "en",
+      "dir": "ltr",
+      "overflow": false,
+      "broken": [],
+      "font": true,
+      "buttons": [
+        {
+          "width": 51.296875,
+          "height": 46,
+          "left": 527.453125,
+          "right": 578.75
+        },
+        {
+          "width": 153.25,
+          "height": 47,
+          "left": 590.75,
+          "right": 744
+        }
+      ],
+      "errors": [],
+      "status": 200
+    },
+    {
+      "width": 1440,
+      "lang": "en",
+      "dir": "ltr",
+      "overflow": false,
+      "broken": [],
+      "font": true,
+      "buttons": [
+        {
+          "width": 51.296875,
+          "height": 46,
+          "left": 1115.453125,
+          "right": 1166.75
+        },
+        {
+          "width": 153.25,
+          "height": 47,
+          "left": 1186.75,
+          "right": 1340
+        }
+      ],
+      "errors": [],
+      "status": 200
+    }
+  ],
+  "standalone_preview": "passed; no external requests; fonts and images embedded",
+  "reduced_motion": "passed",
+  "pricing_entry": "present",
+  "product_screenshots": false,
+  "customer_data": false,
+  "pending_original_logo_assets": [
+    "Mesk | vlabAi",
+    "PayLater Qatar"
+  ],
+  "deployment": "Repository only; no SSH deployment",
+  "preview_sha256": "9886035caff11758217f87b5db30969105e0c77ea9c916bb0e84b117f6ac3f98"
+}

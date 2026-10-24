@@ -10,6 +10,7 @@ Official landing page for the **Hagzz** sports booking mobile application.
 
 ## 📄 Pages
 - `index.html` — Main landing page
+- `qatar-grant.html` — Responsive Arabic/English academy grant marketing page ([standalone preview](docs/campaigns/qatar-grant/Hagzz-Qatar-Grant-Preview.html), [sources and validation](docs/campaigns/qatar-grant/README.md))
 - `privacy.html` — Privacy Policy
 - `termsAndConditions.html` — Terms and Conditions
 - `contact.html` — Contact Us
