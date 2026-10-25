@@ -23,7 +23,7 @@ QSTP, SkipCash and Geidea logo assets were sourced as listed below and visually 
 
 ## Local verification and regeneration
 
-Serve the repository over HTTP (for example `python3 -m http.server 8037`). The page has no backend, signup form, tracking service or automatic message sending. WhatsApp links open a language-appropriate draft for the visitor. Language selection uses the site's existing `content/js/lang.js` and `hagzz-lang` preference; `?lang=ar|en` selects the initial language. Clipboard access has an accessible fallback.
+Serve the repository over HTTP (for example `python3 -m http.server 8037`). The homepage and grant page show an Arabic/English enquiry dialog one second after DOM readiness. It collects name, academy, WhatsApp number and city/country, then opens a WhatsApp draft addressed to +97470542458. The visitor must press Send in WhatsApp. No backend storage or automatic message sending is used. The dialog supports close, Escape, keyboard focus containment and independent language switching. WhatsApp links open a language-appropriate draft for the visitor. Language selection uses the site's existing `content/js/lang.js` and `hagzz-lang` preference; `?lang=ar|en` selects the initial language. Clipboard access has an accessible fallback.
 
 `python3 docs/campaigns/qatar-grant/build-page.py` regenerates the page. `build-preview.py` rebuilds the standalone preview after changes. No package installation or application migration is required.
 
