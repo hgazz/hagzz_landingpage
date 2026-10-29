@@ -27,6 +27,7 @@ def icon(name):
     return f'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{paths.get(name, "")}</svg>'
 
 whatsapp = 'https://wa.me/97470542458'
+google_form_url = 'https://forms.gle/qatar-grant'
 
 parts = ['''<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>منحة التحول الرقمي للأكاديميات في قطر | VLab & QSTP & Hagzz</title><meta name="description" content="منحة التحول الرقمي وأتمتة الإدارة والتشغيل للأكاديميات الرياضية في قطر: بالتعاون مع واحة قطر للعلوم والتكنولوجيا (QSTP) و VLab & Hagzz. نظام ERP، تطبيق أولياء الأمور، تحصيل إلكتروني وبوابة تسجيل."><meta name="theme-color" content="#101b22"><link rel="canonical" href="https://hagzz.el7lm.com/qatar-grant.html"><meta property="og:type" content="website"><meta property="og:title" content="منحة التحول الرقمي للأكاديميات في قطر | VLab & QSTP & Hagzz"><meta property="og:description" content="فرصة استثنائية لتطوير أكاديميتك الرياضية في قطر بأنظمة إدارة التشغيل والحسابات المعتمدة."><meta property="og:image" content="https://hagzz.el7lm.com/content/assets/qatar-grant/banner-ar.jpg"><meta property="og:url" content="https://hagzz.el7lm.com/qatar-grant.html"><link rel="preload" href="content/assets/qatar-grant/fonts/cairo-variable.woff" as="font" type="font/woff" crossorigin><link rel="stylesheet" href="content/css/qatar-grant.css"><script src="content/js/qatar-grant.js" defer></script><script src="content/js/lang.js" defer></script><link rel="stylesheet" href="/content/css/grant-popup.css"><script src="/content/js/grant-popup.js" defer></script></head><body>''']
 
@@ -41,7 +42,7 @@ parts.append('<header class="site-header"><div class="container header-inner"><a
              + link('المميزات', 'Features', '#features')
              + link('التسجيل', 'Apply', '#apply')
              + '</nav><div class="header-actions"><button type="button" id="lang-toggle" class="language" aria-label="Switch to English">English</button>'
-             + '<button type="button" class="button small open-grant-form" data-ar="قدّم على المنحة" data-en="Apply for Grant">قدّم على المنحة</button>'
+             + link('قدّم على المنحة', 'Apply for Grant', google_form_url, 'button small', 'target="_blank" rel="noopener"')
              + '</div></div></header>')
 
 # Hero Section
@@ -51,7 +52,7 @@ parts.append('<main id="main"><section class="hero"><div class="container"><div 
              + t('h1', 'منحة التحول الرقمي وأتمتة الإدارة والتشغيل', 'Digital Transformation & Operations Automation Grant')
              + t('p', 'لأنظمة إدارة التشغيل والحسابات للأكاديميات والفرق الرياضية في قطر — مقدمة من VLab بالتعاون مع واحة قطر للعلوم والتكنولوجيا (QSTP)', 'For operations management and accounting systems in sports academies and teams in Qatar — Powered by VLab in collaboration with Qatar Science & Technology Park (QSTP)', 'hero-lead')
              + '<div class="hero-cta">'
-             + '<button type="button" class="button open-grant-form" data-ar="سجّل اهتمامك بالمنحة الآن (Google Form)" data-en="Apply for the Grant (Google Form)">سجّل اهتمامك بالمنحة الآن (Google Form)</button>'
+             + link('رابط التقديم على المنحة (Google Form)', 'Apply for the Grant (Google Form)', google_form_url, 'button', 'target="_blank" rel="noopener"')
              + link('تواصل مباشرة عبر واتساب', 'Chat on WhatsApp', whatsapp, 'button button-outline whatsapp', 'target="_blank" rel="noopener"')
              + '</div></div>'
              + '<div class="grant-banner-wrapper">'
@@ -170,7 +171,7 @@ parts.append('<section id="apply" class="section section-cta"><div class="contai
              + t('h2', 'الأماكن محدودة! سجل اهتمامك الآن في أقل من دقيقة', 'Limited spots available! Register your interest now in under a minute')
              + t('p', 'لا تفوت فرصة الاستفادة من المنحة المعتمدة لتطوير البنية التقنية لأكاديميتك الرياضية.', 'Don\'t miss the opportunity to elevate your sports academy\'s technology infrastructure.')
              + '<div class="cta-actions">'
-             + '<button type="button" class="button button-large open-grant-form" data-ar="رابط التقديم على المنحة (Google Form)" data-en="Apply for the Grant (Google Form)">رابط التقديم على المنحة (Google Form)</button>'
+             + link('رابط التقديم على المنحة (Google Form)', 'Apply for the Grant (Google Form)', google_form_url, 'button button-large', 'target="_blank" rel="noopener"')
              + link('تواصل معنا عبر واتساب', 'Chat on WhatsApp', whatsapp, 'button button-large button-whatsapp whatsapp', 'target="_blank" rel="noopener"')
              + '</div>'
              + '<div class="cta-subtext">'

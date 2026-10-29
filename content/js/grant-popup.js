@@ -1,4 +1,4 @@
-/* Shared grant enquiry dialog. Data stays in the browser until the visitor sends on WhatsApp. */
+/* Shared grant enquiry dialog. Available on demand. */
 (function () {
     'use strict';
     let dialog;
@@ -79,7 +79,6 @@
             window.location.assign('https://wa.me/97470542458?text=' + encodeURIComponent(message));
         });
 
-        // Global opener function
         window.openGrantPopup = function(triggerEl) {
             returnFocus = triggerEl || document.activeElement;
             if (dialog && !dialog.open) {
@@ -91,25 +90,6 @@
             }
             document.documentElement.classList.add('grant-popup-open');
         };
-
-        // Event delegation for any open button
-        document.addEventListener('click', function (event) {
-            const btn = event.target.closest('.open-grant-form, [data-open-grant-popup], [href="#apply-popup"]');
-            if (btn) {
-                event.preventDefault();
-                window.openGrantPopup(btn);
-            }
-        });
-
-        // Auto open after 1.5 seconds if on grant page
-        window.setTimeout(() => {
-            if (dialog && !dialog.open && !sessionStorage.getItem('grant-popup-shown')) {
-                returnFocus = document.activeElement;
-                dialog.showModal();
-                document.documentElement.classList.add('grant-popup-open');
-                sessionStorage.setItem('grant-popup-shown', 'true');
-            }
-        }, 1500);
     }
 
     if (document.readyState === 'loading') {

@@ -45,22 +45,6 @@
 
     document.addEventListener('langChanged', function (event) { updateLanguage(event.detail.lang); });
 
-    // Open grant form popup dialog
-    document.querySelectorAll('.open-grant-form').forEach(function (button) {
-        button.addEventListener('click', function (e) {
-            e.preventDefault();
-            if (typeof window.openGrantPopup === 'function') {
-                window.openGrantPopup(button);
-            } else {
-                var dialog = document.getElementById('grant-popup');
-                if (dialog && typeof dialog.showModal === 'function') {
-                    dialog.showModal();
-                    document.documentElement.classList.add('grant-popup-open');
-                }
-            }
-        });
-    });
-
     // Copy link
     var copyBtn = document.getElementById('copy-link');
     if (copyBtn) {
