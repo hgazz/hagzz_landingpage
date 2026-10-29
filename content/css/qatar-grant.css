@@ -11,3 +11,61 @@ html[dir=ltr] .hero-copy h1{font-size:clamp(38px,4vw,58px);line-height:1.35;lett
 .site-header .brand{background:var(--ink);padding:10px 14px;border-radius:9px}.site-header .brand img{width:100px}.site-header .brand{min-width:128px}
 @media(max-width:560px){.site-header .brand{padding:9px 10px;min-width:99px}.site-header .brand img{width:79px}}
 .hero-photo figcaption{color:#5c6859;font-size:11px}.fineprint{color:#596b51}
+
+/* Qatar Grant Official Campaign Additions */
+.hero-header-box{max-width:850px;margin-bottom:36px}
+.active-nav{color:var(--lime)!important;font-weight:800}
+.button-outline{background:transparent;border:2px solid var(--lime);color:var(--ink)}
+.button-outline:hover{background:var(--lime);color:var(--ink)}
+.button-large{min-height:64px;font-size:19px;padding:14px 34px}
+.button-whatsapp{background:#25d366;color:#fff;border-color:transparent}
+.button-whatsapp:hover{background:#1ebe57;transform:translateY(-2px);color:#fff}
+.grant-banner-wrapper{margin-top:20px;border-radius:var(--radius);overflow:hidden;box-shadow:0 16px 40px rgba(0,0,0,0.1);border:1px solid var(--line);background:#fff}
+.grant-banner-wrapper img{width:100%;height:auto;display:block}
+.section-entities{background:#fff}
+.grant-entities-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:28px}
+.grant-entity-card{background:#fafbf7;border:1px solid var(--line);border-radius:var(--radius);padding:36px;display:flex;flex-direction:column;gap:16px;box-shadow:0 4px 16px rgba(0,0,0,0.02)}
+.entity-logo-box{min-height:90px;display:flex;align-items:center}
+.entity-logo-box img{max-height:75px;width:auto;object-fit:contain}
+.grant-entity-badge{display:inline-block;padding:5px 14px;border-radius:30px;font-size:13px;font-weight:800;background:#e2f3d5;color:#285718;width:fit-content}
+.grant-entity-badge.badge-green{background:#d5eef7;color:#12526b}
+.section-concept{padding-block:60px;background:#f2f5ed}
+.grant-concept-card{background:linear-gradient(135deg,#0d1720,#162733);border-radius:var(--radius);padding:48px;color:#fff;box-shadow:0 14px 36px rgba(13,23,32,0.16)}
+.concept-title{font-size:clamp(26px,2.6vw,38px);color:#ffffff;margin-block:14px 20px}
+.grant-concept-card p{font-size:19px;line-height:2.1;color:#d7e2da}
+.text-lime{color:var(--lime)!important}
+.grant-features-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:28px}
+.grant-feature-item{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:32px;box-shadow:0 6px 20px rgba(0,0,0,0.02);transition:transform .2s,box-shadow .2s}
+.grant-feature-item:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(0,0,0,0.06)}
+.grant-feature-icon{width:56px;height:56px;border-radius:16px;background:#f0f7ea;color:#3f7823;display:grid;place-items:center;margin-bottom:20px}
+.grant-feature-icon svg{width:30px;height:30px}
+.grant-feature-item h3{font-size:22px;margin-bottom:12px}
+.grant-feature-item p{font-size:16px;line-height:1.85}
+.section-target{background:#f6f8f2}
+.sport-pills-wrap{display:flex;flex-wrap:wrap;gap:14px;margin-top:26px}
+.sport-pill{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;background:#fff;border:1px solid var(--line);border-radius:30px;font-size:16px;font-weight:750;color:#23441d;box-shadow:0 2px 8px rgba(0,0,0,0.03)}
+.section-how{background:#fff}
+.grant-steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:32px}
+.grant-step-box{background:#fafbf7;border:1px solid var(--line);border-radius:var(--radius);padding:34px 26px;text-align:center;position:relative}
+.step-number{width:46px;height:46px;border-radius:50%;background:var(--lime);color:var(--ink);font-weight:900;font-size:22px;display:grid;place-items:center;margin:0 auto 20px}
+.grant-step-box h3{font-size:20px;margin-bottom:12px}
+.grant-step-box p{font-size:15px;line-height:1.8}
+.grant-note-box{margin-top:40px;background:#fff9e8;border:1px solid #f6deb0;border-inline-start:6px solid #d49300;border-radius:14px;padding:24px 28px;display:flex;gap:18px;align-items:flex-start}
+.grant-note-box .note-icon{font-size:28px;line-height:1}
+.grant-note-box h4{margin:0 0 6px;font-size:18px;font-weight:800;color:#785200}
+.grant-note-box p{margin:0;font-size:16px;line-height:1.9;color:#6b4d08}
+.section-cta{background:radial-gradient(ellipse at 50% 50%,#eff6e8,var(--paper))}
+.grant-cta-card{background:#fff;border:2px dashed #476d38;border-radius:calc(var(--radius) + 6px);padding:50px 36px;text-align:center;max-width:960px;margin:0 auto;box-shadow:0 12px 36px rgba(40,75,28,0.05)}
+.grant-cta-card h2{font-size:clamp(26px,3vw,42px);margin-block:14px 18px;color:#183612}
+.grant-cta-card p{font-size:18px;max-width:680px;margin:0 auto 28px}
+.cta-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:16px}
+.cta-subtext{margin-top:24px;display:flex;flex-direction:column;align-items:center;gap:8px}
+.text-maroon{color:var(--maroon)!important}
+
+@media(max-width:880px){
+  .grant-entities-grid,.grant-features-grid,.grant-steps-grid{grid-template-columns:1fr}
+  .grant-concept-card{padding:30px 22px}
+  .grant-cta-card{padding:32px 18px}
+  .cta-actions{flex-direction:column;align-items:stretch}
+  .cta-actions .button{width:100%}
+}
