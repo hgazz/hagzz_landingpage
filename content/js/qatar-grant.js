@@ -29,8 +29,8 @@
         }
 
         var message = ar
-            ? 'مرحبًا، أود التسجيل والاستفسار عن منحة التحول الرقمي للأكاديميات الرياضية في قطر مع واحة قطر للعلوم والتكنولوجيا (QSTP) و VLab.'
-            : 'Hello, I would like to register and enquire about the Digital Transformation Grant for Sports Academies in Qatar with QSTP and VLab.';
+            ? 'مرحبًا، أود التقديم والاستفسار عن منحة التحول الرقمي للأكاديميات الرياضية في قطر مع واحة قطر للعلوم والتكنولوجيا (QSTP) و VLab.'
+            : 'Hello, I would like to apply and enquire about the Digital Transformation Grant for Sports Academies in Qatar with QSTP and VLab.';
         document.querySelectorAll('a.whatsapp').forEach(function (a) {
             a.href = 'https://wa.me/97470542458?text=' + encodeURIComponent(message);
         });
@@ -45,20 +45,18 @@
 
     document.addEventListener('langChanged', function (event) { updateLanguage(event.detail.lang); });
 
-    // Open grant form dialog
+    // Open grant form popup dialog
     document.querySelectorAll('.open-grant-form').forEach(function (button) {
         button.addEventListener('click', function (e) {
             e.preventDefault();
-            var dialog = document.getElementById('grant-popup');
-            if (dialog && typeof dialog.showModal === 'function') {
-                dialog.showModal();
-                document.documentElement.classList.add('grant-popup-open');
+            if (typeof window.openGrantPopup === 'function') {
+                window.openGrantPopup(button);
             } else {
-                var ar = document.documentElement.lang === 'ar';
-                var msg = ar
-                    ? 'طلب التقديم على منحة التحول الرقمي للأكاديميات في قطر — يرجى تزويدنا بالبيانات'
-                    : 'Application for Qatar Sports Academies Digital Transformation Grant';
-                window.open('https://wa.me/97470542458?text=' + encodeURIComponent(msg), '_blank');
+                var dialog = document.getElementById('grant-popup');
+                if (dialog && typeof dialog.showModal === 'function') {
+                    dialog.showModal();
+                    document.documentElement.classList.add('grant-popup-open');
+                }
             }
         });
     });
