@@ -71,8 +71,8 @@
             if (!form.reportValidity()) return;
             const data = new FormData(form);
             const labels = language === 'ar'
-                ? ['طلب تقديم على منحة التحول الرقمي — واحة قطر و VLab & Hagzz', 'الاسم', 'الأكاديمية / المؤسسة', 'نوع الرياضة', 'رقم واتساب', 'المدينة / الدولة']
-                : ['Application — Digital Transformation Grant (QSTP & VLab & Hagzz)', 'Name', 'Academy / Club', 'Sport', 'WhatsApp', 'City / Country'];
+                ? ['طلب تقديم على منحة التحول الرقمي — المحتضنة في واحة قطر للعلوم والتكنولوجيا و VLab & Hagzz', 'الاسم', 'الأكاديمية / المؤسسة', 'نوع الرياضة', 'رقم واتساب', 'المدينة / الدولة']
+                : ['Application — Digital Transformation Grant (Incubated at Qatar Science & Technology Park & VLab & Hagzz)', 'Name', 'Academy / Club', 'Sport', 'WhatsApp', 'City / Country'];
 
             const fields = ['fullName', 'academy', 'sportType', 'phone', 'city'];
             const message = [labels[0], ...fields.map((key, i) => labels[i + 1] + ': ' + (data.get(key) || ''))].join('\n');

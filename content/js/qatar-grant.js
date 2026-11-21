@@ -10,10 +10,10 @@
 
     function updateLanguage(lang) {
         var ar = lang === 'ar';
-        document.title = ar ? 'منحة التحول الرقمي للأكاديميات في قطر | VLab & QSTP & Hagzz' : 'Digital Transformation Grant for Sports Academies in Qatar | VLab & QSTP & Hagzz';
+        document.title = ar ? 'منحة التحول الرقمي للأكاديميات في قطر | VLab & Hagzz' : 'Digital Transformation Grant for Sports Academies in Qatar | VLab & Hagzz';
         var description = ar
-            ? 'منحة التحول الرقمي وأتمتة الإدارة والتشغيل للأكاديميات الرياضية في قطر: بالتعاون مع واحة قطر للعلوم والتكنولوجيا (QSTP) و VLab & Hagzz. نظام ERP، تطبيق أولياء الأمور، تحصيل إلكتروني وبوابة تسجيل.'
-            : 'Digital Transformation & Operations Automation Grant for Sports Academies in Qatar: In collaboration with Qatar Science & Technology Park (QSTP) and VLab & Hagzz. Integrated ERP, Parent App, e-collection, and smart registration.';
+            ? 'منحة التحول الرقمي وأتمتة الإدارة والتشغيل للأكاديميات الرياضية في قطر: المحتضنة في واحة قطر للعلوم والتكنولوجيا و VLab & Hagzz. نظام ERP، تطبيق أولياء الأمور، تحصيل إلكتروني وبوابة تسجيل.'
+            : 'Digital Transformation & Operations Automation Grant for Sports Academies in Qatar: Incubated at Qatar Science & Technology Park and VLab & Hagzz. Integrated ERP, Parent App, e-collection, and smart registration.';
         var metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) metaDesc.content = description;
         var ogTitle = document.querySelector('meta[property="og:title"]');
@@ -29,8 +29,8 @@
         }
 
         var message = ar
-            ? 'مرحبًا، أود التقديم والاستفسار عن منحة التحول الرقمي للأكاديميات الرياضية في قطر مع واحة قطر للعلوم والتكنولوجيا (QSTP) و VLab.'
-            : 'Hello, I would like to apply and enquire about the Digital Transformation Grant for Sports Academies in Qatar with QSTP and VLab.';
+            ? 'مرحبًا، أود التقديم والاستفسار عن منحة التحول الرقمي للأكاديميات الرياضية في قطر المحتضنة في واحة قطر للعلوم والتكنولوجيا و VLab.'
+            : 'Hello, I would like to apply and enquire about the Digital Transformation Grant for Sports Academies in Qatar incubated at Qatar Science & Technology Park and VLab.';
         document.querySelectorAll('a.whatsapp').forEach(function (a) {
             a.href = 'https://wa.me/97470542458?text=' + encodeURIComponent(message);
         });
